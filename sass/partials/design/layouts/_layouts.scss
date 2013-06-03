@@ -1,0 +1,24 @@
+//
+// Layouts
+//
+
+// Page Containers
+
+.wrap {
+//@include outer-container;
+  padding-left: $base-sm;
+  padding-right: $base-sm;
+  @include breakpoint($q-tablet) {
+      padding-left: $base;
+      padding-right: $base;
+  }
+}
+
+.content {
+  padding-top: $base;
+  padding-bottom: $base;
+  @include breakpoint($q-tablet) {
+      padding-top: $base-md;
+      padding-bottom: $base-md;
+  }
+}

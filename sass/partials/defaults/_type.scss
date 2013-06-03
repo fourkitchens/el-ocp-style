@@ -1,0 +1,117 @@
+//
+// Typography
+//
+
+// Headings
+// Typographic scale: 16, 18, 21, 24, 36, 48
+
+h1, .alpha { 
+  font-size: 4rem; /* 64px */
+  font-family: $headline-text;
+  font-weight: 400;
+  line-height: 4.5rem; /* 72px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+h2, .beta {
+  font-size: 2.25rem; /* 32px */
+  font-family: $headline-text;
+  font-weight: $headline-font-weight; 
+  margin-bottom: 1.5rem; /* 24px */
+  color: $red;
+}
+
+h3, .gamma {
+  font-size: 1.5rem; /* 24px */ 
+  font-family: $headline-text; 
+  font-weight: $headline-font-weight; 
+  margin-bottom: .75rem; /* 12px */
+  color: $black;
+}
+
+h4, .delta {
+  font-size: 1rem; 
+  font-family: $headline-text; 
+  font-weight: $headline-font-weight; 
+  text-transform: uppercase; 
+  margin-bottom: em(12,20);
+  color: $black;
+}
+
+h5, .epsilon {
+  font-size: 20px; font-size: em(20,16); 
+  font-family: $body-text; 
+  font-weight: $headline-font-weight; 
+  margin-bottom: em(12,20);
+}
+
+h6, .zeta {
+  font-size: 18px; font-size: em(18,16); 
+  font-family: $headline-text; 
+  font-weight: $headline-font-weight; 
+  margin-bottom: em(12,18);
+}
+
+p, ul, dl, ol { 
+  font-size: $base-font-rem;
+  line-height: $base-line-height;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+// Italics, bold
+
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+// Lists
+
+li {
+  margin-bottom: .75rem; /* 12px */
+}
+
+ul {
+    li {
+        list-style-type: disc;
+    }
+}
+
+ol {
+  li {
+    margin-left: $base-sm;
+  }
+}
+
+// Links
+
+a {
+  color: $linkcolor;
+  cursor: pointer;
+  
+  &:hover { 
+    color: $linkcolorhover;
+  }
+  
+  &:visited {
+      color: $linkcolorvisited;
+  }
+  
+  &:focus {
+      color: $linkcolorfocus;
+  }
+}
+
+// Misc.
+
+code { font: 12px/1 'Courier New', Courier, monospace; }
+
+sub, sup { line-height: 0; }
+
+hr {
+  clear: both;
+  display: block;
+  margin: em(12) 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $bordercolor;
+}

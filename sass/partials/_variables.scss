@@ -1,0 +1,79 @@
+//
+// Variables Partials
+//
+
+// Singularity grid
+
+$grids: 12;
+$gutters: 24/58;
+$output: 'isolation';
+
+$grid-max: 1100px;
+
+// Colors
+
+$black: rgb(34,34,34);
+$darkgray: rgb(68,68,68);
+$gray: rgb(187,187,187);
+$lightgray: rgb(234,234,234);
+$verylightgray: rgb(243,243,243);
+$white: rgb(255,255,255);
+
+$red: rgb(198,18,63);
+$brick: rgb(119,36,50);
+$lightred: rgb(212,77,111);
+$verylightred: rgb(226,136,159);
+$brightred: rgb(240,30,80); // matches background image colors in site header
+
+$blue: rgb(0,101,149);
+$orange: rgb(243,144,29);
+$purple: rgb(109,36,127);
+$green: rgb(109,141,36);
+
+//  Sizes
+
+$base: 24px;
+$base-xs: $base/4;
+$base-sm: $base/2;
+$base-md: $base * 2;
+$base-lg: $base * 3;
+$base-xl: $base * 4;
+
+$base-font-rem: 1rem;
+$base-line-height: 1.5em;
+
+$base-line-length: 39em; // control the longest line lengths as needed with this
+
+// Font stacks
+
+$headline-text: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+$headline-font-weight: 700;
+
+$body-text: Georgia, serif;
+$body-font-weight: 400;
+
+// Breakpoints
+
+$q-mobile: 0;
+$q-smartphone: 0;
+$q-tablet: 37.5em;
+$q-desktop: 61.25em;
+$q-widescreen: 68.75em;
+
+// Borders
+
+$bordercolor: $red;
+$borderstyle: dotted;
+$borderwidth: 2px;
+
+// Links
+
+$linkcolor: $blue;
+$linkcolorhover: darken($linkcolor, 10);
+$linkcolorvisited: darken($linkcolorhover, 10);
+$linkcolorfocus: darken($linkcolorvisited, 10);
+
+// Type
+
+$bodycolor: $darkgray;
+$headlinecolor: $black;

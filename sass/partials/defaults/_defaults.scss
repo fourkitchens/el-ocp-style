@@ -1,0 +1,47 @@
+//
+// Defaults
+// - Use these partials to do global resets
+//
+
+@import 'type';
+@import 'forms';
+
+// Base styles
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 16px;
+  
+  @include breakpoint($q-desktop) {
+    font-size: 18px;
+  }
+  @include breakpoint($q-widescreen) {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-size: $base-font-rem;
+  line-height:$base-line-height;
+  font-family: $body-text;
+  background: $white;
+  color: $bodycolor;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
