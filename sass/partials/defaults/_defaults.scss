@@ -37,6 +37,20 @@ body {
   color: $bodycolor;
 }
 
+// Helper classes
+
+.center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 // Images
 
 img {
@@ -44,4 +58,14 @@ img {
   border-width: 0;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;
+
+  &.left {
+    margin-right: $base;
+    margin-bottom: $base;
+  }
+
+  &.right {
+    margin-left: $base;
+    margin-bottom: $base;
+  }
 }
