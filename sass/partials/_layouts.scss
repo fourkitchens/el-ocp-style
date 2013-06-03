@@ -1,0 +1,35 @@
+// Layouts
+
+/* =======================================================
+    Page Containers
+   ======================================================= */
+.wrap {
+    @include outer-container;
+    padding-left: $base-sm;
+    padding-right: $base-sm;
+    @include media($q-tablet) {
+        padding-left: $base;
+        padding-right: $base;
+    }
+}
+
+.content {
+    padding-top: $base;
+    padding-bottom: $base;
+    @include media($q-tablet) {
+        padding-top: $base-md;
+        padding-bottom: $base-md;
+    }
+}
+
+/* =======================================================
+    Page Layouts A–?
+    determined by body classes
+   ======================================================= */
+
+/* Layout A
+   ======================================================= */
+
+.layout-a {
+
+}

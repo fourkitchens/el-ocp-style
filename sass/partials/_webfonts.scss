@@ -1,0 +1,29 @@
+/* =======================================================
+    Webfonts
+   ======================================================= */
+
+//  The regular weight
+
+@font-face {
+    font-family: 'DINWebCondensed';
+    src: url('../fonts/DINWeb-Cond.eot');
+    src: url('../fonts/DINWeb-Cond.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-Cond.woff') format('woff');
+         /*url('../fonts/DINWeb-Cond.ttf') format('truetype'),
+         url('../fonts/DINWeb-Cond.svg#snicons') format('svg');*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+//  The bold weight
+
+@font-face {
+    font-family: 'DINWebCondensed';
+    src: url('../fonts/DINWeb-CondBold.eot');
+    src: url('../fonts/DINWeb-CondBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-CondBold.woff') format('woff');
+         /*url('../fonts/DINWeb-CondBold.ttf') format('truetype'),
+         url('../fonts/DINWeb-CondBold.svg#snicons') format('svg');*/
+    font-weight: 700;
+    font-style: normal;
+}
