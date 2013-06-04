@@ -4,6 +4,36 @@ Style guide for the Online Curriculum Pilot website.
 
 ## Requirements
 
+### Jekyll
+
+**How to install Jekyll**
+
+* You must have the latest version of Xcode installed (4.6.x), which can be downloaded from the App Store.
+* If you have an older version of Xcode, you must uninstall it first.
+* After the new version of Xcode is installed, go to ```Xcode > Preferences > Downloads > Command Line Tools``` and click "Install".
+
+Now, let's try installing Jekyll.
+
+```
+gem install jekyll
+```
+
+If you're getting an error about RubyGems being out of date, the following command will update RubyGems to the latest version.
+
+```
+gem update --system
+```
+
+**Running Jekyll**
+
+```
+cd my-awesome-site
+jekyll serve -w
+```
+
+Open up ```http://localhost:4000``` in your browser to view the site.
+
+
 ### Breakpoint
 
 Media queries are written using the Breakpoint project.
@@ -13,6 +43,7 @@ gem install breakpoint
 ```
 
 - [Breakpoint project on Github](https://github.com/Team-Sass/breakpoint)
+
 
 ### Singularity
 
@@ -24,6 +55,7 @@ gem install singularity
 
 - [Singularity project on Github](https://github.com/Team-Sass/Singularity)
 - [Singularity documentation](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids)
+
 
 ## Code guidelines
 
