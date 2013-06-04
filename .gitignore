@@ -1,20 +1,11 @@
-# Directories
-#############
-.sass-cache
-_sites
-
-# Mac files
-#############
+# Mac stuff
 .DS_Store
 .AppleDouble
 .LSOverride
 Icon
 
-# Thumbnails
-#############
-._*
+# Sass stuff
+.sass-cache
 
-# Files that might appear on external disk
-#############
-.Spotlight-V100
-.Trashes
+#Jekyll stuff
+_site
