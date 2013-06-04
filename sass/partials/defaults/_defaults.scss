@@ -21,10 +21,10 @@ textarea {
 html {
   font-size: 16px;
   
-  @include breakpoint($q-desktop) {
+  @include breakpoint($desktop) {
     font-size: 18px;
   }
-  @include breakpoint($q-widescreen) {
+  @include breakpoint($widescreen) {
     font-size: 20px;
   }
 }

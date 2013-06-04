@@ -54,11 +54,25 @@ $body-font-weight: 400;
 
 // Breakpoints
 
-$q-mobile: 0;
-$q-smartphone: 0;
-$q-tablet: 37.5em;
-$q-desktop: 61.25em;
-$q-widescreen: 68.75em;
+
+$desktop: 61.25em;
+$widescreen: 68.75em;
+
+$header-sm: 37.5em;
+$header-md: 61.25em;
+$header-lg: 68.75em;
+$identity: 37.5em;
+$logo: 37.5em;
+$title-sm: 37.5em;
+$title-md: 61.25em;
+$title-lg: 68.75em;
+$main-nav-sm: 37.5em;
+$main-nav-md: 61.25em;
+$menu: 37.5em;
+$menu-toggle: 37.5em;
+$arrow: 37.5em;
+$main: 37.5em;
+$content: 37.5em;
 
 // Borders
 

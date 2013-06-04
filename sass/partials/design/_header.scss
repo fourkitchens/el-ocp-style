@@ -12,15 +12,15 @@
     size: 90%;
   }
     
-  @include breakpoint($q-tablet) {
+  @include breakpoint($header-sm) {
     padding-top: $base;
     background-size: 100%;
     background-position: right bottom;
   }
-  @include breakpoint($q-desktop) {
+  @include breakpoint($header-md) {
     background-size: 90%;
   }
-  @include breakpoint($q-widescreen) {
+  @include breakpoint($header-lg) {
     background-size: 80%;
   }
 }
@@ -36,7 +36,7 @@
   padding: 0;
   @include clearfix;
   
-  @include breakpoint($q-tablet) {
+  @include breakpoint($identity) {
     margin-bottom: $base;
   }
 }
@@ -53,7 +53,7 @@
   white-space: nowrap;
   overflow: hidden;
   
-  @include breakpoint($q-tablet) {
+  @include breakpoint($logo) {
     float: none;
     width: 162px; // Expose the full EL logo
     height: 102px;
@@ -76,10 +76,10 @@
       display: none; /* Hide everything except "Common Core Success" on mobile */
   }
 
-  @include breakpoint($q-tablet) {
+  @include breakpoint($title-sm) {
   	font-size: 2.25rem; /* 36px */
   	line-height: 2.625rem; /* 42px */
-  	@include grid-span(11);
+  	@include grid-span(11,2);
   	.mobile-hidden {
       	display: inline; /* Show the full title statement */
   	}
@@ -88,11 +88,11 @@
   	}
   }
 
-  @include breakpoint($q-desktop) {
+  @include breakpoint($title-md) {
   	@include grid-span(10);
   }
 
-  @include breakpoint($q-widescreen) {
+  @include breakpoint($title-lg) {
   	@include grid-span(9);
   }
 }
@@ -131,7 +131,7 @@
     color: $white;
   }
   
-  @include breakpoint($q-tablet) {
+  @include breakpoint($main-nav-sm) {
     background-color: transparent;
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -144,7 +144,7 @@
     }
   }
   
-  @include breakpoint($q-desktop) {
+  @include breakpoint($main-nav-md) {
     font-size: 1.5rem;
     line-height: 1.75rem;
     
@@ -172,7 +172,7 @@
       max-height: 18em;
   }
     
-  @include breakpoint($q-tablet) {
+  @include breakpoint($menu) {
     margin-left: 0;
     margin-right: 0;
     max-height: none;
@@ -190,7 +190,7 @@
   width: 36px;
   height: 36px;
     
-  @include breakpoint($q-tablet) {
+  @include breakpoint($menu-toggle) {
       display: none;
   }
 }

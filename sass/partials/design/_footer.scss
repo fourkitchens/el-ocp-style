@@ -38,7 +38,7 @@
       }
     }
     
-    @include breakpoint($q-tablet) {
+    @include breakpoint($arrow) {
       padding-top: $base;
       padding-bottom: $base;
     }
