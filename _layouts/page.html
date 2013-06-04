@@ -1,0 +1,41 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<title>{{ page.title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+<!-- For all browsers -->
+<link rel='stylesheet' href='/css/style.css'>
+
+<!-- JavaScript -->
+<script src='js/modernizr-2.6.2.dev.js'></script>
+</head>
+
+<body>
+
+{% include header.html %}
+  
+<main>      
+  <section class="content">
+      
+  {{content}}
+    
+  </section>
+  
+</main><!-- /main -->
+
+{% include footer.html %}
+  
+<script src='js/jquery-1.9.1.min.js'></script>
+<script src='js/functions.js'></script> 
+</body>
+</html>
