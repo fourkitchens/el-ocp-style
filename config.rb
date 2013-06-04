@@ -1,6 +1,7 @@
 # Require any additional compass plugins here.
 require 'breakpoint'
 require 'singularitygs'
+require 'toolkit'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -18,6 +19,7 @@ line_comments = false
 
 # In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector. Uncomment:
 # debug = true
+environment = :development
 
 ##############################
 ## You probably don't need to edit anything below this.
