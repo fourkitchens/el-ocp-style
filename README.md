@@ -47,7 +47,7 @@ gem install breakpoint
 
 ### Singularity
 
-Our grid framework comes from the Singularity project. 
+Our grid framework comes from the Singularity project.
 
 ```
 gem install singularitygs
@@ -55,6 +55,18 @@ gem install singularitygs
 
 - [Singularity project on Github](https://github.com/Team-Sass/Singularity)
 - [Singularity documentation](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids)
+
+### Bundler
+Bundler ensures we use the same gem versions across all environments
+
+```
+gem install bundler
+```
+
+Then we can run compass with:
+```
+bundle exec compass watch
+```
 
 
 ## Code guidelines
@@ -74,8 +86,8 @@ h1 {
   font-size: 2em; // Sets H1 to 32px
 }
 ```
-  
+
 ## References
 - http://jancbeck.com/articles/btconf-brad-frost
-- https://github.com/bradfrost/patternlab 
+- https://github.com/bradfrost/patternlab
 - https://github.com/bjankord/Style-Guide-Boilerplate
