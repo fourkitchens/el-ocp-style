@@ -50,7 +50,7 @@ gem install breakpoint
 Our grid framework comes from the Singularity project. 
 
 ```
-gem install singularity
+gem install singularitygs
 ```
 
 - [Singularity project on Github](https://github.com/Team-Sass/Singularity)
