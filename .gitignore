@@ -1,6 +1,7 @@
 # Directories
 #############
 .sass-cache
+_sites
 
 # Mac files
 #############
