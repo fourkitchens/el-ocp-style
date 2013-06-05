@@ -31,33 +31,30 @@ cd my-awesome-site
 jekyll serve -w
 ```
 
-Open up ```http://localhost:4000``` in your browser to view the site.
+Open up [http://localhost:4000](http://localhost:4000) in your browser to view the site.
 
 
 ### Breakpoint
 
-Media queries are written using the Breakpoint project.
+Media queries are written using the [Breakpoint](https://github.com/Team-Sass/breakpoint) project.
 
 ```
 gem install breakpoint
 ```
 
-- [Breakpoint project on Github](https://github.com/Team-Sass/breakpoint)
-
-
 ### Singularity
 
-Our grid framework comes from the Singularity project.
+Our grid framework comes from the [Singularity](https://github.com/Team-Sass/Singularity) project.
 
 ```
 gem install singularitygs
 ```
 
-- [Singularity project on Github](https://github.com/Team-Sass/Singularity)
 - [Singularity documentation](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids)
 
 ### Bundler
-Bundler ensures we use the same gem versions across all environments
+
+Bundler ensures we use the same gem versions across all environments.
 
 ```
 gem install bundler
@@ -104,7 +101,7 @@ Now you can go to [github.com/fourkitchens/el-ocp-style](http://github.com/fourk
 
 Set your tabs/indents to 2 spaces in your text editor.
 
-**Comments**
+**Sass comments**
 
 You can use ```//``` for both section headings, as well as inline comments.
 
