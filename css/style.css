@@ -579,7 +579,7 @@ a:focus {
 }
 
 code {
-  font: 12px/1 "Courier New", Courier, monospace;
+  font: 12px/1 'Courier New', Courier, monospace;
 }
 
 sub, sup {
@@ -712,10 +712,20 @@ main {
 
 .site-header-inner {
   position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (min-width: 37.5em) {
+  .site-header-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .identity {
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  padding-bottom: 12px;
   padding: 0;
   *zoom: 1;
 }
@@ -728,7 +738,7 @@ main {
 }
 @media (min-width: 37.5em) {
   .identity {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -773,9 +783,9 @@ main {
     line-height: 2.625rem;
     /* 42px */
     width: 91.45833%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
     clear: none;
   }
   .site-title .mobile-hidden {
@@ -825,7 +835,7 @@ main {
 }
 .main-nav a {
   display: block;
-  padding: 0.65rem 0.75rem 0.75rem;
+  padding: .65rem .75rem .75rem;
   color: #e2889f;
   text-decoration: none;
 }
@@ -846,7 +856,7 @@ main {
   }
   .main-nav a {
     color: #772432;
-    padding: 0 0.25rem;
+    padding: 0 .25rem;
   }
 }
 @media (min-width: 61.25em) {
@@ -855,7 +865,7 @@ main {
     line-height: 1.75rem;
   }
   .main-nav a {
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
   }
 }
 
@@ -864,11 +874,11 @@ main {
   overflow-y: hidden;
   margin-left: -12px;
   margin-right: -12px;
-  -moz-transition: max-height 0.3s ease-in-out;
-  -ms-transition: max-height 0.3s ease-in-out;
-  -o-transition: max-height 0.3s ease-in-out;
-  -webkit-transition: max-height 0.3s ease-in-out;
-  transition: max-height 0.3s ease-in-out;
+  -moz-transition: max-height .3s ease-in-out;
+  -ms-transition: max-height .3s ease-in-out;
+  -o-transition: max-height .3s ease-in-out;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
 }
 .menu.active {
   max-height: 18em;

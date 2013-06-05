@@ -27,17 +27,25 @@
 
 .site-header-inner {
   position: relative;
+  padding-left: $base-sm;
+  padding-right: $base-sm;
+  @include breakpoint($header-sm) {
+    padding-left: $base;
+    padding-right: $base;
+  }
 }
 
 // Identity
 
 .identity {
-  margin-bottom: $base-sm;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  padding-bottom: $base-sm;
   padding: 0;
   @include clearfix;
   
   @include breakpoint($identity) {
-    margin-bottom: $base;
+    padding-bottom: $base;
   }
 }
 
@@ -79,7 +87,7 @@
   @include breakpoint($title-sm) {
   	font-size: 2.25rem; /* 36px */
   	line-height: 2.625rem; /* 42px */
-  	@include grid-span(11,2);
+  	@include grid-span(11,1);
   	.mobile-hidden {
       	display: inline; /* Show the full title statement */
   	}
