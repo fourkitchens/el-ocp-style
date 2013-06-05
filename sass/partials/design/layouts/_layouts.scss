@@ -1,24 +1,5 @@
 //
-// Layouts
+// Layout partials
 //
 
-// Page Containers
-
-main {
-  padding-top: $base;
-  padding-bottom: $base;
-  @include breakpoint($main) {
-      padding-top: $base-md;
-      padding-bottom: $base-md;
-  }
-}
-
-.content {
-//@include outer-container;
-  padding-left: $base-sm;
-  padding-right: $base-sm;
-  @include breakpoint($content) {
-      padding-left: $base;
-      padding-right: $base;
-  }
-}
+@import 'page';

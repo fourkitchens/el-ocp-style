@@ -3,8 +3,8 @@
    ======================================================= */
    
 .site-footer {
-  padding-top: $base-sm;
-  padding-bottom: $base-sm;
+  padding-top: $space-half;
+  padding-bottom: $space-half;
   background-color: $brick;
     
   h3 {
@@ -39,7 +39,7 @@
     }
     
     @include breakpoint($arrow) {
-      padding-top: $base;
-      padding-bottom: $base;
+      padding-top: $space;
+      padding-bottom: $space;
     }
 }
