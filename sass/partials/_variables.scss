@@ -1,5 +1,5 @@
 //
-// Variables Partials
+// Variables partials
 //
 
 // Singularity grid
@@ -12,37 +12,42 @@ $grid-max: 1100px;
 
 // Colors
 
-$black: rgb(34,34,34);
-$darkgray: rgb(68,68,68);
-$gray: rgb(187,187,187);
-$lightgray: rgb(234,234,234);
+$black:         rgb(34,34,34);
+$darkgray:      rgb(68,68,68);
+$gray:          rgb(187,187,187);
+$lightgray:     rgb(234,234,234);
 $verylightgray: rgb(243,243,243);
-$white: rgb(255,255,255);
+$white:         rgb(255,255,255);
 
-$red: rgb(198,18,63);
-$brick: rgb(119,36,50);
-$lightred: rgb(212,77,111);
-$verylightred: rgb(226,136,159);
-$brightred: rgb(240,30,80); // matches background image colors in site header
+$red:           rgb(198,18,63);
+$brick:         rgb(119,36,50);
+$lightred:      rgb(212,77,111);
+$verylightred:  rgb(226,136,159);
+$brightred:     rgb(240,30,80); // matches background image colors in site header
 
-$blue: rgb(0,101,149);
-$orange: rgb(243,144,29);
-$purple: rgb(109,36,127);
-$green: rgb(109,141,36);
+$blue:          rgb(0,101,149);
+$orange:        rgb(243,144,29);
+$purple:        rgb(109,36,127);
+$green:         rgb(109,141,36);
 
 //  Sizes
 
-$base: 24px;
-$base-xs: $base/4;
-$base-sm: $base/2;
-$base-md: $base * 2;
-$base-lg: $base * 3;
-$base-xl: $base * 4;
+$space:           24px;
+$space-quarter:   $space/4;
+$space-half:      $space/2;
+$space-double:    $space * 2;
+$space-triple:    $space * 3;
+$space-quadruple: $space * 4;
 
-$base-font-rem: 1rem;
-$base-line-height: 1.5em;
+// Type
 
-$base-line-length: 39em; // control the longest line lengths as needed with this
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$base-line-length: em(624); // control the longest line lengths as needed with this
+
+$bodycolor: $darkgray;
+$headlinecolor: $black;
 
 // Font stacks
 
@@ -54,25 +59,26 @@ $body-font-weight: 400;
 
 // Breakpoints
 
+$breakpoint-to-ems: true;
 
-$desktop: 61.25em;
-$widescreen: 68.75em;
+$desktop:     600px;
+$widescreen:  1100px;
 
-$header-sm: 37.5em;
-$header-md: 61.25em;
-$header-lg: 68.75em;
-$identity: 37.5em;
-$logo: 37.5em;
-$title-sm: 37.5em;
-$title-md: 61.25em;
-$title-lg: 68.75em;
-$main-nav-sm: 37.5em;
-$main-nav-md: 61.25em;
-$menu: 37.5em;
-$menu-toggle: 37.5em;
-$arrow: 37.5em;
-$main: 37.5em;
-$content: 37.5em;
+$header-sm:   600px;
+$header-md:   980px;
+$header-lg:   1100px;
+$identity:    600px;
+$logo:        600px;
+$title-sm:    600px;
+$title-md:    980px;
+$title-lg:    1100px;
+$main-nav-sm: 600px;
+$main-nav-md: 980px;
+$menu:        600px;
+$menu-toggle: 600px;
+$arrow:       600px;
+$main:        600px;
+$content:     600px;
 
 // Borders
 
@@ -86,8 +92,3 @@ $linkcolor: $blue;
 $linkcolorhover: darken($linkcolor, 10);
 $linkcolorvisited: darken($linkcolorhover, 10);
 $linkcolorfocus: darken($linkcolorvisited, 10);
-
-// Type
-
-$bodycolor: $darkgray;
-$headlinecolor: $black;

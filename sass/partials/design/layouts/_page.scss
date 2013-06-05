@@ -1,0 +1,23 @@
+//
+// General page layout
+//
+
+main {
+  padding-top: $space;
+  padding-bottom: $space;
+  @include breakpoint($main) {
+    padding-top: $space-double;
+    padding-bottom: $space-double;
+  }
+}
+
+.content {
+//@include outer-container;
+  padding-left: $space-half;
+  padding-right: $space-half;
+  
+  @include breakpoint($content) {
+    padding-left: $space;
+    padding-right: $space;
+  }
+}

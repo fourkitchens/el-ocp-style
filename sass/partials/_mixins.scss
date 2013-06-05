@@ -1,3 +1,7 @@
+//
+// Mixins partials
+//
+
 // Clearfix
 
 @mixin clearfix {
@@ -12,12 +16,27 @@
   }
 }
 
-// EM calculator: http://viljamis.com/blog/2013/prototyping-responsive-typography
-// Converts pixels to EMs
-// Example: font-size: em(16) --> font-size: 1em
+// EM calculator
+// http://viljamis.com/blog/2013/prototyping-responsive-typography
 
 $browser-context: 16; // Default
 
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em
 }
+
+// Rem font sizing w/ px fallback
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing
+// Modified to use a px value inside ()
+// Usage: @include font-size(32) --> font-size: 3.2rem, font-size: 32px
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin line-height($sizeValue: 1) {
+  line-height: ($sizeValue * 1) + px;
+  line-height: ($sizeValue / 10) + rem;
+}
+

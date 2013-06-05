@@ -9,3 +9,7 @@ Icon
 
 #Jekyll stuff
 _site
+
+# Bundler stuff
+.bundle
+vendor

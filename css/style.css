@@ -480,67 +480,65 @@ table {
   clear: both;
 }
 
-h1, .alpha {
-  font-size: 4rem;
-  /* 64px */
+h1, h2, h3, h4 {
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-weight: 400;
-  line-height: 4.5rem;
-  /* 72px */
-  margin-bottom: 1.5rem;
-  /* 24px */
 }
 
-h2, .beta {
-  font-size: 2.25rem;
-  /* 32px */
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+h5, h6 {
+  font-family: Georgia, serif;
+}
+
+h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  /* 24px */
+}
+
+h3, h4, h5, h6 {
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 64px;
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 72px;
+  line-height: 7.2rem;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  margin-bottom: 24px;
   color: #c6123f;
 }
 
-h3, .gamma {
-  font-size: 1.5rem;
-  /* 24px */
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-weight: 700;
-  margin-bottom: .75rem;
-  /* 12px */
+h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
   color: #222222;
 }
 
-h4, .delta {
-  font-size: 1rem;
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-weight: 700;
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
-  margin-bottom: 0.6em;
   color: #222222;
 }
 
-h5, .epsilon {
-  font-size: 20px;
-  font-size: 1.25em;
-  font-family: Georgia, serif;
-  font-weight: 700;
-  margin-bottom: 0.6em;
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
-h6, .zeta {
-  font-size: 18px;
-  font-size: 1.125em;
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.66667em;
+h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p, ul, dl, ol {
-  font-size: 1rem;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 1.5rem;
-  /* 24px */
 }
 
 em {
@@ -553,7 +551,6 @@ strong {
 
 li {
   margin-bottom: .75rem;
-  /* 12px */
 }
 
 ul li {
@@ -611,22 +608,20 @@ textarea {
 }
 
 html {
-  font-size: 16px;
-}
-@media (min-width: 61.25em) {
-  html {
-    font-size: 18px;
-  }
-}
-@media (min-width: 68.75em) {
-  html {
-    font-size: 20px;
-  }
+  font-size: 62.5%;
+  /*  
+    @include breakpoint($desktop) {
+      @include font-size (18);
+    }
+    @include breakpoint($widescreen) {
+      @include font-size (20);
+    }
+  */
 }
 
 body {
-  font-size: 1rem;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 24px;
   font-family: Georgia, serif;
   background: white;
   color: #444444;
