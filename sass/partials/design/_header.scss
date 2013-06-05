@@ -76,23 +76,23 @@
 .site-title {
   display: block;
   color: $white;
-  font-size: 1.5rem;
-  line-height: 36px; /* Match the height of the EL symbol */
+  @include font-size(24);
+  line-height: 36px; // Match the height of the EL symbol
   margin-bottom: 0;
   -webkit-font-smoothing: antialiased;
   .mobile-hidden {
-      display: none; /* Hide everything except "Common Core Success" on mobile */
+      display: none; // Hide everything except "Common Core Success" on mobile
   }
 
   @include breakpoint($title-sm) {
-  	font-size: 2.25rem; /* 36px */
-  	line-height: 2.625rem; /* 42px */
+  	@include font-size(36);
+  	@include line-height(42);
   	@include grid-span(11,1);
   	.mobile-hidden {
-      	display: inline; /* Show the full title statement */
+      	display: inline; // Show the full title statement
   	}
   	&:after {
-      	content: '.'; /* Add a period at the end of the sentence */
+      	content: '.'; // Add a period at the end of the sentence
   	}
   }
 
@@ -112,8 +112,8 @@
   padding: 0;
   font-family: $headline-text;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  @include font-size(24);
+  @include line-height(28);
   background-color: $brick;
   > li {
     margin: 0;
@@ -141,8 +141,8 @@
   
   @include breakpoint($main-nav-sm) {
     background-color: transparent;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    @include font-size(24);
+    @include line-height(28);
     > li {
       display: inline-block;
     }
@@ -153,8 +153,8 @@
   }
   
   @include breakpoint($main-nav-md) {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    @include font-size(24);
+    @include line-height(28);
     
     a {
       padding: 0 .5rem;

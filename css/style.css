@@ -609,19 +609,21 @@ textarea {
 
 html {
   font-size: 62.5%;
-  /*  
+  /*
     @include breakpoint($desktop) {
-      @include font-size (18);
+      @include font-size(18);
     }
     @include breakpoint($widescreen) {
-      @include font-size (20);
+      @include font-size(20);
     }
   */
 }
 
 body {
   font-size: 16px;
+  font-size: 1.6rem;
   line-height: 24px;
+  line-height: 2.4rem;
   font-family: Georgia, serif;
   background: white;
   color: #444444;
@@ -761,22 +763,21 @@ main {
 .site-title {
   display: block;
   color: white;
-  font-size: 1.5rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 36px;
-  /* Match the height of the EL symbol */
   margin-bottom: 0;
   -webkit-font-smoothing: antialiased;
 }
 .site-title .mobile-hidden {
   display: none;
-  /* Hide everything except "Common Core Success" on mobile */
 }
 @media (min-width: 37.5em) {
   .site-title {
-    font-size: 2.25rem;
-    /* 36px */
-    line-height: 2.625rem;
-    /* 42px */
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 42px;
+    line-height: 4.2rem;
     width: 91.45833%;
     float: left;
     margin-right: -100%;
@@ -785,11 +786,9 @@ main {
   }
   .site-title .mobile-hidden {
     display: inline;
-    /* Show the full title statement */
   }
   .site-title:after {
     content: '.';
-    /* Add a period at the end of the sentence */
   }
 }
 @media (min-width: 61.25em) {
@@ -816,8 +815,10 @@ main {
   padding: 0;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
   background-color: #772432;
 }
 .main-nav > li {
@@ -843,8 +844,10 @@ main {
 @media (min-width: 37.5em) {
   .main-nav {
     background-color: transparent;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
   }
   .main-nav > li {
     display: inline-block;
@@ -856,8 +859,10 @@ main {
 }
 @media (min-width: 61.25em) {
   .main-nav {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
   }
   .main-nav a {
     padding: 0 .5rem;

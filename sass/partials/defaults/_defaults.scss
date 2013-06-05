@@ -20,19 +20,19 @@ textarea {
 
 html {
   font-size: 62.5%;
-/*  
+/*
   @include breakpoint($desktop) {
-    @include font-size (18);
+    @include font-size(18);
   }
   @include breakpoint($widescreen) {
-    @include font-size (20);
+    @include font-size(20);
   }
 */
 }
 
 body {
-  font-size: $base-font-size;
-  line-height:$base-line-height;
+  @include font-size(16);
+  @include line-height(24);
   font-family: $body-text;
   background: $white;
   color: $bodycolor;
