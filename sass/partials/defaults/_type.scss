@@ -3,59 +3,59 @@
 //
 
 // Headings
-// Typographic scale: 16, 18, 21, 24, 36, 48
 
-h1, .alpha { 
-  font-size: 4rem; /* 64px */
+#{headings(1,4)} {
   font-family: $headline-text;
-  font-weight: 400;
-  line-height: 4.5rem; /* 72px */
-  margin-bottom: 1.5rem; /* 24px */
 }
 
-h2, .beta {
-  font-size: 2.25rem; /* 32px */
-  font-family: $headline-text;
-  font-weight: $headline-font-weight; 
-  margin-bottom: 1.5rem; /* 24px */
+#{headings(5,6)} {
+  font-family: $body-text;
+}
+
+#{headings(2,6)} {
+  font-weight: $headline-font-weight;
+}
+
+#{headings(3,6)} {
+  margin-bottom: $space-half;
+}
+
+h1 { 
+  @include font-size(64);
+  font-weight: 400;
+  @include line-height(72);
+  margin-bottom: $space;
+}
+
+h2 {
+  @include font-size(32);
+  margin-bottom: $space;
   color: $red;
 }
 
-h3, .gamma {
-  font-size: 1.5rem; /* 24px */ 
-  font-family: $headline-text; 
-  font-weight: $headline-font-weight; 
-  margin-bottom: .75rem; /* 12px */
+h3 {
+  @include font-size(24);
   color: $black;
 }
 
-h4, .delta {
-  font-size: 1rem; 
-  font-family: $headline-text; 
-  font-weight: $headline-font-weight; 
-  text-transform: uppercase; 
-  margin-bottom: em(12,20);
+h4 {
+  @include font-size(16); 
+  text-transform: uppercase;
   color: $black;
 }
 
-h5, .epsilon {
-  font-size: 20px; font-size: em(20,16); 
-  font-family: $body-text; 
-  font-weight: $headline-font-weight; 
-  margin-bottom: em(12,20);
+h5 {
+  @include font-size(16);
 }
 
-h6, .zeta {
-  font-size: 18px; font-size: em(18,16); 
-  font-family: $headline-text; 
-  font-weight: $headline-font-weight; 
-  margin-bottom: em(12,18);
+h6 {
+  @include font-size(16);
 }
 
 p, ul, dl, ol { 
-  font-size: $base-font-rem;
+  font-size: $base-font-size;
   line-height: $base-line-height;
-  margin-bottom: 1.5rem; /* 24px */
+  margin-bottom: 1.5rem; // 24px
 }
 
 // Italics, bold
@@ -66,7 +66,7 @@ strong { font-weight: 700; }
 // Lists
 
 li {
-  margin-bottom: .75rem; /* 12px */
+  margin-bottom: .75rem; // 12px
 }
 
 ul {
@@ -77,7 +77,7 @@ ul {
 
 ol {
   li {
-    margin-left: $base-sm;
+    margin-left: $space-half;
   }
 }
 

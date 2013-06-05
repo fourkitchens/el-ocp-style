@@ -19,18 +19,19 @@ textarea {
 }
 
 html {
-  font-size: 16px;
-  
+  font-size: 62.5%;
+/*  
   @include breakpoint($desktop) {
-    font-size: 18px;
+    @include font-size (18);
   }
   @include breakpoint($widescreen) {
-    font-size: 20px;
+    @include font-size (20);
   }
+*/
 }
 
 body {
-  font-size: $base-font-rem;
+  font-size: $base-font-size;
   line-height:$base-line-height;
   font-family: $body-text;
   background: $white;
@@ -60,12 +61,12 @@ img {
   -ms-interpolation-mode: bicubic;
 
   &.left {
-    margin-right: $base;
-    margin-bottom: $base;
+    margin-right: $space;
+    margin-bottom: $space;
   }
 
   &.right {
-    margin-left: $base;
-    margin-bottom: $base;
+    margin-left: $space;
+    margin-bottom: $space;
   }
 }

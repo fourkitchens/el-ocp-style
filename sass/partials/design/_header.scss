@@ -3,7 +3,7 @@
    ======================================================= */
 
 .site-header {
-  padding-top: $base-sm;
+  padding-top: $space-half;
   background: {
     color: $red;
     image: url('../img/bkg-wrench.png');
@@ -13,7 +13,7 @@
   }
     
   @include breakpoint($header-sm) {
-    padding-top: $base;
+    padding-top: $space;
     background-size: 100%;
     background-position: right bottom;
   }
@@ -27,11 +27,11 @@
 
 .site-header-inner {
   position: relative;
-  padding-left: $base-sm;
-  padding-right: $base-sm;
+  padding-left: $space-half;
+  padding-right: $space-half;
   @include breakpoint($header-sm) {
-    padding-left: $base;
-    padding-right: $base;
+    padding-left: $space;
+    padding-right: $space;
   }
 }
 
@@ -40,12 +40,12 @@
 .identity {
   margin-top: 0;
   margin-bottom: .75rem;
-  padding-bottom: $base-sm;
+  padding-bottom: $space-half;
   padding: 0;
   @include clearfix;
   
   @include breakpoint($identity) {
-    padding-bottom: $base;
+    padding-bottom: $space;
   }
 }
 
@@ -53,7 +53,7 @@
 
 .el-logo {
   float: left;
-  margin-right: $base-xs;
+  margin-right: $space-quarter;
   width: 48px; // Limit the width and height so we only see the "E" symbol
   height: 36px;
   background: transparent url('../img/el-logo.png') left top no-repeat;
@@ -169,8 +169,8 @@
 .menu {
   max-height: 0;
   overflow-y: hidden;
-  margin-left: -1*$base-sm;
-  margin-right: -1*$base-sm;
+  margin-left: -1*$space-half;
+  margin-right: -1*$space-half;
   -moz-transition: max-height .3s ease-in-out;
   -ms-transition: max-height .3s ease-in-out;
   -o-transition: max-height .3s ease-in-out;
@@ -186,13 +186,13 @@
     max-height: none;
     position: absolute;
     top: 0;
-    right: $base;
+    right: $space;
   }
 }
 
 #menu-toggle {
   position: absolute;
-  right: $base-sm;
+  right: $space-half;
   top: 0;
   z-index: 10;
   width: 36px;
