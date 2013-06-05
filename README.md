@@ -68,6 +68,35 @@ Then we can run compass with:
 bundle exec compass watch
 ```
 
+### Git
+
+Please create a feature branch whenever making new changes.
+
+**Creating a branch**
+
+```
+# from master
+git pull
+git checkout -b my-awesome-feature
+
+# make changes
+git add FILE1 FILE2 ...
+git commit -m "Message"
+```
+
+**Push branch to Github**
+
+```
+# initial push
+git push -u origin my-awesome-feature
+ 
+# subsequent pushes
+git push
+```
+
+**Pull requests**
+
+Now you can go to [github.com/fourkitchens/el-ocp-style](http://github.com/fourkitchens/el-ocp-style) and [initiate a pull request](https://help.github.com/articles/using-pull-requests#initiating-the-pull-request).
 
 ## Code guidelines
 
