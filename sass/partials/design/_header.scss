@@ -29,6 +29,7 @@
   position: relative;
   padding-left: $space-half;
   padding-right: $space-half;
+  @include grid-max;
   @include breakpoint($header-sm) {
     padding-left: $space;
     padding-right: $space;

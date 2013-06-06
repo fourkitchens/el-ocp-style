@@ -6,6 +6,7 @@
   padding-top: $space-half;
   padding-bottom: $space-half;
   background-color: $brick;
+  @include grid-max;
     
   h3 {
     margin: 0;
