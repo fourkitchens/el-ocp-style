@@ -591,6 +591,40 @@ hr {
   border-top: 1px solid #c6123f;
 }
 
+table {
+  margin-bottom: 2.4rem;
+  font-family: Georgia, serif;
+}
+
+th, td {
+  padding: 1.2rem 2.4rem;
+  text-align: left;
+}
+
+th {
+  font-size: 20px;
+  font-size: 2rem;
+  border-left: 1px solid #e2889f;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  background-color: #c6123f;
+  color: white;
+  vertical-align: bottom;
+}
+th:first-child {
+  border-left-width: 0;
+}
+
+td {
+  border-bottom: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  background-color: #f3f3f3;
+  vertical-align: top;
+}
+td:first-child {
+  border-left-width: 0;
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

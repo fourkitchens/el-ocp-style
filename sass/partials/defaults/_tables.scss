@@ -1,0 +1,36 @@
+//
+// Tables
+//
+
+table {
+  margin-bottom: 2.4rem; // 24px
+  font-family: $body-text;
+}
+
+th, td {
+  padding: 1.2rem 2.4rem;
+  text-align: left;
+}
+
+th {
+  @include font-size(20);
+  border-left: 1px solid $verylightred;
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+  background-color: $red;
+  color: $white;
+  vertical-align: bottom;  
+  &:first-child {
+    border-left-width: 0; // remove the left border on the first in a row
+  }
+}
+
+td {
+  border-bottom: 1px solid $gray;
+  border-left: 1px solid $gray;
+  background-color: $verylightgray;
+  vertical-align: top;
+  &:first-child {
+    border-left-width: 0; // remove the left border on the first in a row
+  }
+}
