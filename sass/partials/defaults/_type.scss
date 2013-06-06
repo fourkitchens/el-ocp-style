@@ -4,19 +4,15 @@
 
 // Headings
 
-#{headings(1,4)} {
+#{headings(1,3)} {
   font-family: $headline-text;
 }
 
-#{headings(5,6)} {
-  font-family: $body-text;
-}
-
-#{headings(2,6)} {
+#{headings(2,4)} {
   font-weight: $headline-font-weight;
 }
 
-#{headings(3,6)} {
+#{headings(3,5)} {
   margin-bottom: $space-half;
 }
 
@@ -40,16 +36,24 @@ h3 {
 
 h4 {
   @include font-size(16); 
-  text-transform: uppercase;
+  font-family: $body-text;
   color: $black;
 }
 
 h5 {
-  @include font-size(16);
+  @include font-size(20);
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+  color: $black;
 }
 
 h6 {
   @include font-size(16);
+  margin-bottom: 0;
+  font-family: $body-text;
+  font-style: italic;
+  font-weight: $body-font-weight;
+  color: $black;
 }
 
 p, ul, dl, ol { 
@@ -89,10 +93,12 @@ a {
   
   &:hover { 
     color: $linkcolorhover;
+    text-decoration: none;
   }
   
   &:visited {
       color: $linkcolorvisited;
+      text-decoration: none;
   }
   
   &:focus {

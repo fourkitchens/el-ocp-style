@@ -90,5 +90,5 @@ $borderwidth: 2px;
 
 $linkcolor: $blue;
 $linkcolorhover: darken($linkcolor, 10);
-$linkcolorvisited: darken($linkcolorhover, 10);
-$linkcolorfocus: darken($linkcolorvisited, 10);
+$linkcolorvisited: $blue;
+$linkcolorfocus: darken($linkcolor, 10);
