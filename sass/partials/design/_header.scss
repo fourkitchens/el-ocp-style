@@ -39,10 +39,8 @@
 // Identity
 
 .identity {
-  margin-top: 0;
-  margin-bottom: .75rem;
+  margin: 0;
   padding-bottom: $space-half;
-  padding: 0;
   @include clearfix;
   
   @include breakpoint($identity) {
@@ -94,6 +92,8 @@
   	}
   	&:after {
       	content: '.'; // Add a period at the end of the sentence
+      	display: inline-block;
+      	margin-left: -.2em; // Cheat it left so it sits in the right place relative to the end of the sentence
   	}
   }
 
