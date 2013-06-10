@@ -625,6 +625,47 @@ td:first-child {
   border-left-width: 0;
 }
 
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4em 1em .5em;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background-color: #006595;
+  color: white;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.button:hover, .button:active {
+  background-color: #0088c8;
+  color: white;
+}
+.button.button-disabled {
+  background-color: #eaeaea;
+  color: #bbbbbb;
+  cursor: default;
+}
+.button.button-disabled:hover, .button.button-disabled:active {
+  background-color: #eaeaea;
+  color: #bbbbbb;
+}
+.button.button-small {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: .25em .625em .3em;
+}
+.button.button-large {
+  font-size: 24px;
+  font-size: 2.4rem;
+  padding: .6em 1em .625em;
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
