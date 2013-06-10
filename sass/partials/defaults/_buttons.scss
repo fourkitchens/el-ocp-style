@@ -1,0 +1,54 @@
+//
+// Buttons
+//
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4em 1em .5em;
+  @include font-size(20);
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+  text-align: center;
+  background-color: $blue;
+  color: $white;
+  
+  // Transitions
+  
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  
+  // The hover state
+  
+  &:hover, &:active {
+    background-color: lighten($blue,10);
+    color: $white;
+  }
+  
+  // Button Variations
+  
+  &.button-disabled {
+    background-color: $lightgray;
+    color: $gray;
+    cursor: default;
+    &:hover, &:active {
+      background-color: $lightgray;
+      color: $gray;
+    }
+  }
+  
+  // Sized buttons
+  
+  &.button-small {
+    @include font-size(16);
+    padding: .25em .625em .3em;
+  }
+  
+  &.button-large {
+    @include font-size(24);
+    padding: .6em 1em .625em;
+  }
+}
