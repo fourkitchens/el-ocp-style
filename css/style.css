@@ -1097,6 +1097,11 @@ main {
   }
 }
 
+body.typography .content {
+  max-width: 37.5em;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: 'DINWebCondensed';
   src: url("../fonts/DINWeb-Cond.eot");
