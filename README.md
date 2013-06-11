@@ -10,7 +10,7 @@ Style guide for the Online Curriculum Pilot website.
 
 * You must have the latest version of Xcode installed (4.6.x), which can be downloaded from the App Store.
 * If you have an older version of Xcode, you must uninstall it first.
-* After the new version of Xcode is installed, go to ```Xcode > Preferences > Downloads > Command Line Tools``` and click "Install".
+* After the new version of Xcode is installed, go to `Xcode > Preferences > Downloads > Command Line Tools` and click "Install".
 
 Now, let's try installing Jekyll.
 
@@ -31,7 +31,7 @@ cd my-awesome-site
 jekyll serve -w
 ```
 
-Open up [http://localhost:4000](http://localhost:4000) in your browser to view the site.
+Go to [http://localhost:4000](http://localhost:4000) to view the site.
 
 
 ### Breakpoint
@@ -44,13 +44,12 @@ gem install breakpoint
 
 ### Singularity
 
-Our grid framework comes from the [Singularity](https://github.com/Team-Sass/Singularity) project.
+Our grid framework comes from the [Singularity](https://github.com/Team-Sass/Singularity) project. Check out the [Singularity wiki](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids) for documentation.
 
 ```
 gem install singularitygs
 ```
 
-- [Singularity documentation](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids)
 
 ### Bundler
 
@@ -93,17 +92,20 @@ git push
 
 **Pull requests**
 
-Now you can go to [github.com/fourkitchens/el-ocp-style](http://github.com/fourkitchens/el-ocp-style) and [initiate a pull request](https://help.github.com/articles/using-pull-requests#initiating-the-pull-request).
+Now you can go to the [Github repo](http://github.com/fourkitchens/el-ocp-style) and [initiate a pull request](https://help.github.com/articles/using-pull-requests#initiating-the-pull-request).
 
 ## Code guidelines
 
 **Tabs/indents**
 
-Set your tabs/indents to 2 spaces in your text editor.
+In your text editor, set it to use spaces instead of tabs/indents. The space length should be set to 2 spaces.
+
+* Coda: Go to `Coda > Preferences > Editor` and set "Tab width: 2" and check "Use spaces instead of tabs".
+* Sublime Text: In the bottom right, click "Spaces" then select "Indent using spaces" and "Tab width: 2".
 
 **Sass comments**
 
-You can use ```//``` for both section headings, as well as inline comments.
+You can use `//` for both section headings, as well as inline comments.
 
 ```
 // Headings
