@@ -9,8 +9,19 @@ $legacy-support-for-ie7:     false;
 $legacy-support-for-ie8:     true;
 $legacy-support-for-mozilla: false;
 
-//
 // Import base
-//
 
 @import 'partials/base';
+
+// Import normalize
+
+@import 'partials/defaults/normalize';
+
+// Theme partials
+
+@import 'partials/defaults/defaults';
+@import 'partials/design/design';
+
+// Web fonts
+
+@import 'partials/fonts/fonts';

@@ -1,0 +1,19 @@
+/* =======================================================
+    Assessment Styles
+   ======================================================= */
+
+.node-ocp-assessment {
+  .pane-node-title {
+    .pane-title {
+      margin-bottom: 0;
+    }
+    .pane-content {
+      h1 {
+        margin-top: 0;
+      }
+    }
+  }
+  .download_all {
+    @extend .button;
+  }
+}

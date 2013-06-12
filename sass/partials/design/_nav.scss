@@ -1,0 +1,123 @@
+// Main navigation
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+  font-family: $headline-text;
+  font-weight: 400;
+  @include font-size(24);
+  @include line-height(28);
+  background-color: $brick;
+  
+  > li {
+    margin: 0;
+    list-style-type: none;
+    border-top: 2px dotted $red;
+    
+    &:first-child {
+        border-top-width: 0;
+    }
+    
+  }
+  
+  a {
+    display: block;
+    padding: .65rem .75rem .75rem;
+    color: $verylightred;
+    text-decoration: none;
+    
+    &.active {
+      color: $white;
+    }
+    
+    &:hover {
+      color: $white;
+    }
+  }
+  
+  @include breakpoint($main-nav-sm) {
+    background-color: transparent;
+    @include font-size(24);
+    @include line-height(28);
+    > li {
+      display: inline-block;
+    }
+    a, a.active {
+      color: $brick;
+      padding: 0 .25rem;
+      &:hover {
+        color: $white;
+      }    
+    }
+  }
+  
+  @include breakpoint($main-nav-md) {
+    @include font-size(24);
+    @include line-height(28);
+    
+    a {
+      padding: 0 .5rem;
+    }
+  }
+}
+
+// Menu and menu toggle
+
+// Menu
+
+.menu {
+  max-height: 0;
+  overflow-y: hidden;
+  margin-left: -1*$space-half;
+  margin-right: -1*$space-half;
+  -moz-transition: max-height .3s ease-in-out;
+  -ms-transition: max-height .3s ease-in-out;
+  -o-transition: max-height .3s ease-in-out;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
+  &.active {
+      max-height: 18em;
+  }
+    
+  @include breakpoint($menu) {
+    margin-left: 0;
+    margin-right: 0;
+    max-height: none;
+    position: absolute;
+    top: 0;
+    right: $space;
+  }
+}
+
+#menu-toggle {
+  position: absolute;
+  right: $space-half;
+  top: 0;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+    
+  @include breakpoint($menu-toggle) {
+      display: none;
+  }
+}
+
+// Menu link
+
+#menu-link {
+  text-decoration: none;
+  .open {
+    display: block; // Show the hamburger and hide the X
+  }
+  .close {
+    display: none;
+  }
+}
+#menu-link.active {
+  .open {
+    display: none; // Show the X and hide the hamburger
+  }
+  .close {
+    display: block;
+  }
+}
