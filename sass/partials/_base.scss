@@ -4,7 +4,6 @@
 
 // Compass extensions
 
-@import 'normalize';
 @import 'breakpoint';
 @import 'singularitygs';
 
@@ -12,12 +11,4 @@
 
 @import 'variables';
 @import 'mixins';
-
-// Theme partials
-
-@import 'defaults/defaults';
-@import 'design/design';
-
-// Web fonts
-
-@import 'fonts/fonts';
+@import 'extendables';
