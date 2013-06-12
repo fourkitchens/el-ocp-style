@@ -751,6 +751,113 @@ main {
   }
 }
 
+.node-top,
+.title-wrapper {
+  *zoom: 1;
+}
+.node-top:before, .node-top:after,
+.title-wrapper:before,
+.title-wrapper:after {
+  display: table;
+  content: "";
+}
+.node-top:after,
+.title-wrapper:after {
+  clear: both;
+}
+
+.node-top .node-pager {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  .node-top .node-pager {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+.node-top h1.page-title {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  .node-top h1.page-title {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+
+#primary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  #primary {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+
+#secondary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  #secondary {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+.jump-links h2.title {
+  margin: 0;
+  color: white;
+  background: #444444;
+  padding: 6px;
+  line-height: 1;
+}
+.jump-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jump-links ul li {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.jump-links ul li a {
+  display: block;
+  padding: 6px;
+  background: #f3f3f3;
+}
+.jump-links ul li:hover a {
+  background: #bbbbbb;
+}
+
 /* =======================================================
     Site Header Styles
    ======================================================= */
@@ -1121,6 +1228,10 @@ main {
 /* =======================================================
     Site Footer Styles
    ======================================================= */
+footer {
+  clear: right;
+}
+
 .site-footer {
   padding-top: 12px;
   padding-bottom: 12px;
