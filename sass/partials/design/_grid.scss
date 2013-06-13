@@ -1,0 +1,41 @@
+//
+// The grid
+//
+// ** THIS PAGE IS FOR DOCUMENTATION PURPOSES ONLY **
+//
+// github.com/Team-Sass/Singularity
+// Singularity settings are in /partials/_variables.scss
+//
+// $grids: 12;
+// $gutters: 24/58;
+// $output: 'isolation';
+
+.grid-docs {
+  .grid {
+    text-align: center;
+    color: $white;
+    background: $brick;
+    margin-bottom: $space;
+    min-height: 5em;
+    padding-top: $space;
+    @include grid-span(12);
+  }
+  
+  .grid-1 {
+    @include grid-span(1, $output-style: 'float');
+  }
+
+  .last {
+    @include grid-span(1, 'omega', $output-style: 'float');      
+  }
+
+  @include breakpoint($content) {
+    .primary {
+      @include grid-span(9, 1);
+    }
+    .secondary { 
+      @include grid-span(3, 10);
+    }
+  }
+
+}

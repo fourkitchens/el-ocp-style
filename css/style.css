@@ -1230,6 +1230,49 @@ body.typography .content {
   margin: 0 auto;
 }
 
+.grid-docs .grid {
+  text-align: center;
+  color: white;
+  background: #772432;
+  margin-bottom: 24px;
+  min-height: 5em;
+  padding-top: 24px;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+.grid-docs .grid-1 {
+  width: 6.04167%;
+  clear: right;
+  float: left;
+  margin-left: 0%;
+  margin-right: 2.5%;
+}
+.grid-docs .last {
+  width: 6.04167%;
+  clear: right;
+  float: right;
+  margin-right: 0%;
+}
+@media (min-width: 37.5em) {
+  .grid-docs .primary {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  .grid-docs .secondary {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
 @font-face {
   font-family: 'DINWebCondensed';
   src: url("../fonts/DINWeb-Cond.eot");
