@@ -12,9 +12,10 @@ main {
 }
 
 .content {
-//@include outer-container;
   padding-left: $space-half;
   padding-right: $space-half;
+  max-width: $grid-max;
+  margin: 0 auto;
   
   @include breakpoint($content) {
     padding-left: $space;
