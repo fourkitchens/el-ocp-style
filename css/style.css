@@ -730,26 +730,138 @@ img.right {
 }
 
 main {
-  padding-top: 24px;
+  padding-top: 0;
   padding-bottom: 24px;
 }
 @media (min-width: 37.5em) {
   main {
-    padding-top: 48px;
     padding-bottom: 48px;
   }
 }
 
 .content {
+  *zoom: 1;
   padding-left: 12px;
   padding-right: 12px;
   max-width: 1100px;
   margin: 0 auto;
 }
+.content:before, .content:after {
+  display: table;
+  content: "";
+}
+.content:after {
+  clear: both;
+}
 @media (min-width: 37.5em) {
   .content {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+.node-top,
+.title-wrapper {
+  *zoom: 1;
+  position: relative;
+}
+.node-top:before, .node-top:after,
+.title-wrapper:before,
+.title-wrapper:after {
+  display: table;
+  content: "";
+}
+.node-top:after,
+.title-wrapper:after {
+  clear: both;
+}
+
+.node-top .node-pager {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 1;
+}
+@media (min-width: 37.5em) {
+  .node-top .node-pager {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    bottom: 36px;
+    left: auto;
+    right: 0;
+    top: auto;
+  }
+}
+.node-top h1.page-title {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  .node-top h1.page-title {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+
+#primary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  #primary {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+
+#secondary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  #secondary {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+.node-bottom {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-top: 48px;
+}
+@media (min-width: 37.5em) {
+  .node-bottom {
+    margin-top: 96px;
   }
 }
 
@@ -861,11 +973,6 @@ main {
   }
   .site-title .mobile-hidden {
     display: inline;
-  }
-  .site-title:after {
-    content: '.';
-    display: inline-block;
-    margin-left: -.2em;
   }
 }
 @media (min-width: 61.25em) {
@@ -1123,6 +1230,10 @@ main {
 /* =======================================================
     Site Footer Styles
    ======================================================= */
+footer {
+  clear: right;
+}
+
 .site-footer {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1227,6 +1338,203 @@ main {
   margin-top: 0;
 }
 
+.jump-links .title {
+  margin: 0;
+  background: #444444;
+  padding: 6px 12px;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  background-color: #bbbbbb;
+  color: #444444;
+}
+.jump-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jump-links ul li {
+  list-style-type: none;
+  margin: 0;
+  border-top: 2px solid #f3f3f3;
+}
+.jump-links ul li:first-child {
+  border-top-width: 0;
+}
+.jump-links a {
+  display: block;
+  padding: 6px 12px;
+  background: #eaeaea;
+  text-decoration: none;
+}
+.jump-links a:hover {
+  background: #f3f3f3;
+  text-decoration: underline;
+}
+@media (min-width: 37.5em) {
+  .jump-links .title {
+    padding: 6px;
+  }
+  .jump-links a {
+    padding: 6px;
+  }
+}
+@media (min-width: 61.25em) {
+  .jump-links .title {
+    padding: 6px 12px;
+  }
+  .jump-links a {
+    padding: 6px 12px;
+  }
+}
+
+.node-top {
+  border-bottom: 2px dotted #c6123f;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+@media (min-width: 37.5em) {
+  .node-top {
+    padding-top: 72px;
+    padding-bottom: 36px;
+  }
+}
+
+.title-wrapper .page-title {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.1em;
+}
+.title-wrapper .id {
+  margin: 0 0 24px;
+  padding: 6px 0 0 0;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+@media (min-width: 37.5em) {
+  .title-wrapper .page-title {
+    font-size: 48px;
+    font-size: 4.8rem;
+    line-height: 1.1em;
+  }
+  .title-wrapper .id {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.node-pager {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+}
+.node-pager a {
+  display: inline-block;
+  margin-bottom: 0.125em;
+  padding: 6px;
+  background-color: #eaeaea;
+  color: #787878;
+  text-decoration: none;
+}
+.node-pager a:hover, .node-pager a:active {
+  background-color: #f3f3f3;
+  color: #006595;
+  text-decoration: none;
+}
+.node-pager a:hover .icon, .node-pager a:active .icon {
+  color: inherit;
+}
+.node-pager .pager-prev {
+  float: left;
+  text-align: left;
+}
+.node-pager .pager-next {
+  float: right;
+  text-align: right;
+}
+.node-pager .icon {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #bbbbbb;
+}
+.node-pager .id, .node-pager .title {
+  display: none;
+}
+@media (min-width: 37.5em) {
+  .node-pager a {
+    display: block;
+    padding: 12px 6px;
+  }
+  .node-pager .pager-prev, .node-pager .pager-next {
+    float: none;
+  }
+  .node-pager .id {
+    display: inline-block;
+  }
+}
+@media (min-width: 61.25em) {
+  .node-pager a {
+    padding: 12px;
+  }
+}
+
+.node-pager.pager-bottom a {
+  width: 100%;
+}
+.node-pager.pager-bottom .icon, .node-pager.pager-bottom .id {
+  display: inline-block;
+}
+.node-pager.pager-bottom .title {
+  display: none;
+}
+@media (min-width: 37.5em) {
+  .node-pager.pager-bottom .pager-prev, .node-pager.pager-bottom .pager-next {
+    float: left;
+    width: 50%;
+  }
+  .node-pager.pager-bottom .pager-prev {
+    border-right: 1px solid white;
+  }
+  .node-pager.pager-bottom .pager-next {
+    border-left: 1px solid white;
+  }
+}
+@media (min-width: 61.25em) {
+  .node-pager.pager-bottom .title {
+    display: inline-block;
+  }
+}
+
+@font-face {
+  font-family: 'Shera Icon';
+  src: url("../fonts/shera-regular-webfont.eot");
+  src: url("../fonts/shera-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/shera-regular-webfont.woff") format("woff"), url("../fonts/shera-regular-webfont.ttf") format("truetype"), url("../fonts/shera-regular-webfont.svg#shera-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "Shera Icon", arial;
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: middle;
+}
+.icon:before {
+  content: attr(data-icon);
+}
+
+/**
+ * Usage: here's the html to put elsewhere
+ * <span class="icon" aria-hidden="true" data-icon="insert-letter-or-unicode-here"></span>
+ */
 body.common .content {
   max-width: 39em;
   margin: 0 auto;

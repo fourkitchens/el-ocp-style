@@ -1,0 +1,103 @@
+//
+// Pager
+//
+
+.node-pager {
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+
+  a {
+    display: inline-block;
+    margin-bottom: em(2);
+    padding: $space-quarter;
+    background-color: $lightgray;
+    color: $mediumgray;
+    text-decoration: none;
+    &:hover, &:active {
+      background-color: $verylightgray;
+      color: $blue;
+      text-decoration: none;
+      .icon {
+        color: inherit;
+      }
+    }
+  }
+  
+  .pager-prev {
+    float: left;
+    text-align: left;
+  }
+  .pager-next {
+    float: right;
+    text-align: right;
+  }
+  
+  // Pager elements
+  
+  .icon {
+    display: inline-block;
+    font-size: 1.5em;
+    color: $gray;
+  }
+  .id, .title {
+    display: none; // Hide the id and the title on mobile
+  }
+    
+  @include breakpoint($content) {
+    a {
+      display: block; // The pager links will take up the full container width and stack on top of eachother
+      padding: $space-half $space-quarter;
+    }
+    .pager-prev, .pager-next {
+      float: none; // Get rid of the floats so the pagers expand to fill the width of their container.
+    }
+    
+    // Pager elements
+    
+    .id {
+      display: inline-block; // Show the id when there's room
+    }
+  }
+
+  @include breakpoint($content-md) {
+    a {
+      padding: $space-half;
+    }
+  }
+}
+
+// An inline pager
+
+.node-pager.pager-bottom {
+  a {
+    width: 100%;
+  }
+
+  // Pager elements 
+  
+  .icon, .id {
+    display: inline-block; // Show the id and the icon always for the bottom pager
+  }
+  .title {
+    display: none;
+  }
+  
+  @include breakpoint($content) {
+    .pager-prev, .pager-next {
+      float: left;
+      width: 50%;
+    }
+    .pager-prev {
+      border-right: 1px solid $white;
+    }
+    .pager-next {
+      border-left: 1px solid $white;
+    }    
+  }
+
+  @include breakpoint($content-md) {
+    .title {
+      display: inline-block; // Show the title when there's likely to be room
+    }
+  }
+}
