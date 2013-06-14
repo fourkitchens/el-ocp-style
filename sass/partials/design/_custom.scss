@@ -2,9 +2,9 @@
 // Custom styles for the style guide ONLY
 //
 
-body.typography {
+body.common {
   .content {
-    max-width: em(600);
+    max-width: $base-line-length;
     margin: 0 auto;
   }
 }
