@@ -14,6 +14,7 @@ $grid-max: 1100px;
 
 $black:         rgb(34,34,34);
 $darkgray:      rgb(68,68,68);
+$mediumgray:    rgb(120,120,120);
 $gray:          rgb(187,187,187);
 $lightgray:     rgb(234,234,234);
 $verylightgray: rgb(243,243,243);
@@ -35,6 +36,7 @@ $green:         rgb(109,141,36);
 $space:           24px;
 $space-quarter:   $space/4;
 $space-half:      $space/2;
+$space-and-half:  $space * 1.5;
 $space-double:    $space * 2;
 $space-triple:    $space * 3;
 $space-quadruple: $space * 4;
@@ -44,7 +46,7 @@ $space-quadruple: $space * 4;
 $base-font-size: 16px;
 $base-line-height: 24px;
 
-$base-line-length: em(624); // control the longest line lengths as needed with this
+$base-line-length: 39em; // control the longest line lengths as needed with this
 
 $bodycolor: $darkgray;
 $headlinecolor: $black;
@@ -80,6 +82,7 @@ $menu-toggle: 600px;
 $arrow:       600px;
 $main:        600px;
 $content:     600px;
+$content-md:  980px;
 $table:       600px;
 
 // Borders

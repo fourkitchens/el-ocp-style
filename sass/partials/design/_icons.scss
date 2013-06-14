@@ -1,0 +1,33 @@
+//
+// Icons (This is a placeholder icon font that I made for another client. We'll replace with a custom one for EL when it's ready)
+//
+
+//  The custom icon font
+
+@font-face {
+    font-family: 'Shera Icon';
+    src: url('../fonts/shera-regular-webfont.eot');
+    src: url('../fonts/shera-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/shera-regular-webfont.woff') format('woff'),
+         url('../fonts/shera-regular-webfont.ttf') format('truetype'),
+         url('../fonts/shera-regular-webfont.svg#shera-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// The class
+
+.icon {
+  font-family: "Shera Icon", arial;
+  font-weight: normal;
+  font-style: normal;
+  &:before {
+    content: attr(data-icon);
+  }
+  vertical-align: middle;
+}
+
+/**
+ * Usage: here's the html to put elsewhere
+ * <span class="icon" aria-hidden="true" data-icon="insert-letter-or-unicode-here"></span>
+ */

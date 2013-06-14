@@ -3,21 +3,88 @@
 //
 
 main {
-  padding-top: $space;
+  padding-top: 0; // $space; Zero-ing out the top padding so we can use a flush-to-the-top background-image on module detail pages
   padding-bottom: $space;
   @include breakpoint($main) {
-    padding-top: $space-double;
+    // padding-top: $space-double; See comment above
     padding-bottom: $space-double;
   }
 }
 
 .content {
-//@include outer-container;
+  @include clearfix;
   padding-left: $space-half;
   padding-right: $space-half;
+  max-width: $grid-max;
+  margin: 0 auto;
   
   @include breakpoint($content) {
     padding-left: $space;
     padding-right: $space;
+  }
+}
+
+// Meta elements: Pager, title, lesson ID
+
+.node-top,
+.title-wrapper {
+  @include clearfix;
+  position: relative;
+}
+
+.node-top {
+  .node-pager {
+    @include grid-span(12,1);
+    position: absolute;
+    top: $space;
+    left: 0;
+    z-index: 1;
+
+    @include breakpoint($content) {
+      @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
+      bottom: $space-and-half;
+      left: auto;
+      right: 0;
+      top: auto;
+    }
+  }
+
+  h1.page-title {
+    @include grid-span(12,1);
+
+    @include breakpoint($content) {
+      @include grid-span(9, 1); // 9 columns wide, starting at the 1st column
+    }
+  }
+}
+
+// Primary content
+
+#primary {
+  @include grid-span(12,1);
+
+  @include breakpoint($content) {
+    @include grid-span(9, 1); // 3 columns wide, starting at the 1st column
+  }
+}
+
+// Sidebar content
+
+#secondary {
+  @include grid-span(12,1);
+
+  @include breakpoint($content) {
+    @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
+  }
+}
+
+// Footer content
+
+.node-bottom {
+  @include grid-span(12,1);
+  margin-top: $space-double;
+  
+  @include breakpoint($content) {
+    margin-top: $space-quadruple;
   }
 }
