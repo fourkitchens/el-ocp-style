@@ -3,15 +3,16 @@
 //
 
 main {
-  padding-top: $space;
+  padding-top: 0; // $space; Zero-ing out the top padding so we can use a flush-to-the-top background-image on module detail pages
   padding-bottom: $space;
   @include breakpoint($main) {
-    padding-top: $space-double;
+    // padding-top: $space-double; See comment above
     padding-bottom: $space-double;
   }
 }
 
 .content {
+  @include clearfix;
   padding-left: $space-half;
   padding-right: $space-half;
   
@@ -26,14 +27,23 @@ main {
 .node-top,
 .title-wrapper {
   @include clearfix;
+  position: relative;
 }
 
 .node-top {
   .node-pager {
     @include grid-span(12,1);
+    position: absolute;
+    top: $space;
+    left: 0;
+    z-index: 1;
 
     @include breakpoint($content) {
       @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
+      bottom: $space-and-half;
+      left: auto;
+      right: 0;
+      top: auto;
     }
   }
 
@@ -66,34 +76,13 @@ main {
   }
 }
 
-.jump-links {
-  h2.title {
-    margin: 0;
-    color: $white;
-    background: $darkgray;
-    padding: $space-quarter;
-    line-height: 1;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    li {
-      list-style-type: none;
-      margin-bottom: 0;
-            
-      a {
-        display: block;
-        padding: $space-quarter;
-        background: $verylightgray;
-      }
+// Footer content
 
-      &:hover {
-        a {
-          background: $gray;
-        }
-      }
-    }
+.node-bottom {
+  @include grid-span(12,1);
+  margin-top: $space-double;
+  
+  @include breakpoint($content) {
+    margin-top: $space-quadruple;
   }
 }

@@ -1,0 +1,50 @@
+//
+// Detail page header
+//
+
+// The node top container
+
+.node-top {
+  border-bottom: 2px dotted $red;
+  margin-bottom: $space;
+  padding-bottom: $space;
+  padding-top: $space;
+  
+  @include breakpoint($main) {
+    padding-top: $space-triple;
+    padding-bottom: $space-and-half;
+  }
+}
+
+// The page title and id
+
+.title-wrapper {
+    
+  .page-title {
+    margin: 0;
+    padding: 0;
+    @include font-size(32);
+    line-height: 1.1em;
+  }
+  
+  .id {
+    margin: 0 0 $space;
+    padding: $space-quarter 0 0 0;
+    @include font-size(20);
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+    text-align: center;
+  }
+  
+  @include breakpoint($main) {
+    .page-title {
+      @include font-size(48);
+      line-height: 1.1em;
+    }
+    .id {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+  }
+}

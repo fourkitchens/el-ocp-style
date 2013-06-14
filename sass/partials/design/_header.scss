@@ -90,11 +90,6 @@
   	.mobile-hidden {
       	display: inline; // Show the full title statement
   	}
-  	&:after {
-      	content: '.'; // Add a period at the end of the sentence
-      	display: inline-block;
-      	margin-left: -.2em; // Cheat it left so it sits in the right place relative to the end of the sentence
-  	}
   }
 
   @include breakpoint($title-md) {
