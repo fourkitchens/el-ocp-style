@@ -80,9 +80,9 @@ td {
 	td { 
 		/* Behave  like a "row" */
 		border: none;
-		//border-bottom: 1px solid $lightgray; 
+		border-bottom:  2px dotted $gray; 
 		position: relative;
-		padding-left: 50%; 
+		padding-left: 35%; 
 		white-space: normal;
 		text-align:left;
 		background: none;
@@ -93,7 +93,7 @@ td {
 		position: absolute;
 		/* Top/left values mimic padding */
 		left: $space-half;
-		width: 45%; 
+		width: 30%; 
 		padding-right: $space-half; 
 		text-align:left;
 		@include font-size(20);
@@ -101,6 +101,10 @@ td {
 	  font-weight: $body-font-weight;
 	  color: $darkgray;
 		}
+		
+  td:last-child {
+    border-bottom: none;
+  }
 	 
 	/*
 	Label the data
