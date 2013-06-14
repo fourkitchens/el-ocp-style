@@ -2,9 +2,13 @@
 // Tables
 //
 
+// Normal View
+
 table {
   margin-bottom: 2.4rem; // 24px
   font-family: $body-text;
+  width: 100%; 
+  border-collapse: collapse; 
 }
 
 th, td {
@@ -28,9 +32,84 @@ th {
 td {
   border-bottom: 1px solid $gray;
   border-left: 1px solid $gray;
-  background-color: $verylightgray;
+  background: $verylightgray; 
   vertical-align: top;
   &:first-child {
     border-left-width: 0; // remove the left border on the first in a row
   }
+}
+
+// No-More-Tables View
+
+@media only screen and (max-width: $table) {
+
+	table {
+	  border-top: 1px solid $gray;
+	}
+	
+	/* Zebra striping */
+	tr:nth-of-type(odd) { 
+	  background: $verylightgray;
+	  border-bottom: 1px solid $gray;
+	}
+	
+	tr:nth-of-type(even) { 
+	  background: $lightgray; 
+	  border-bottom: 1px solid $gray; 
+	}
+		
+	/* Force table to not be like tables anymore */
+	table, 
+	thead, 
+	tbody, 
+	th, 
+	td, 
+	tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	//tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom:  2px dotted $gray; 
+		position: relative;
+		padding-left: 35%; 
+		white-space: normal;
+		text-align:left;
+		background: none;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: $space-half;
+		width: 30%; 
+		padding-right: $space-half; 
+		text-align:left;
+		@include font-size(20);
+	  font-family: $headline-text;
+	  font-weight: $body-font-weight;
+	  color: $darkgray;
+		}
+		
+  td:last-child {
+    border-bottom: none;
+  }
+	 
+	/*
+	Label the data
+	*/
+	td:before {
+	  content: attr(data-title); 
+	}
 }
