@@ -203,6 +203,11 @@
 
 #menu-link {
   text-decoration: none;
+  color: $brick;
+  .icon {
+    @include font-size(48);
+    line-height: 36px;
+  }
   .open {
     display: block; // Show the hamburger and hide the X
   }

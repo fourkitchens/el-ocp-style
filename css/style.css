@@ -1166,6 +1166,12 @@ main {
 
 #menu-link {
   text-decoration: none;
+  color: #772432;
+}
+#menu-link .icon {
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 36px;
 }
 #menu-link .open {
   display: block;
@@ -1586,15 +1592,15 @@ footer {
 }
 
 @font-face {
-  font-family: 'Shera Icon';
-  src: url("../fonts/shera-regular-webfont.eot");
-  src: url("../fonts/shera-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/shera-regular-webfont.woff") format("woff"), url("../fonts/shera-regular-webfont.ttf") format("truetype"), url("../fonts/shera-regular-webfont.svg#shera-icons") format("svg");
+  font-family: 'EL Icon';
+  src: url("../fonts/elicon-regular-webfont.eot");
+  src: url("../fonts/elicon-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/elicon-regular-webfont.woff") format("woff"), url("../fonts/elicon-regular-webfont.ttf") format("truetype"), url("../fonts/elicon-regular-webfont.svg#el-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 .icon {
-  font-family: "Shera Icon", arial;
+  font-family: "EL Icon", arial;
   font-weight: normal;
   font-style: normal;
   vertical-align: middle;
