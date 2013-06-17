@@ -1166,6 +1166,12 @@ main {
 
 #menu-link {
   text-decoration: none;
+  color: #772432;
+}
+#menu-link .icon {
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 36px;
 }
 #menu-link .open {
   display: block;
