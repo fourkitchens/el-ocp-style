@@ -7,6 +7,7 @@
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
   background-color: #006595;
   color: white;
   -moz-transition: all .2s linear;
@@ -14,6 +15,9 @@
   -o-transition: all .2s linear;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+}
+.button:visited, .node-ocp-assessment .download_all:visited {
+  color: white;
 }
 .button:hover, .node-ocp-assessment .download_all:hover, .button:active, .node-ocp-assessment .download_all:active {
   background-color: #0088c8;
@@ -24,7 +28,7 @@
   color: #bbbbbb;
   cursor: default;
 }
-.button.button-disabled:hover, .node-ocp-assessment .button-disabled.download_all:hover, .button.button-disabled:active, .node-ocp-assessment .button-disabled.download_all:active {
+.button.button-disabled:visited, .node-ocp-assessment .button-disabled.download_all:visited, .button.button-disabled:hover, .node-ocp-assessment .button-disabled.download_all:hover, .button.button-disabled:active, .node-ocp-assessment .button-disabled.download_all:active {
   background-color: #eaeaea;
   color: #bbbbbb;
 }
@@ -1582,6 +1586,12 @@ footer {
 @media (min-width: 61.25em) {
   .node-pager.pager-bottom .title {
     display: inline-block;
+  }
+  .node-pager.pager-bottom .pager-prev .title {
+    margin-left: .5em;
+  }
+  .node-pager.pager-bottom .pager-next .title {
+    margin-right: .5em;
   }
 }
 

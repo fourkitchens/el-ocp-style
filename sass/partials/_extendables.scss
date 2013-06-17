@@ -10,6 +10,7 @@
   font-family: $headline-text;
   font-weight: $body-font-weight;
   text-align: center;
+  text-decoration: none;
   background-color: $blue;
   color: $white;
   
@@ -21,6 +22,12 @@
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   
+  // The visited state
+  
+  &:visited {
+    color: $white;
+  }
+
   // The hover state
   
   &:hover, &:active {
@@ -34,7 +41,7 @@
     background-color: $lightgray;
     color: $gray;
     cursor: default;
-    &:hover, &:active {
+    &:visited, &:hover, &:active {
       background-color: $lightgray;
       color: $gray;
     }
