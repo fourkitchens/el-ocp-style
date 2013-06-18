@@ -1,0 +1,69 @@
+//
+// Detail page components
+//
+
+// Common styles
+
+[class*='component'] {
+  
+  margin-bottom: $space-double;
+    
+  // Tables
+  
+  table {
+  
+    // Classes on the table to control the width of the first column
+    &.one-fourth {
+      th:first-child {
+        width: 50%;
+      }
+    }
+    &.one-third {
+      th:first-child {
+        width: 33%;
+      }
+    }
+    &.one-half {
+      th:first-child {
+        width: 50%;
+      }
+    }
+    &.two-thirds {
+      th:first-child {
+        width: 66%;
+      }
+    }
+    &.three-fourths {
+      th:first-child {
+        width: 75%;
+      }
+    }
+
+    // In tables, get rid of the normalize top margins on lists and paragraphs
+    h3, h4, ol, ul, p {
+      margin-top: 0;
+    }
+    
+    // Adjust the headings down a level within tables
+    h3 {
+      @include font-size(16);
+      @include line-height(24); 
+      font-family: $body-text;
+      font-weight: $headline-font-weight;
+    }
+    h4 {
+      @include font-size(20);
+      @include line-height(24); 
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+    }    
+  }  
+}
+
+// Text components get a dotted border below the header
+
+.component-text {
+  header {
+    border-bottom: $borderwidth $borderstyle $bordercolor;
+  }
+}

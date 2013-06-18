@@ -541,6 +541,8 @@ h1 {
 h2 {
   font-size: 32px;
   font-size: 3.2rem;
+  line-height: 36px;
+  line-height: 3.6rem;
   margin-bottom: 24px;
   color: #c6123f;
 }
@@ -548,12 +550,16 @@ h2 {
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
+  line-height: 30px;
+  line-height: 3rem;
   color: #222222;
 }
 
 h4 {
   font-size: 16px;
   font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-family: Georgia, serif;
   color: #222222;
 }
@@ -561,6 +567,8 @@ h4 {
 h5 {
   font-size: 20px;
   font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
   color: #222222;
@@ -569,6 +577,8 @@ h5 {
 h6 {
   font-size: 16px;
   font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   margin-bottom: 0;
   font-family: Georgia, serif;
   font-style: italic;
@@ -594,12 +604,31 @@ li {
   margin-bottom: .75rem;
 }
 
+ul {
+  padding-left: 1em;
+}
 ul li {
   list-style-type: disc;
 }
 
+ol {
+  padding-left: .5em;
+}
 ol li {
   margin-left: 12px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+ol ol {
+  list-style-type: upper-alpha;
+}
+ol ol ol {
+  list-style-type: lower-roman;
+}
+ol ol ol ol {
+  list-style-type: lower-alpha;
 }
 
 a {
@@ -644,7 +673,7 @@ table {
 }
 
 th, td {
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem;
   text-align: left;
 }
 
@@ -937,7 +966,8 @@ main {
 }
 @media (min-width: 37.5em) {
   .node-bottom {
-    margin-top: 96px;
+    clear: both;
+    margin-top: 48px;
   }
 }
 
@@ -1506,6 +1536,48 @@ footer {
     padding: 0;
     text-align: left;
   }
+}
+
+[class*='component'] {
+  margin-bottom: 48px;
+}
+[class*='component'] table.one-fourth th:first-child {
+  width: 50%;
+}
+[class*='component'] table.one-third th:first-child {
+  width: 33%;
+}
+[class*='component'] table.one-half th:first-child {
+  width: 50%;
+}
+[class*='component'] table.two-thirds th:first-child {
+  width: 66%;
+}
+[class*='component'] table.three-fourths th:first-child {
+  width: 75%;
+}
+[class*='component'] table h3, [class*='component'] table h4, [class*='component'] table ol, [class*='component'] table ul, [class*='component'] table p {
+  margin-top: 0;
+}
+[class*='component'] table h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+[class*='component'] table h4 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.component-text header {
+  border-bottom: 2px dotted #c6123f;
 }
 
 .node-pager {
