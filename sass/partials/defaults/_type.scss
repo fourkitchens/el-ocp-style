@@ -94,16 +94,35 @@ ol {
 
 // Set the list item labelling style for nested ordered lists
 
-ol {
+ol li {
   list-style-type: decimal; // 1. , 2. , 3.
-  ol {
+  li {
     list-style-type: upper-alpha; // A. , B. , C.
-    ol {
+    li {
       list-style-type: lower-roman; // i. , ii. , iii.
-      ol {
+      li {
         list-style-type: lower-alpha; // a. , b. , c.
       }
     }
+  }
+}
+
+// Set the list item labeling style for ordered lists nested inside of unordered lists
+
+ul li {
+  ol li {
+    list-style-type: decimal; // 1. , 2. , 3.
+    li {
+      list-style-type: upper-alpha; // A. , B. , C.
+    }
+  }
+}
+
+// Set the list item labeling for nested unordered lists
+
+ul li {
+  li {
+    list-style-type: circle;
   }
 }
 

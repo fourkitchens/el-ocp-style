@@ -40,7 +40,7 @@
     }
 
     // In tables, get rid of the normalize top margins on lists and paragraphs
-    h3, h4, ol, ul, p {
+    h3, h4, ol, ul, p, blockquote {
       margin-top: 0;
     }
     
@@ -56,7 +56,15 @@
       @include line-height(24); 
       font-family: $headline-text;
       font-weight: $body-font-weight;
-    }    
+    } 
+    
+    // Treat the blockquotes separately
+    blockquote {
+      margin: $space-half 0;
+      padding: 0 $space-half;
+      font-style: italic;
+      color: $mediumgray;
+    }   
   }  
 }
 

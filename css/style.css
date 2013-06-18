@@ -618,17 +618,28 @@ ol li {
   margin-left: 12px;
 }
 
-ol {
+ol li {
   list-style-type: decimal;
 }
-ol ol {
+ol li li {
   list-style-type: upper-alpha;
 }
-ol ol ol {
+ol li li li {
   list-style-type: lower-roman;
 }
-ol ol ol ol {
+ol li li li li {
   list-style-type: lower-alpha;
+}
+
+ul li ol li {
+  list-style-type: decimal;
+}
+ul li ol li li {
+  list-style-type: upper-alpha;
+}
+
+ul li li {
+  list-style-type: circle;
 }
 
 a {
@@ -1562,7 +1573,7 @@ footer {
 [class*='component'] table.three-fourths th:first-child {
   width: 75%;
 }
-[class*='component'] table h3, [class*='component'] table h4, [class*='component'] table ol, [class*='component'] table ul, [class*='component'] table p {
+[class*='component'] table h3, [class*='component'] table h4, [class*='component'] table ol, [class*='component'] table ul, [class*='component'] table p, [class*='component'] table blockquote {
   margin-top: 0;
 }
 [class*='component'] table h3 {
@@ -1580,6 +1591,12 @@ footer {
   line-height: 2.4rem;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
+}
+[class*='component'] table blockquote {
+  margin: 12px 0;
+  padding: 0 12px;
+  font-style: italic;
+  color: #787878;
 }
 
 .component-text header {
