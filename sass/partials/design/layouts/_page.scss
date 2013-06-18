@@ -81,10 +81,12 @@ main {
 // Footer content
 
 .node-bottom {
+  
   @include grid-span(12,1);
   margin-top: $space-double;
   
   @include breakpoint($content) {
-    margin-top: $space-quadruple;
+    clear: both;
+    margin-top: $space-double;
   }
 }

@@ -5,7 +5,7 @@
 // The node top container
 
 .node-top {
-  border-bottom: 2px dotted $red;
+  border-bottom: $borderwidth $borderstyle $bordercolor;
   margin-bottom: $space;
   padding-bottom: $space;
   padding-top: $space;
