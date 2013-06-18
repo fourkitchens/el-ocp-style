@@ -1555,6 +1555,33 @@ footer {
   }
 }
 
+.tag {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: .2em .625em .3em;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: #f3f3f3;
+}
+.tag:hover {
+  background-color: white;
+  border-color: #eaeaea;
+  color: #444444;
+}
+
+.tag-collection {
+  margin-top: 0;
+  padding-left: 0;
+}
+.tag-collection li {
+  display: inline-block;
+  list-style-type: none;
+}
+
 [class*='component'] {
   margin-bottom: 48px;
 }
