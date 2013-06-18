@@ -7,10 +7,10 @@
     margin: 0;
     background: $darkgray;
     padding: $space-quarter $space-half;
-    @include font-size(20);
+    @include font-size(18);
     font-family: $headline-text;
     font-weight: $headline-font-weight;
-    line-height: 1;
+    @include line-height(24);
     background-color: $gray;
     color: $darkgray;
   }
@@ -23,6 +23,8 @@
       list-style-type: none;
       margin: 0;
       border-top: 2px solid $verylightgray;
+      font-family: $headline-text;
+      @include font-size(18);
       &:first-child {
         border-top-width: 0;
       }

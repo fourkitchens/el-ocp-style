@@ -1465,11 +1465,12 @@ footer {
   margin: 0;
   background: #444444;
   padding: 6px 12px;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 700;
-  line-height: 1;
+  line-height: 24px;
+  line-height: 2.4rem;
   background-color: #bbbbbb;
   color: #444444;
 }
@@ -1482,6 +1483,9 @@ footer {
   list-style-type: none;
   margin: 0;
   border-top: 2px solid #f3f3f3;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 .jump-links ul li:first-child {
   border-top-width: 0;
