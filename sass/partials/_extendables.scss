@@ -13,6 +13,7 @@
   text-decoration: none;
   background-color: $blue;
   color: $white;
+  border-bottom: 2px solid darken($blue,8);
   
   // Transitions
   
@@ -31,13 +32,14 @@
   // The hover state
   
   &:hover, &:active {
-    background-color: lighten($blue,10);
+    background-color: darken($blue,8);
     color: $white;
   }
   
   // Button Variations
   
   &.button-disabled {
+    border-bottom-color: $gray;
     background-color: $lightgray;
     color: $gray;
     cursor: default;
