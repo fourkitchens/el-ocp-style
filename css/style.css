@@ -7,24 +7,30 @@
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
   background-color: #006595;
   color: white;
+  border-bottom: 2px solid #00496c;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
+.button:visited, .node-ocp-assessment .download_all:visited {
+  color: white;
+}
 .button:hover, .node-ocp-assessment .download_all:hover, .button:active, .node-ocp-assessment .download_all:active {
-  background-color: #0088c8;
+  background-color: #00496c;
   color: white;
 }
 .button.button-disabled, .node-ocp-assessment .button-disabled.download_all {
+  border-bottom-color: #bbbbbb;
   background-color: #eaeaea;
   color: #bbbbbb;
   cursor: default;
 }
-.button.button-disabled:hover, .node-ocp-assessment .button-disabled.download_all:hover, .button.button-disabled:active, .node-ocp-assessment .button-disabled.download_all:active {
+.button.button-disabled:visited, .node-ocp-assessment .button-disabled.download_all:visited, .button.button-disabled:hover, .node-ocp-assessment .button-disabled.download_all:hover, .button.button-disabled:active, .node-ocp-assessment .button-disabled.download_all:active {
   background-color: #eaeaea;
   color: #bbbbbb;
 }
@@ -537,6 +543,8 @@ h1 {
 h2 {
   font-size: 32px;
   font-size: 3.2rem;
+  line-height: 36px;
+  line-height: 3.6rem;
   margin-bottom: 24px;
   color: #c6123f;
 }
@@ -544,12 +552,16 @@ h2 {
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
+  line-height: 30px;
+  line-height: 3rem;
   color: #222222;
 }
 
 h4 {
   font-size: 16px;
   font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-family: Georgia, serif;
   color: #222222;
 }
@@ -557,6 +569,8 @@ h4 {
 h5 {
   font-size: 20px;
   font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
   color: #222222;
@@ -565,6 +579,8 @@ h5 {
 h6 {
   font-size: 16px;
   font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   margin-bottom: 0;
   font-family: Georgia, serif;
   font-style: italic;
@@ -590,12 +606,42 @@ li {
   margin-bottom: .75rem;
 }
 
+ul {
+  padding-left: 1em;
+}
 ul li {
   list-style-type: disc;
 }
 
+ol {
+  padding-left: .5em;
+}
 ol li {
   margin-left: 12px;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+ol li li {
+  list-style-type: upper-alpha;
+}
+ol li li li {
+  list-style-type: lower-roman;
+}
+ol li li li li {
+  list-style-type: lower-alpha;
+}
+
+ul li ol li {
+  list-style-type: decimal;
+}
+ul li ol li li {
+  list-style-type: upper-alpha;
+}
+
+ul li li {
+  list-style-type: circle;
 }
 
 a {
@@ -640,7 +686,7 @@ table {
 }
 
 th, td {
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem;
   text-align: left;
 }
 
@@ -933,7 +979,8 @@ main {
 }
 @media (min-width: 37.5em) {
   .node-bottom {
-    margin-top: 96px;
+    clear: both;
+    margin-top: 48px;
   }
 }
 
@@ -1420,11 +1467,12 @@ footer {
   margin: 0;
   background: #444444;
   padding: 6px 12px;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 700;
-  line-height: 1;
+  line-height: 24px;
+  line-height: 2.4rem;
   background-color: #bbbbbb;
   color: #444444;
 }
@@ -1437,6 +1485,9 @@ footer {
   list-style-type: none;
   margin: 0;
   border-top: 2px solid #f3f3f3;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 .jump-links ul li:first-child {
   border-top-width: 0;
@@ -1508,6 +1559,81 @@ footer {
     padding: 0;
     text-align: left;
   }
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: .2em .625em .3em;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: #f3f3f3;
+}
+.tag:hover {
+  background-color: white;
+  border-color: #eaeaea;
+  color: #444444;
+}
+
+.tag-collection {
+  margin-top: 0;
+  padding-left: 0;
+}
+.tag-collection li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+[class*='component'] {
+  margin-bottom: 48px;
+}
+[class*='component'] table.one-fourth th:first-child {
+  width: 50%;
+}
+[class*='component'] table.one-third th:first-child {
+  width: 33%;
+}
+[class*='component'] table.one-half th:first-child {
+  width: 50%;
+}
+[class*='component'] table.two-thirds th:first-child {
+  width: 66%;
+}
+[class*='component'] table.three-fourths th:first-child {
+  width: 75%;
+}
+[class*='component'] table h3, [class*='component'] table h4, [class*='component'] table ol, [class*='component'] table ul, [class*='component'] table p, [class*='component'] table blockquote {
+  margin-top: 0;
+}
+[class*='component'] table h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+[class*='component'] table h4 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+}
+[class*='component'] table blockquote {
+  margin: 12px 0;
+  padding: 0 12px;
+  font-style: italic;
+  color: #787878;
+}
+
+.component-text header {
+  border-bottom: 2px dotted #c6123f;
 }
 
 .node-pager {
@@ -1588,6 +1714,12 @@ footer {
 @media (min-width: 61.25em) {
   .node-pager.pager-bottom .title {
     display: inline-block;
+  }
+  .node-pager.pager-bottom .pager-prev .title {
+    margin-left: .5em;
+  }
+  .node-pager.pager-bottom .pager-next .title {
+    margin-right: .5em;
   }
 }
 

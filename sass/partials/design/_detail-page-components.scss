@@ -1,0 +1,105 @@
+//
+// Detail page components
+//
+
+// Tags and tag collections
+
+.tag {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid $verylightgray;
+  padding: .2em .625em .3em;
+  font-family: $headline-text;
+  @include font-size(18);
+  font-weight: $body-font-weight;
+  text-decoration: none;
+  background-color: $verylightgray;
+  &:hover {
+    background-color: $white;
+    border-color: $lightgray;
+    color: $darkgray;
+  }
+}
+
+.tag-collection {
+  margin-top: 0;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+}
+
+// Component styles
+
+[class*='component'] {
+  
+  margin-bottom: $space-double;
+    
+  // Tables
+  
+  table {
+  
+    // Classes on the table to control the width of the first column
+    &.one-fourth {
+      th:first-child {
+        width: 50%;
+      }
+    }
+    &.one-third {
+      th:first-child {
+        width: 33%;
+      }
+    }
+    &.one-half {
+      th:first-child {
+        width: 50%;
+      }
+    }
+    &.two-thirds {
+      th:first-child {
+        width: 66%;
+      }
+    }
+    &.three-fourths {
+      th:first-child {
+        width: 75%;
+      }
+    }
+
+    // In tables, get rid of the normalize top margins on lists and paragraphs
+    h3, h4, ol, ul, p, blockquote {
+      margin-top: 0;
+    }
+    
+    // Adjust the headings down a level within tables
+    h3 {
+      @include font-size(16);
+      @include line-height(24); 
+      font-family: $body-text;
+      font-weight: $headline-font-weight;
+    }
+    h4 {
+      @include font-size(20);
+      @include line-height(24); 
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+    } 
+    
+    // Treat the blockquotes separately
+    blockquote {
+      margin: $space-half 0;
+      padding: 0 $space-half;
+      font-style: italic;
+      color: $mediumgray;
+    }   
+  }  
+}
+
+// Text components get a dotted border below the header
+
+.component-text {
+  header {
+    border-bottom: $borderwidth $borderstyle $bordercolor;
+  }
+}

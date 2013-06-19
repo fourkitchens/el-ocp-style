@@ -25,23 +25,27 @@ h1 {
 
 h2 {
   @include font-size(32);
+  @include line-height(36);
   margin-bottom: $space;
   color: $red;
 }
 
 h3 {
   @include font-size(24);
+  @include line-height(30);
   color: $black;
 }
 
 h4 {
-  @include font-size(16); 
+  @include font-size(16);
+  @include line-height(24); 
   font-family: $body-text;
   color: $black;
 }
 
 h5 {
   @include font-size(20);
+  @include line-height(24); 
   font-family: $headline-text;
   font-weight: $body-font-weight;
   color: $black;
@@ -49,6 +53,7 @@ h5 {
 
 h6 {
   @include font-size(16);
+  @include line-height(24); 
   margin-bottom: 0;
   font-family: $body-text;
   font-style: italic;
@@ -74,14 +79,50 @@ li {
 }
 
 ul {
-    li {
-        list-style-type: disc;
-    }
+  padding-left: 1em; // decrease the left padding on lists
+  li {
+      list-style-type: disc;
+  }
 }
 
 ol {
+  padding-left: .5em; // decrease the left padding on lists
   li {
     margin-left: $space-half;
+  }
+}
+
+// Set the list item labelling style for nested ordered lists
+
+ol li {
+  list-style-type: decimal; // 1. , 2. , 3.
+  li {
+    list-style-type: upper-alpha; // A. , B. , C.
+    li {
+      list-style-type: lower-roman; // i. , ii. , iii.
+      li {
+        list-style-type: lower-alpha; // a. , b. , c.
+      }
+    }
+  }
+}
+
+// Set the list item labeling style for ordered lists nested inside of unordered lists
+
+ul li {
+  ol li {
+    list-style-type: decimal; // 1. , 2. , 3.
+    li {
+      list-style-type: upper-alpha; // A. , B. , C.
+    }
+  }
+}
+
+// Set the list item labeling for nested unordered lists
+
+ul li {
+  li {
+    list-style-type: circle;
   }
 }
 
