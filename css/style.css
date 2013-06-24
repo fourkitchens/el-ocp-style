@@ -1548,6 +1548,9 @@ footer {
   font-weight: 400;
   text-align: center;
 }
+.title-wrapper .thumbnail {
+  display: none;
+}
 @media (min-width: 37.5em) {
   .title-wrapper .page-title {
     font-size: 48px;
@@ -1558,6 +1561,12 @@ footer {
     margin: 0;
     padding: 0;
     text-align: left;
+  }
+  .title-wrapper .thumbnail {
+    display: block;
+    float: left;
+    width: 10.3125%;
+    margin-right: 12px;
   }
 }
 
