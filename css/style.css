@@ -918,7 +918,7 @@ main {
     top: auto;
   }
 }
-.node-top h1.page-title {
+.node-top .title-wrapper {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -926,7 +926,7 @@ main {
   clear: none;
 }
 @media (min-width: 37.5em) {
-  .node-top h1.page-title {
+  .node-top .title-wrapper {
     width: 74.375%;
     float: left;
     margin-right: -100%;

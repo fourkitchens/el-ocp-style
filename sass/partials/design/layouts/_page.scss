@@ -49,11 +49,11 @@ main {
     }
   }
 
-  h1.page-title {
+  .title-wrapper {
     @include grid-span(12,1);
-
+    
     @include breakpoint($content) {
-      @include grid-span(9, 1); // 9 columns wide, starting at the 1st column
+      @include grid-span(9,1); // 9 columns wide, starting at the 1st column
     }
   }
 }
