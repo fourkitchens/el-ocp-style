@@ -12,6 +12,11 @@ main {
 }
 
 .content {
+  @include clearfix; // Make sure content div contains all children
+}
+
+// Page elements that need to be respect the grid max
+.wrap {
   @include clearfix;
   padding-left: $space-half;
   padding-right: $space-half;
@@ -21,68 +26,79 @@ main {
   @include breakpoint($content) {
     padding-left: $space;
     padding-right: $space;
-  }
+  } 
 }
 
-// Meta elements: Pager, title, lesson ID
-
-.node-top,
-.title-wrapper {
-  @include clearfix;
-  position: relative;
-}
+// The node top elements
 
 .node-top {
-  .node-pager {
+  width: 100%;
+  
+  // The innner wrapper that brings the title and pager in from the browser edges
+
+  .node-top-inner {
+    position: relative;
+  }
+
+  // The title wrapper
+  
+  .title-wrapper {
     @include grid-span(12,1);
+    
+    @include breakpoint($content) {
+      @include grid-span(9,1); // 9 columns wide, starting at the 1st column
+    }
+  }
+
+  // The pager
+  
+  .node-pager {
     position: absolute;
-    top: $space;
-    left: 0;
+    top: 0;
+    left: $space-half;
+    right: $space-half;
     z-index: 1;
 
     @include breakpoint($content) {
-      @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
-      bottom: $space-and-half;
+      width: column-span(3,10);
+      bottom: 0;
       left: auto;
-      right: 0;
+      right: $space;
       top: auto;
     }
   }
+}
 
-  h1.page-title {
+// The node content elements
+
+.node-content {
+  @include clearfix;
+
+  // Primary content
+  
+  #primary {
     @include grid-span(12,1);
-
+  
     @include breakpoint($content) {
-      @include grid-span(9, 1); // 9 columns wide, starting at the 1st column
+      @include grid-span(9, 1); // 3 columns wide, starting at the 1st column
     }
   }
-}
-
-// Primary content
-
-#primary {
-  @include grid-span(12,1);
-
-  @include breakpoint($content) {
-    @include grid-span(9, 1); // 3 columns wide, starting at the 1st column
+  
+  // Sidebar content
+  
+  #secondary {
+    @include grid-span(12,1);
+  
+    @include breakpoint($content) {
+      @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
+    }
   }
-}
 
-// Sidebar content
-
-#secondary {
-  @include grid-span(12,1);
-
-  @include breakpoint($content) {
-    @include grid-span(3, 10); // 3 columns wide, starting at the 10th column
-  }
 }
 
 // Footer content
 
 .node-bottom {
-  
-  @include grid-span(12,1);
   margin-top: $space-double;
   
   @include breakpoint($content) {

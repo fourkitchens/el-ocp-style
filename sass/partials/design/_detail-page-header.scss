@@ -13,7 +13,7 @@
   @include breakpoint($main) {
     padding-top: $space-triple;
     padding-bottom: $space-and-half;
-  }
+  }  
 }
 
 // The page title and id
@@ -36,6 +36,10 @@
     text-align: center;
   }
   
+  .thumbnail {
+    display: none;
+  }
+  
   @include breakpoint($main) {
     .page-title {
       @include font-size(48);
@@ -46,5 +50,58 @@
       padding: 0;
       text-align: left;
     }
+    .thumbnail {
+      position: relative;
+      display: block;
+      float: left;
+      margin-right: gutter-span();
+      width: $space-triple;
+    }
   }
 }
+
+// Variations for module pages
+
+.module {
+
+  // Add the background image for the node-top
+  
+  .node-top {
+    border-bottom-width: 0;
+    background: {
+      color: $brick;
+      image: url('../img/treefrog-1600-12quality.jpg');
+      size: cover;
+      position: 50% 35%;
+    }
+    
+    @include breakpoint($main) {
+      padding-top: $space*8;
+    }
+    
+  }    
+
+  // Change the title text color so it works on a background image
+
+  .title-wrapper {
+    color: $white;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+  }
+
+}
+
+// Variations for the units
+
+/*
+.unit {
+  .title-wrapper {
+    padding-left: column-span(2,1);
+  }
+  .thumbnail {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: column-span(2,1);
+  }
+}
+*/

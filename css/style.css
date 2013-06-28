@@ -859,10 +859,6 @@ main {
 
 .content {
   *zoom: 1;
-  padding-left: 12px;
-  padding-right: 12px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 .content:before, .content:after {
   display: table;
@@ -871,54 +867,78 @@ main {
 .content:after {
   clear: both;
 }
+
+.wrap {
+  *zoom: 1;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wrap:before, .wrap:after {
+  display: table;
+  content: "";
+}
+.wrap:after {
+  clear: both;
+}
 @media (min-width: 37.5em) {
-  .content {
+  .wrap {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
-.node-top,
-.title-wrapper {
-  *zoom: 1;
+.node-top {
+  width: 100%;
+}
+.node-top .node-top-inner {
   position: relative;
 }
-.node-top:before, .node-top:after,
-.title-wrapper:before,
-.title-wrapper:after {
-  display: table;
-  content: "";
-}
-.node-top:after,
-.title-wrapper:after {
-  clear: both;
-}
-
-.node-top .node-pager {
+.node-top .title-wrapper {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+}
+@media (min-width: 37.5em) {
+  .node-top .title-wrapper {
+    width: 74.375%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+.node-top .node-pager {
   position: absolute;
-  top: 24px;
-  left: 0;
+  top: 0;
+  left: 12px;
+  right: 12px;
   z-index: 1;
 }
 @media (min-width: 37.5em) {
   .node-top .node-pager {
     width: 23.125%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    bottom: 36px;
+    bottom: 0;
     left: auto;
-    right: 0;
+    right: 24px;
     top: auto;
   }
 }
-.node-top h1.page-title {
+
+.node-content {
+  *zoom: 1;
+}
+.node-content:before, .node-content:after {
+  display: table;
+  content: "";
+}
+.node-content:after {
+  clear: both;
+}
+.node-content #primary {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -926,7 +946,7 @@ main {
   clear: none;
 }
 @media (min-width: 37.5em) {
-  .node-top h1.page-title {
+  .node-content #primary {
     width: 74.375%;
     float: left;
     margin-right: -100%;
@@ -934,8 +954,7 @@ main {
     clear: none;
   }
 }
-
-#primary {
+.node-content #secondary {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -943,24 +962,7 @@ main {
   clear: none;
 }
 @media (min-width: 37.5em) {
-  #primary {
-    width: 74.375%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0%;
-    clear: none;
-  }
-}
-
-#secondary {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-@media (min-width: 37.5em) {
-  #secondary {
+  .node-content #secondary {
     width: 23.125%;
     float: right;
     margin-left: 0;
@@ -970,11 +972,6 @@ main {
 }
 
 .node-bottom {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
   margin-top: 48px;
 }
 @media (min-width: 37.5em) {
@@ -1548,6 +1545,9 @@ footer {
   font-weight: 400;
   text-align: center;
 }
+.title-wrapper .thumbnail {
+  display: none;
+}
 @media (min-width: 37.5em) {
   .title-wrapper .page-title {
     font-size: 48px;
@@ -1559,8 +1559,45 @@ footer {
     padding: 0;
     text-align: left;
   }
+  .title-wrapper .thumbnail {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 2.5%;
+    width: 72px;
+  }
 }
 
+.module .node-top {
+  border-bottom-width: 0;
+  background-color: #772432;
+  background-image: url("../img/treefrog-1600-12quality.jpg");
+  background-size: cover;
+  background-position: 50% 35%;
+}
+@media (min-width: 37.5em) {
+  .module .node-top {
+    padding-top: 192px;
+  }
+}
+.module .title-wrapper {
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*
+.unit {
+  .title-wrapper {
+    padding-left: column-span(2,1);
+  }
+  .thumbnail {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: column-span(2,1);
+  }
+}
+*/
 .tag {
   display: inline-block;
   border-radius: 5px;
@@ -1721,6 +1758,19 @@ footer {
   .node-pager.pager-bottom .pager-next .title {
     margin-right: .5em;
   }
+}
+
+.node-pager.overlay a {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #444444;
+}
+.node-pager.overlay a:hover {
+  background-color: white;
+  color: #006595;
+}
+.node-pager.overlay .icon {
+  color: #787878;
 }
 
 @font-face {
