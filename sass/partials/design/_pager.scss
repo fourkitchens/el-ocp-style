@@ -107,3 +107,20 @@
     }
   }
 }
+
+// Pager for overlaying on a background image
+
+.node-pager.overlay {
+  a {
+    background-color: $white;
+    background-color: rgba(255,255,255,.6);
+    color: $darkgray;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+  .icon {
+    color: $mediumgray;
+  } 
+}
