@@ -1,3 +1,289 @@
 //
 // Curriculum List
 //
+
+.curriculum-list {
+  @include clearfix;
+  border-bottom: $borderwidth $borderstyle $bordercolor;
+  margin-bottom: $space-double;
+
+// The defaults for all components
+
+  // Items
+  
+  .item {
+    @include grid-span(12,1,$output-style: 'float');
+    position: relative;
+    border-top: $borderwidth $borderstyle $bordercolor;
+    margin: 0;
+    padding: 0;
+    .item {
+      border-color: $gray; // For any item nested inside another, change the border color to gray
+    }
+  }
+  
+  > .item:first-child {
+    border-top-width: 0; // Remove the border and padding for the first item in the top level of a curriculum list
+    padding-top: 0;
+  }
+  
+  .item-content {
+    padding: $space 0;
+    @include grid-span(12,1,$output-style: 'float');
+  }
+  
+  .item-action {
+    padding: 0 0 $space-and-quarter 0;
+    @include grid-span(12,1,$output-style: 'float');
+  }
+  
+  .item-children {
+    @include grid-span(12,1,$output-style: 'float');
+    max-height: 0;
+    overflow-y: hidden;
+    &.active {
+      max-height: none;
+    }
+  }
+
+  // The item id
+  
+  .id {
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+  }
+
+  // The item title
+    
+  .title {
+    font-family: $headline-text;
+    font-weight: $headline-font-weight;
+    color: $headlinecolor;
+    a {
+      color: $headlinecolor;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: $blue;
+      }
+    }
+  }
+    
+// Layouts for individual components
+
+  // The module
+  
+  .item-module {
+    > .item-content {
+      .thumb {
+        @include grid-span(3,10);
+      }
+      .body {
+        @include grid-span(9,1);
+      }
+      .id {
+        @include font-size(18);
+        @include line-height(24);
+      }
+      .title {
+        @include font-size(20);
+        @include line-height(24);
+        margin-bottom: $space-quarter;
+      }
+      .description {
+        margin-bottom: $space-half;
+      }
+    }
+  }
+  
+  // The unit
+  
+  .item-unit {
+    > .item-content {
+      .thumb {
+        @include grid-span(2,11);
+      }
+      .body {
+        @include grid-span(10,1);
+      }
+      .id {
+        @include font-size(18);
+        @include line-height(24);
+      }
+      .title {
+        @include font-size(20);
+        @include line-height(24);
+        margin-bottom: $space-half;
+      }
+    }
+  }
+
+  // The performance task
+  
+  .item-task {
+    > .item-content {
+      .id {
+        @include font-size(18);
+        @include line-height(24);
+      }
+      .title {
+        @include font-size(20);
+        @include line-height(24);
+      }
+    }
+  }
+  
+  // The lesson
+  
+  .item-lesson {
+    > .item-content {
+      .id, .title {
+        @include font-size(18);
+        @include line-height(20);
+      }
+    }
+  }
+
+  // The assessment
+  
+  .item-assessment {
+    > .item-content {
+      .id, .title {
+        @include font-size(18);
+        @include line-height(20);
+      }
+    }
+  }
+
+// Breakpoint adjustments
+
+@include breakpoint($curriculum-sm) {
+
+  .item-action, .item-content {
+    padding: $space 0 $space-and-quarter;
+  }
+  
+  .item-action {
+    text-align: right;
+  }
+  
+  .item-children {
+    @include grid-span(12,1,$output-style: 'float');
+  }
+    
+  // The module
+  
+  .item-module {
+    > .item-content {
+      @include grid-span(10,1,$output-style: 'float');
+      .thumb {
+        @include grid-span(4,1,10,$output-style: 'float');
+      }
+      .body {
+        @include grid-span(6,5,10,$output-style: 'float');
+      }
+    }
+    > .item-action {
+      @include grid-span(2,11,$output-style: 'float');
+    }
+  }
+  
+  // The unit
+  
+  .item-unit {
+    > .item-content {
+      @include grid-span(10,1,$output-style: 'float');
+      .thumb {
+        @include grid-span(2,1,10,$output-style: 'float');
+      }
+      .body {
+        @include grid-span(8,3,10,$output-style: 'float');
+      }
+    }
+    > .item-action {
+      @include grid-span(2,11,$output-style: 'float');
+    }
+  }
+
+  // The performance task
+  
+  .item-task {
+    > .item-content {
+      @include grid-span(10,1,$output-style: 'float');
+    }
+    > .item-action {
+      @include grid-span(2,11,$output-style: 'float');
+    }
+  }
+  
+  // The lesson
+  
+  .item-lesson {
+    > .item-content {
+      @include grid-span(10,1,$output-style: 'float');
+      .thumb {
+        @include grid-span(2,1,10,$output-style: 'float');
+      }
+      .body {
+        @include grid-span(8,3,10,$output-style: 'float');
+      }
+    }
+    > .item-action {
+      @include grid-span(2,11,$output-style: 'float');
+    }
+  }
+
+  // The assessment
+  
+  .item-assessment {
+    > .item-content {
+      @include grid-span(10,1,$output-style: 'float');
+    }
+    > .item-action {
+      @include grid-span(2,11,$output-style: 'float');
+    }
+  }
+}
+
+@include breakpoint($curriculum-md) {
+
+  // The module
+  
+  .item-module {
+    > .item-content {
+      .title {
+        @include font-size(32);
+        @include line-height(36);
+        margin-bottom: $space-half;
+      }
+    }
+  }
+  
+  // The unit
+  
+  .item-unit {
+    > .item-content {
+      .title {
+        @include font-size(24);
+        @include line-height(30);
+      }
+    }
+  }
+}
+  
+} // End of curriculum-list
+
+// The list toggle
+
+.list-toggle {
+  
+  // The display of the two spans is toggled via javascript
+  .open { display: block; }
+  .close { display: none; }
+  
+  &.active {
+    .open { display: none; }
+    .close { display: block; }
+  }
+
+}

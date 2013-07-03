@@ -48,6 +48,15 @@
       color: $gray;
     }
   }
+
+  &.button-subtle {
+    border-bottom-color: $darkgray;
+    background-color: $mediumgray;
+    color: $white;
+    &:visited, &:hover, &:active {
+      background-color: $black;
+    }
+  }
   
   // Sized buttons
   
