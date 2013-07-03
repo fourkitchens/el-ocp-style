@@ -45,6 +45,74 @@
   padding: .6em 1em .625em;
 }
 
+.container {
+  padding: 12px;
+  background-color: #f3f3f3;
+}
+.container .title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #444444;
+}
+.container .body {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+}
+.container .body p {
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+.container .action {
+  padding: 12px 0 6px;
+}
+@media (min-width: 37.5em) {
+  .container .body {
+    width: 64.95726%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  .container .action {
+    width: 29.91453%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding: 6px 0;
+    text-align: right;
+  }
+}
+
+.container-group {
+  *zoom: 1;
+}
+.container-group:before, .container-group:after {
+  display: table;
+  content: "";
+}
+.container-group:after {
+  clear: both;
+}
+.container-group .container {
+  margin-bottom: 6px;
+}
+@media (min-width: 37.5em) {
+  .container-group .container {
+    float: left;
+    width: 48.75%;
+  }
+  .container-group .container:nth-child(even) {
+    float: right;
+  }
+}
+
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* normalize.scss v2.1.0 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
 /* ==========================================================================
@@ -1795,6 +1863,11 @@ footer {
  * Usage: here's the html to put elsewhere
  * <span class="icon" aria-hidden="true" data-icon="insert-letter-or-unicode-here"></span>
  */
+.grade-downloads {
+  clear: both;
+  padding-top: 24px;
+}
+
 body.common .content {
   max-width: 39em;
   margin: 0 auto;

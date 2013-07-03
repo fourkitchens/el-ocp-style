@@ -61,3 +61,56 @@
     padding: .6em 1em .625em;
   }
 }
+
+//
+// Containers
+//
+.container {
+  padding: $space-half;
+  background-color: $verylightgray;
+  .title {
+    @include font-size(18);
+    font-family: $headline-text;
+    font-weight: $headline-font-weight;
+    @include line-height(24);
+    color: $darkgray;
+  }
+  .body {
+    font-family: $headline-text;
+    p {
+      margin: 0;
+      @include font-size(18);
+      @include line-height(24);
+    }
+  }
+  .action {
+    padding: $space-half 0 $space-quarter;
+  }
+  @include breakpoint($main) {
+    .body {
+      @include grid-span(4,1,6,.25);
+    }
+    .action {
+      @include grid-span(2,5,6,.25);
+      padding: $space-quarter 0;
+      text-align: right;
+      
+    }
+  }    
+}
+
+.container-group {
+  @include clearfix;
+  .container {
+    margin-bottom: $space-quarter;
+  }
+  @include breakpoint($main) {
+    .container {
+      float: left;
+      width: column-span(6,1);
+      &:nth-child(even) {
+        float: right;
+      } 
+    }
+  }  
+}
