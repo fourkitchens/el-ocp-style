@@ -16,9 +16,13 @@
     position: relative;
     border-top: $borderwidth $borderstyle $bordercolor;
     margin: 0;
-    padding: 0;
     .item {
       border-color: $gray; // For any item nested inside another, change the border color to gray
+      background-color: $ultralightgray; // Give a slight gray background to first generation children
+      .item {
+        //border-width: 1px; // Make the border thinner
+        background-color: $verylightgray; // Give a slightly darker gray bkg to seconod generation children
+      }
     }
   }
   
@@ -140,6 +144,9 @@
       .id, .title {
         @include font-size(18);
         @include line-height(20);
+      }
+      .title + .id {
+        margin-top: $space; // In lessons, sometimes there are assessments listed. Add margin-top to ids to separate them
       }
     }
   }
@@ -276,8 +283,36 @@
 // The list toggle
 
 .list-toggle {
+  display: inline-block;
+  padding: 0 -$space-quarter;
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+  @include font-size(18);
+  @include line-height(20);
+  text-decoration: none;
+  color: $mediumgray;
+  
+  // colors
+  &:visited, &:active {
+    color: $mediumgray;
+  }
+  &:hover {
+    color: $blue;
+    .icon {
+      color: $blue;
+    }
+  }
+  
+  .icon {
+    @include font-size(32);
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: -.05em;
+    color: $gray;
+  }
   
   // The display of the two spans is toggled via javascript
+  
   .open { display: block; }
   .close { display: none; }
   
@@ -286,4 +321,24 @@
     .close { display: block; }
   }
 
+  @include breakpoint($curriculum-sm) {
+    text-align: center;
+    position: relative;
+    top: -.625em;
+    .icon {
+      display: block;
+      @include font-size(60);
+      line-height: 100%;
+      margin-bottom: -$space-half;
+    }
+  }
+
+  @include breakpoint($curriculum-md) {
+    top: -.625em;
+    .icon {
+      @include font-size(72);
+      line-height: 100%;
+      margin-bottom: $space*-.625;
+    }
+  }
 }

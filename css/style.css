@@ -1887,10 +1887,13 @@ footer {
   position: relative;
   border-top: 2px dotted #c6123f;
   margin: 0;
-  padding: 0;
 }
 .curriculum-list .item .item {
   border-color: #bbbbbb;
+  background-color: #f9f9f9;
+}
+.curriculum-list .item .item .item {
+  background-color: #f3f3f3;
 }
 .curriculum-list > .item:first-child {
   border-top-width: 0;
@@ -2012,6 +2015,9 @@ footer {
   font-size: 1.8rem;
   line-height: 20px;
   line-height: 2rem;
+}
+.curriculum-list .item-lesson > .item-content .title + .id {
+  margin-top: 24px;
 }
 .curriculum-list .item-assessment > .item-content .id, .curriculum-list .item-assessment > .item-content .title {
   font-size: 18px;
@@ -2153,6 +2159,35 @@ footer {
   }
 }
 
+.list-toggle {
+  display: inline-block;
+  padding: -6px;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+  text-decoration: none;
+  color: #787878;
+}
+.list-toggle:visited, .list-toggle:active {
+  color: #787878;
+}
+.list-toggle:hover {
+  color: #006595;
+}
+.list-toggle:hover .icon {
+  color: #006595;
+}
+.list-toggle .icon {
+  font-size: 32px;
+  font-size: 3.2rem;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: -.05em;
+  color: #bbbbbb;
+}
 .list-toggle .open {
   display: block;
 }
@@ -2164,6 +2199,31 @@ footer {
 }
 .list-toggle.active .close {
   display: block;
+}
+@media (min-width: 37.5em) {
+  .list-toggle {
+    text-align: center;
+    position: relative;
+    top: -.625em;
+  }
+  .list-toggle .icon {
+    display: block;
+    font-size: 60px;
+    font-size: 6rem;
+    line-height: 100%;
+    margin-bottom: -12px;
+  }
+}
+@media (min-width: 47.5em) {
+  .list-toggle {
+    top: -.625em;
+  }
+  .list-toggle .icon {
+    font-size: 72px;
+    font-size: 7.2rem;
+    line-height: 100%;
+    margin-bottom: -15px;
+  }
 }
 
 body.common .content {
