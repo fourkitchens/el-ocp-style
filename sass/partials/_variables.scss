@@ -18,6 +18,7 @@ $mediumgray:    rgb(120,120,120);
 $gray:          rgb(187,187,187);
 $lightgray:     rgb(234,234,234);
 $verylightgray: rgb(243,243,243);
+$ultralightgray:rgb(249,249,249);
 $white:         rgb(255,255,255);
 
 $red:           rgb(198,18,63);
@@ -33,13 +34,14 @@ $green:         rgb(109,141,36);
 
 //  Sizes
 
-$space:           24px;
-$space-quarter:   $space/4;
-$space-half:      $space/2;
-$space-and-half:  $space * 1.5;
-$space-double:    $space * 2;
-$space-triple:    $space * 3;
-$space-quadruple: $space * 4;
+$space:             24px;
+$space-quarter:     $space/4;
+$space-half:        $space/2;
+$space-and-quarter: $space*1.25;
+$space-and-half:    $space * 1.5;
+$space-double:      $space * 2;
+$space-triple:      $space * 3;
+$space-quadruple:   $space * 4;
 
 // Type
 
@@ -84,6 +86,8 @@ $main:        600px;
 $content:     600px;
 $content-md:  980px;
 $table:       600px;
+$curriculum-sm: 600px;
+$curriculum-md: 760px;
 
 // Borders
 
