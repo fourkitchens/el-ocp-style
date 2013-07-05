@@ -60,6 +60,18 @@
   }
 }
 
+// Variations for grade level
+
+.grade {
+
+  // Remove the bottom margin so it doesn't space the grade level list too far away
+  
+  .node-top {
+    margin-bottom: 0;    
+  }    
+
+}
+
 // Variations for module pages
 
 .module {
@@ -89,19 +101,3 @@
   }
 
 }
-
-// Variations for the units
-
-/*
-.unit {
-  .title-wrapper {
-    padding-left: column-span(2,1);
-  }
-  .thumbnail {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: column-span(2,1);
-  }
-}
-*/

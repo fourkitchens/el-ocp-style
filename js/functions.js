@@ -20,12 +20,25 @@ $(document).ready(function (){
    ======================================================= */
 
        
-    $menu = $('.menu'),
+    $menu = $('.menu');
     $menulink = $('#menu-link');
     
     $menulink.click(function() {
         $(this).toggleClass('active');
         $menu.toggleClass('active');
+        return false;
+    });
+
+/* =======================================================
+    Toggle curriculum list items
+   ======================================================= */
+
+       
+    $listlink = $('.list-toggle');
+    
+    $listlink.click(function() {
+        $(this).toggleClass('active');
+        $(this).parent().parent().find('> .item-children').toggleClass('active');
         return false;
     });
     
