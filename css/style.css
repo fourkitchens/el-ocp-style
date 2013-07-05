@@ -2010,6 +2010,9 @@ footer {
   line-height: 24px;
   line-height: 2.4rem;
 }
+.curriculum-list .item-lesson {
+  padding: 0 12px;
+}
 .curriculum-list .item-lesson > .item-content .id, .curriculum-list .item-lesson > .item-content .title {
   font-size: 18px;
   font-size: 1.8rem;

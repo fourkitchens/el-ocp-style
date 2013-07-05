@@ -140,13 +140,14 @@
   // The lesson
   
   .item-lesson {
+    padding: 0 $space-half;
     > .item-content {
       .id, .title {
         @include font-size(18);
         @include line-height(20);
       }
       .title + .id {
-        margin-top: $space; // In lessons, sometimes there are assessments listed. Add margin-top to ids to separate them
+        margin-top: $space; // In lessons, sometimes there are assessments listed. Add margin-top to ids to separate them.
       }
     }
   }
