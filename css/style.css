@@ -2229,6 +2229,20 @@ footer {
   }
 }
 
+.texts .title {
+  font-weight: 700;
+  color: #222222;
+}
+.texts .isbn {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+}
+.texts .isbn:before {
+  content: 'ISBN: ';
+}
+.texts .lexile {
+  text-align: right;
+}
+
 body.common .content {
   max-width: 39em;
   margin: 0 auto;
