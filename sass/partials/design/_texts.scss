@@ -1,0 +1,19 @@
+//
+// Texts
+//
+
+.texts {
+    .title {
+        font-weight: $headline-font-weight;
+        color: $headlinecolor;
+    }
+    .isbn {
+        font-family: $headline-text;
+        &:before {
+            content: 'ISBN: ';
+        }
+    }
+    .lexile {
+        text-align: right;
+    }
+}
