@@ -10,6 +10,7 @@
   text-decoration: none;
   background-color: #006595;
   color: white;
+  border: none;
   border-bottom: 2px solid #00496c;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -1057,6 +1058,60 @@ main {
   }
 }
 
+.search .title-wrapper {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+.search .search-input {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+.search .search-report {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+.search #primary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  .search #primary {
+    width: 74.375%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+.search #secondary {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 37.5em) {
+  .search #secondary {
+    width: 23.125%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+
 /* =======================================================
     Site Header Styles
    ======================================================= */
@@ -1738,6 +1793,143 @@ footer {
 
 .component-text header {
   border-bottom: 2px dotted #c6123f;
+}
+
+.search .node-top {
+  border: none;
+  margin-bottom: 24px;
+  padding-bottom: 0;
+  padding-top: 24px;
+}
+@media (min-width: 37.5em) {
+  .search .node-top {
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+}
+.search .page-title {
+  margin-bottom: 24px;
+}
+.search .search-input {
+  margin-bottom: 24px;
+  padding: 12px;
+  background-color: #f3f3f3;
+}
+.search .search-input label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #444444;
+}
+.search .search-input label:after {
+  content: ': ';
+}
+.search .search-input input[type="text"],
+.search .search-input input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-top-color: #bbbbbb;
+  margin-bottom: 6px;
+  padding: 6px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+}
+.search .search-input input[type="text"]:focus,
+.search .search-input input[type="search"]:focus {
+  border-color: #c6123f;
+}
+.search .search-input input[type="submit"] {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (min-width: 37.5em) {
+  .search .search-input {
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+  .search .search-input label,
+  .search .search-input input[type="text"],
+  .search .search-input input[type="search"],
+  .search .search-input input[type="submit"] {
+    display: inline-block;
+  }
+  .search .search-input label {
+    margin: 0 6px 0 0;
+  }
+  .search .search-input label:after {
+    content: "";
+  }
+  .search .search-input input[type="text"],
+  .search .search-input input[type="search"] {
+    margin: 0 6px 0 0;
+    width: 50%;
+  }
+  .search .search-input input[type="submit"] {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+}
+.search .search-report {
+  border-bottom: 2px dotted #c6123f;
+  padding-bottom: 12px;
+}
+.search .search-report .count {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 30px;
+  line-height: 3rem;
+  color: #222222;
+}
+.search .search-report .share, .search .search-report .reset {
+  float: left;
+  width: 50%;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+}
+.search .search-report .share a, .search .search-report .reset a {
+  text-decoration: none;
+}
+.search .search-report .reset {
+  text-align: right;
+}
+@media (min-width: 37.5em) {
+  .search .search-report .count {
+    width: 23.125%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  .search .search-report .share {
+    width: 48.75%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25.625%;
+    clear: none;
+  }
+  .search .search-report .reset {
+    width: 23.125%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
 }
 
 .node-pager {

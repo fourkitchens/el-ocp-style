@@ -1,0 +1,41 @@
+//
+// Search page layout
+//
+
+.search { // this is the body class
+  
+  // The title wrapper
+  
+  .title-wrapper {
+    @include grid-span(12,1);
+  }
+
+  .search-input {
+    @include grid-span(12,1);
+  }
+
+  .search-report {
+    @include grid-span(12,1);
+  }
+
+  // Primary content
+  
+  #primary {
+    @include grid-span(12,1);
+  
+    @include breakpoint($content) {
+      @include grid-span(9, 4); // 3 columns wide, starting at the 1st column
+    }
+  }
+  
+  // Sidebar content
+  
+  #secondary {
+    @include grid-span(12,1);
+  
+    @include breakpoint($content) {
+      @include grid-span(3, 1); // 3 columns wide, starting at the 10th column
+    }
+  }
+
+}
