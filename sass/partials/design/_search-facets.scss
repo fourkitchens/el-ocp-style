@@ -1,0 +1,112 @@
+//
+// Facets
+//
+
+// The facets in selectable lists
+// These styles match the jump links for the most part
+
+.facet-list {
+
+  margin-bottom: $space-half + $space-quarter;
+  
+  .title {
+    margin: 0;
+    background: $darkgray;
+    padding: $space-quarter $space-half;
+    @include font-size(18);
+    font-family: $headline-text;
+    font-weight: $headline-font-weight;
+    @include line-height(24);
+    background-color: $gray;
+    color: $darkgray;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      position: relative;
+      list-style-type: none;
+      margin: 0;
+      border-top: 2px solid $verylightgray;
+      font-family: $headline-text;
+      @include font-size(18);
+      &:first-child {
+        border-top-width: 0;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: $space-quarter $space-and-half $space-quarter $space-half;
+    background: $lightgray;
+    text-decoration: none;
+    &:hover {
+      background: $verylightgray;
+      text-decoration: underline;
+    }
+  }
+  
+  .count {
+    position: absolute;
+    padding: $space-quarter;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    color: $mediumgray;
+  }
+  
+  @include breakpoint($content) {
+    .title {
+      padding: $space-quarter;
+    }
+    
+    a {
+      padding: $space-quarter;
+      padding-right: $space-and-half;
+    }
+  }
+
+  @include breakpoint($content-md) {
+    .title {
+      padding: $space-quarter $space-half;
+    }
+    
+    a {
+      padding: $space-quarter $space-and-half $space-quarter $space-half;
+    }
+  }  
+} // End facet list styles
+
+// The currently active facets
+
+.active-facets {
+  margin-bottom: $space-half;
+
+  .facet {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid $verylightgray;
+    margin-right: .2em;
+    padding: 0 .375em 0 .25em;
+    font-family: $headline-text;
+    @include font-size(18);
+    font-weight: $body-font-weight;
+    text-decoration: none;
+    background-color: $verylightgray;
+    &:hover {
+      background-color: $white;
+      border-color: $lightgray;
+      color: $darkgray;
+    }
+    
+    .icon {
+      margin-left: .25em;
+      color: $gray;
+    }
+  }
+}
+

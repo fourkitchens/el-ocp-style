@@ -115,6 +115,10 @@
       @include line-height(30);
       
       a { text-decoration: none; }
+      
+      .icon {
+        font-size: 1.25em;
+      }
     }
     
     .reset {

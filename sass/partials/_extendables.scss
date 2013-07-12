@@ -70,6 +70,10 @@
     @include font-size(24);
     padding: .6em 1em .625em;
   }
+  
+  &.button-full {
+    width: 100%;
+  }
 }
 
 //
