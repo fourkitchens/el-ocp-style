@@ -1,0 +1,114 @@
+//
+// Search page components
+//
+
+.search-results {
+  @include clearfix;
+  
+  @include breakpoint($main) {
+    
+    // Show results in a 2-up grid
+    
+    .result {
+      float: left;
+      width: column-span(4.5,1,9);
+      clear: both;
+      &:nth-child(even) {
+        float: right;
+        clear: none;
+      }
+    }    
+  }
+
+  @include breakpoint($main-lg) {
+    
+    // Show results in a 3-up grid
+    
+    // Clear previous nth-child styles
+    .result:nth-child(even) {
+      float: left;
+    }
+    .result {
+      float: left;
+      width: column-span(3,1,9);
+      clear: none;
+      margin-right: gutter-span(1,16); // If I use the gutter span for a 12-column grid, the gutters are too wide to accommodate the regions, so I have to cheat it by using a gutter from a grid with a larger number of columns. The '16' was found by trian and error.
+      
+      // first in the row
+      &:nth-child(3n+4) {
+        clear: both;
+      }
+      
+      // last in the row
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }    
+  }
+  
+}
+
+// The search results
+
+.result {
+  border-top: $borderwidth $borderstyle $gray;
+  padding: $space-half 0 $space;
+  
+  // The id
+  
+  .id {
+    font-family: $headline-text;
+    @include font-size(18);
+    @include line-height(20);
+  }
+  
+  // The title
+  
+  .title {
+    margin-bottom: $space-half;
+    font-family: $headline-text;
+    @include font-size(20);
+    font-weight: $headline-font-weight;
+    @include line-height(24);
+    
+    a {
+      color: $headlinecolor;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  // The actions
+  
+  .action {
+    font-family: $headline-text;
+    @include font-size(18);
+    @include line-height(20);
+    
+    a {
+      display: inline-block;
+      margin-right: .25em;
+      color: $mediumgray;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
+      }
+    }
+    
+    .icon {
+      font-size: 1.25em;
+    }
+  }
+}
+
+// The more results button
+
+.more-results {
+  clear: both;
+  padding-top: $space;
+  width: 100%;
+  text-align: center;
+} 

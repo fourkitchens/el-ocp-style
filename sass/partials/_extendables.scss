@@ -13,6 +13,7 @@
   text-decoration: none;
   background-color: $blue;
   color: $white;
+  border: none;
   border-bottom: 2px solid darken($blue,8);
   
   // Transitions
@@ -68,6 +69,10 @@
   &.button-large {
     @include font-size(24);
     padding: .6em 1em .625em;
+  }
+  
+  &.button-full {
+    width: 100%;
   }
 }
 

@@ -1,0 +1,142 @@
+//
+// Search page header
+//
+
+.search { // The body class
+
+// The node top container
+
+  .node-top {
+    border: none;
+    margin-bottom: $space;
+    padding-bottom: 0;
+    padding-top: $space;
+    
+    @include breakpoint($main) {
+      padding-top: $space-triple;
+      padding-bottom: 0;
+    }  
+  }
+
+  // The page title
+    
+  .page-title {
+    margin-bottom: $space;
+  }
+  
+  // The search input container
+  
+  .search-input {
+    margin-bottom: $space;
+    padding: $space-half;
+    background-color: $verylightgray;
+    
+    label {
+      display: block;
+      margin-bottom: $space-quarter;
+      @include font-size(20);
+      font-family: $headline-text;
+      font-weight: $headline-font-weight;
+      @include line-height(24);
+      color: $darkgray;
+      &:after {
+        content: ': ';
+      }
+    }
+    
+    input[type="text"],
+    input[type="search"] {
+      @include box-sizing(border-box);
+      border: 1px solid $lightgray;
+      border-top-color: $gray;
+      margin-bottom: $space-quarter;
+      padding: $space-quarter;
+      width: 100%;
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+      &:focus {
+        border-color: $red;
+      }
+    }
+    
+    input[type="submit"] {
+      padding-left: $space;
+      padding-right: $space;
+    }
+    
+    @include breakpoint($main) {
+      padding-bottom: $space;
+      padding-top: $space;
+      
+      label,
+      input[type="text"],
+      input[type="search"],
+      input[type="submit"] {
+        display: inline-block;
+      }
+      label {
+        margin: 0 $space-quarter 0 0;
+        &:after {
+          content: "";
+        }
+      }
+      input[type="text"],
+      input[type="search"] {
+        margin: 0 $space-quarter 0 0;
+        width: 50%;
+      }
+      input[type="submit"] {
+        @include font-size(18);
+        @include line-height(24);
+      }
+    }
+  }
+  
+  // The results report and sharing container
+  
+  .search-report {
+    border-bottom: $borderwidth $borderstyle $bordercolor;
+    padding-bottom: $space-half;
+
+    .count {
+      font-family: $headline-text;
+      font-weight: $headline-font-weight;
+      @include font-size(24);
+      @include line-height(30);
+      color: $headlinecolor;
+    }
+    
+    .share, .reset {
+      float: left;
+      width: 50%;
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+      @include font-size(20);
+      @include line-height(30);
+      
+      a { text-decoration: none; }
+      
+      .icon {
+        font-size: 1.25em;
+      }
+    }
+    
+    .reset {
+      text-align: right;
+    }
+
+    @include breakpoint($main) {
+      
+      .count {
+        @include grid-span(3,1);
+      }
+      .share {
+        @include grid-span(6,4);
+      }
+      .reset {
+        @include grid-span(3,10);
+      }
+    }
+  }
+
+} // End .search container
