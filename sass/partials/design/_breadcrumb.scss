@@ -1,0 +1,56 @@
+//
+// Breadcrumb
+//
+
+// Base styles
+
+.breadcrumb {
+  
+  font-family: $headline-text;
+  @include font-size(18);
+  font-weight: $body-font-weight;
+  @include line-height(20);
+  
+  a {
+    color: $mediumgray;
+    text-decoration: none;
+    &:hover {
+      color: $blue;
+    }
+  }
+  
+  .breadcrumb-separator {
+    display: inline-block;
+    color: $gray;
+    padding: 0 .1em;
+    
+  }
+  
+  .selected {
+    display: none; // Hide the current page in the crumbs
+  }
+  
+  // The light variation is for use over dark or image backgrounds
+  
+  &.breadcrumb-light {
+    
+    a {
+      color: $gray;
+      &:hover {
+        color: $lightgray;
+      }
+    }
+    
+    .breadcrumb-separator {
+      color: $mediumgray;
+    }
+    
+  }
+
+}
+
+// The "You are here" header that gets written to the breadcrumb pane-content div
+
+.element-invisible {
+  display: none;
+}

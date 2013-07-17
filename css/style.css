@@ -1661,10 +1661,18 @@ footer {
   padding-bottom: 24px;
   padding-top: 24px;
 }
+.node-top .breadcrumb {
+  display: none;
+}
 @media (min-width: 37.5em) {
   .node-top {
-    padding-top: 72px;
     padding-bottom: 36px;
+  }
+  .node-top .breadcrumb {
+    display: block;
+    margin-bottom: 72px;
+    margin-top: -6px;
+    width: 100%;
   }
 }
 
@@ -1719,8 +1727,8 @@ footer {
   background-position: 50% 35%;
 }
 @media (min-width: 37.5em) {
-  .module .node-top {
-    padding-top: 192px;
+  .module .node-top .breadcrumb {
+    margin-bottom: 144px;
   }
 }
 .module .title-wrapper {
@@ -2633,6 +2641,43 @@ footer {
 }
 .texts .lexile {
   text-align: right;
+}
+
+.breadcrumb {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 2rem;
+}
+.breadcrumb a {
+  color: #787878;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: #006595;
+}
+.breadcrumb .breadcrumb-separator {
+  display: inline-block;
+  color: #bbbbbb;
+  padding: 0 .1em;
+}
+.breadcrumb .selected {
+  display: none;
+}
+.breadcrumb.breadcrumb-light a {
+  color: #bbbbbb;
+}
+.breadcrumb.breadcrumb-light a:hover {
+  color: #eaeaea;
+}
+.breadcrumb.breadcrumb-light .breadcrumb-separator {
+  color: #787878;
+}
+
+.element-invisible {
+  display: none;
 }
 
 body.common .content {

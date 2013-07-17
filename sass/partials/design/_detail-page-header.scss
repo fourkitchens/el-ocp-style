@@ -9,12 +9,27 @@
   margin-bottom: $space;
   padding-bottom: $space;
   padding-top: $space;
+
+  // Hide the breadcrumbs on mobile
+
+  .breadcrumb {    
+    display: none;
+  }
   
   @include breakpoint($main) {
-    padding-top: $space-triple;
     padding-bottom: $space-and-half;
+    
+    // Display the breadcrumbs
+
+    .breadcrumb {
+      display: block;
+      margin-bottom: $space-triple;
+      margin-top: -$space-quarter;
+      width: 100%;
+    }
   }  
 }
+
 
 // The page title and id
 
@@ -88,7 +103,9 @@
     }
     
     @include breakpoint($main) {
-      padding-top: $space*8;
+      .breadcrumb {
+        margin-bottom: $space*6;
+      }
     }
     
   }    
