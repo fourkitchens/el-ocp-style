@@ -1,0 +1,158 @@
+//
+// Homepage
+//
+
+.home main {
+  padding-bottom: 0; // Zero out standard padding on main so bottom stripe can sit flush against site footer
+}
+
+// Promos
+
+.promos {
+  padding: 0;
+  background-color: $verylightgray;
+  
+  .promo {
+
+    border-top: $borderwidth $borderstyle $gray;    
+    padding-bottom: $space-and-half;
+    padding-top: $space;    
+    &:first-child {
+      border-top-width: 0;
+    }
+    
+    .title {
+      font-family: $headline-text;
+      @include font-size(24);
+      font-weight: $headline-font-weight;
+      @include line-height(28);
+      margin-bottom: $space-quarter;
+      color: $headlinecolor;
+      
+      a {
+        color: $headlinecolor;
+        text-decoration: none;
+        &:hover {
+          color: $blue;
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .body {
+      margin-bottom: $space-half;
+      p { margin: 0; }
+    }
+    
+    .action {
+      font-family: $headline-text;
+      @include font-size(20);
+      font-weight: $body-font-weight;
+      @include line-height(24);
+      color: $blue;
+      a {
+        color: $blue;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          .icon {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    
+  } // End promo
+  
+  @include breakpoint($homepage-md) {
+
+    .promo {
+      border-top-width: 0;
+      float: left;
+      width: 30%;
+    }
+    
+    // Apply margin, padding and borders to the 2nd promo only
+    
+    .promo:nth-child(even) {
+      width: 34%;
+      margin: 0 2%;
+      padding-left: 2%;
+      padding-right: 2%;
+      border-left: 2px dotted $gray;
+      border-right: 2px dotted $gray;
+    }
+
+  }
+
+}
+
+// Video
+
+.video {
+  padding: $space 0 $space-and-half;
+  background-color: $white;
+  
+  h2 {
+    margin: 0 0 $space-half;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .video-wrapper {
+    position: relative; // Establish positioning context
+    width: 100%; // Make sure it's full width
+    padding-bottom: 56.25%; // Maintain a 16:9 aspect ratio for the container, and therefore the absolutely positioned iframe
+  }
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  @include breakpoint($homepage-md) {
+    padding-top: $space-and-half;
+    padding-bottom: $space-double;
+  }  
+  
+}
+
+
+// Testimonials
+
+.testimonials {
+  padding: $space 0 $space-and-half;
+  background-color: $darkgray;
+  
+  .quote {
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+    color: $lightgray;
+    
+    .body {
+      @include font-size(24);
+      @include line-height(28);
+      margin-bottom: $space-half;
+    }
+    .source {
+      @include font-size(18);
+      @include line-height(20);
+    }
+    .name, .school {
+      display: block;
+    }
+    .school {
+      color: $gray;
+    }
+  }
+  
+  @include breakpoint($homepage-md) {
+    .quote {
+      @include grid-span(8,3);
+    }
+  }
+    
+}
