@@ -84,23 +84,8 @@
   // The actions
   
   .action {
-    font-family: $headline-text;
-    @include font-size(18);
-    @include line-height(20);
-    
-    a {
-      display: inline-block;
-      margin-right: .25em;
-      color: $mediumgray;
-      text-decoration: none;
-      &:hover {
-        color: $blue;
-      }
-    }
-    
-    .icon {
-      font-size: 1.25em;
-    }
+    margin: 0;
+    padding: 0;
   }
 }
 

@@ -2019,23 +2019,8 @@ footer {
   text-decoration: underline;
 }
 .result .action {
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 20px;
-  line-height: 2rem;
-}
-.result .action a {
-  display: inline-block;
-  margin-right: .25em;
-  color: #787878;
-  text-decoration: none;
-}
-.result .action a:hover {
-  color: #006595;
-}
-.result .action .icon {
-  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
 }
 
 .more-results {
