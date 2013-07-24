@@ -79,7 +79,64 @@
       padding: $space-quarter $space-and-half $space-quarter $space-half;
     }
   }  
-} // End facet list styles
+} // End base facet list styles
+
+
+// Toggling long facet lists
+
+.facet-list {
+
+  // The toggle link base styles
+  
+  .facet-list-toggle {
+    display: block;
+    padding: $space-quarter 0;
+    @include font-size(18);
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+    @include line-height(20);
+    background-color: $white;
+    &:hover {
+      background-color: $white;
+    }
+  }
+  
+  // The collapsed list
+  
+  &.is-collapsed {
+  
+    // Don't display any facet list items after the first 5
+    li:nth-child(n+6) {
+      display: none;
+    }
+    
+    // Display the correct text in the list toggle link
+    .facet-list-toggle {
+      .more { display: block; }
+      .less { display: none; }
+    }
+
+  }
+  
+  // The expanded list
+  
+  &.is-expanded {
+  
+    // Don't display any facet list items after the first 5
+    li:nth-child(n+6) {
+      display: block;
+    }
+    
+    // Display the correct text in the list toggle link
+    .facet-list-toggle {
+      .more { display: none; }
+      .less { display: block; }
+    }
+    
+  }
+  
+} // End toggle styles
+
 
 // The currently active facets
 
@@ -90,6 +147,7 @@
     display: inline-block;
     border-radius: 5px;
     border: 1px solid $verylightgray;
+    margin-bottom: .2em;
     margin-right: .2em;
     padding: 0 .375em 0 .25em;
     font-family: $headline-text;

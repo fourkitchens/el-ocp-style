@@ -42,6 +42,23 @@ $(document).ready(function (){
     });
 
 /* =======================================================
+    Toggle search facet lists
+   ======================================================= */
+
+       
+    $facetlink = $('.facet-list .facet-list-toggle');
+    
+    $facetlink.click(function() {
+        $(this).toggleClass('active');
+        
+        // Switch between the is-expanded and is-collapsed class
+        $(this).parents('.facet-list').toggleClass('is-expanded is-collapsed');
+        
+        // Suppress normal behavior for the toggle link
+        return false;
+    });
+    
+/* =======================================================
     Testimonial fader on homepage
    ======================================================= */
 
