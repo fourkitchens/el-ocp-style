@@ -2776,21 +2776,21 @@ footer {
   }
 }
 
-.video {
+.in-action {
   padding: 24px 0 36px;
   background-color: white;
 }
-.video h2 {
+.in-action h2 {
   margin: 0 0 12px;
   padding: 0;
   text-align: center;
 }
-.video .video-wrapper {
+.in-action .video-wrapper {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
 }
-.video iframe {
+.in-action iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -2798,7 +2798,7 @@ footer {
   left: 0;
 }
 @media (min-width: 47.5em) {
-  .video {
+  .in-action {
     padding-top: 36px;
     padding-bottom: 48px;
   }
