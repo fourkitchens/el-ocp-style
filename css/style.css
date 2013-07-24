@@ -2114,6 +2114,39 @@ footer {
   }
 }
 
+.facet-list .facet-list-toggle {
+  display: block;
+  padding: 6px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 2rem;
+  background-color: white;
+}
+.facet-list .facet-list-toggle:hover {
+  background-color: white;
+}
+.facet-list.is-collapsed li:nth-child(n+6) {
+  display: none;
+}
+.facet-list.is-collapsed .facet-list-toggle .more {
+  display: block;
+}
+.facet-list.is-collapsed .facet-list-toggle .less {
+  display: none;
+}
+.facet-list.is-expanded li:nth-child(n+6) {
+  display: block;
+}
+.facet-list.is-expanded .facet-list-toggle .more {
+  display: none;
+}
+.facet-list.is-expanded .facet-list-toggle .less {
+  display: block;
+}
+
 .active-facets {
   margin-bottom: 12px;
 }
@@ -2121,6 +2154,7 @@ footer {
   display: inline-block;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
+  margin-bottom: .2em;
   margin-right: .2em;
   padding: 0 .375em 0 .25em;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
