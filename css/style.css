@@ -2714,6 +2714,221 @@ footer {
   display: none;
 }
 
+.home main {
+  padding-bottom: 0;
+}
+
+.promos {
+  padding: 0;
+  background-color: #772432;
+}
+.promos .promo {
+  border-top: 2px dotted #b2364b;
+  padding-bottom: 36px;
+  padding-top: 24px;
+}
+.promos .promo:first-child {
+  border-top-width: 0;
+}
+.promos .promo .title {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 2.8rem;
+  margin-bottom: 12px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+.promos .promo .title a {
+  color: white;
+  text-decoration: none;
+}
+.promos .promo .title a:hover {
+  color: #e2889f;
+  text-decoration: underline;
+}
+.promos .promo .body {
+  margin-bottom: 12px;
+  color: white;
+}
+.promos .promo .body p {
+  margin: 0;
+}
+.promos .promo .action {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #e2889f;
+}
+.promos .promo .action a {
+  color: #e2889f;
+  text-decoration: none;
+}
+.promos .promo .action a:hover {
+  color: white;
+}
+.promos .promo .action .icon {
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 47.5em) {
+  .promos .promo {
+    border-top-width: 0;
+    float: left;
+    width: 30%;
+  }
+  .promos .promo:nth-child(even) {
+    width: 34%;
+    margin: 0 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 2px dotted #b2364b;
+    border-right: 2px dotted #b2364b;
+  }
+}
+
+.video {
+  padding: 24px 0 36px;
+  background-color: white;
+}
+.video h2 {
+  margin: 0 0 12px;
+  padding: 0;
+  text-align: center;
+}
+.video .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 47.5em) {
+  .video {
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+}
+
+.testimonials {
+  background-color: #bbbbbb;
+}
+.testimonials .quote {
+  padding: 24px 0;
+  width: 82.91667%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 8.54167%;
+  clear: none;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  background-color: #bbbbbb;
+  color: #444444;
+}
+.testimonials .quote .body {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  margin-bottom: 12px;
+  text-indent: -.3em;
+}
+.testimonials .quote .source {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+.testimonials .quote .name, .testimonials .quote .school {
+  display: block;
+  color: #f3f3f3;
+}
+@media (min-width: 47.5em) {
+  .testimonials .quote {
+    width: 65.83333%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 17.08333%;
+    clear: none;
+  }
+}
+
+.fader {
+  *zoom: 1;
+  position: relative;
+}
+.fader:before, .fader:after {
+  display: table;
+  content: "";
+}
+.fader:after {
+  clear: both;
+}
+.fader .slide {
+  z-index: 1;
+  opacity: 0;
+}
+.fader .prev, .fader .next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 36px;
+  font-size: 3.6rem;
+  color: #d4d4d4;
+}
+.fader .prev:hover, .fader .next:hover {
+  color: white;
+}
+.fader .prev .icon, .fader .next .icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -.375em;
+  -webkit-font-smoothing: antialiased;
+}
+.fader .prev {
+  text-align: left;
+  left: 0;
+  width: 6.04167%;
+}
+.fader .prev .icon {
+  left: 0;
+}
+.fader .next {
+  text-align: right;
+  right: 0;
+  width: 6.04167%;
+}
+.fader .next .icon {
+  right: 0;
+}
+@media (min-width: 37.5em) {
+  .fader .prev, .fader .next {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
+  .fader .prev .icon, .fader .next .icon {
+    margin-top: -.25em;
+  }
+}
+@media (min-width: 47.5em) {
+  .fader .prev, .fader .next {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+  .fader .prev .icon, .fader .next .icon {
+    margin-top: -.25em;
+  }
+}
+
 body.common .content {
   max-width: 39em;
   margin: 0 auto;

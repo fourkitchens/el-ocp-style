@@ -33,7 +33,6 @@ $(document).ready(function (){
     Toggle curriculum list items
    ======================================================= */
 
-       
     $listlink = $('.list-toggle');
     
     $listlink.click(function() {
@@ -59,7 +58,15 @@ $(document).ready(function (){
         return false;
     });
     
+/* =======================================================
+    Testimonial fader on homepage
+   ======================================================= */
 
+    $('#Testimonials').easyFader({
+      slideDur: 5000,
+      fadeDur: 500
+    });
+    
 });
 
 

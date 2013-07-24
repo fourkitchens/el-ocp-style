@@ -1,0 +1,232 @@
+//
+// Homepage
+//
+
+.home main {
+  padding-bottom: 0; // Zero out standard padding on main so bottom stripe can sit flush against site footer
+}
+
+// Promos
+
+.promos {
+  padding: 0;
+  background-color: $brick;
+  
+  .promo {
+
+    border-top: $borderwidth $borderstyle lighten($brick,15);    
+    padding-bottom: $space-and-half;
+    padding-top: $space;    
+    &:first-child {
+      border-top-width: 0;
+    }
+    
+    .title {
+      font-family: $headline-text;
+      @include font-size(24);
+      font-weight: $headline-font-weight;
+      @include line-height(28);
+      margin-bottom: $space-half;
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+      
+      a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          color: $verylightred;
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .body {
+      margin-bottom: $space-half;
+      color: $white;
+      p { margin: 0; }
+    }
+    
+    .action {
+      font-family: $headline-text;
+      @include font-size(20);
+      font-weight: $body-font-weight;
+      @include line-height(24);
+      color: $verylightred;
+      a {
+        color: $verylightred;
+        text-decoration: none;
+        &:hover {
+          color: $white;
+        }
+      }
+      .icon {
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    
+  } // End promo
+  
+  @include breakpoint($homepage-md) {
+
+    .promo {
+      border-top-width: 0;
+      float: left;
+      width: 30%;
+    }
+    
+    // Apply margin, padding and borders to the 2nd promo only
+    
+    .promo:nth-child(even) {
+      width: 34%;
+      margin: 0 2%;
+      padding-left: 2%;
+      padding-right: 2%;
+      border-left: 2px dotted lighten($brick,15);
+      border-right: 2px dotted lighten($brick,15);
+    }
+
+  }
+
+}
+
+// Video
+
+.video {
+  padding: $space 0 $space-and-half;
+  background-color: $white;
+  
+  h2 {
+    margin: 0 0 $space-half;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .video-wrapper {
+    position: relative; // Establish positioning context
+    width: 100%; // Make sure it's full width
+    padding-bottom: 56.25%; // Maintain a 16:9 aspect ratio for the container, and therefore the absolutely positioned iframe
+  }
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  @include breakpoint($homepage-md) {
+    padding-top: $space-and-half;
+    padding-bottom: $space-double;
+  }  
+  
+}
+
+
+// Testimonials
+
+// Base styles
+
+.testimonials {
+  background-color: $gray;
+  
+  .quote {
+    padding: $space 0;
+    @include grid-span(10,2);
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+    background-color: $gray;
+    color: $darkgray;
+    
+    .body {
+      @include font-size(24);
+      @include line-height(28);
+      margin-bottom: $space-half;
+      text-indent: -.3em;
+    }
+    .source {
+      @include font-size(18);
+      @include line-height(20);
+    }
+    .name, .school {
+      display: block;
+      color: $verylightgray;
+    }
+  }
+  
+  @include breakpoint($homepage-md) {
+    .quote {
+      @include grid-span(8,3);
+    }
+  }
+    
+}
+
+// Fader styles
+
+.fader {
+
+  @include clearfix;
+  position: relative;
+  
+  .slide {
+    z-index: 1;
+    opacity: 0; // Init values for these hide all slides. They are revealed by the script
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @include font-size(36);
+    color: lighten($gray,10);
+    &:hover {
+      color: $white;
+    }
+    
+    .icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -.375em;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+  }
+  
+  .prev {
+    text-align: left;
+    left: 0;
+    width: column-span(1,1);
+    .icon {
+      left: 0;
+    }
+  }
+  
+  .next {
+    text-align: right;
+    right: 0;
+    width: column-span(1,1);
+    .icon {
+      right: 0;
+    }
+  }
+
+  @include breakpoint($homepage) {
+    .prev,.next {
+      @include font-size(48);
+      .icon {
+        margin-top: -.25em;
+      }
+    }
+  }
+  
+  @include breakpoint($homepage-md) {
+    .prev,.next {
+      @include font-size(60);
+      .icon {
+        margin-top: -.25em;
+      }
+    }
+  }
+  
+}
