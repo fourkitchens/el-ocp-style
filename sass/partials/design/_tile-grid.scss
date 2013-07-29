@@ -1,0 +1,49 @@
+//
+// Tile grid
+//
+
+.tile-grid {
+  @include clearfix;
+  margin-bottom: $space;
+  width: 100%;
+  //outline: 1px solid red;
+  
+  > div {
+    float: left;
+    margin: 0;
+  }
+  
+  // Grades
+  
+  .tile-grade {
+    font-family: $headline-text;
+    @include font-size(48);
+    @include line-height(48);
+    font-weight: $body-font-weight;
+    
+    small {
+      display: block;
+      @include font-size(20);
+      @include line-height(24);
+    }
+  
+    a {
+      display: block;
+      padding: $space-half $space;
+      position: relative;
+      z-index: 1;
+      outline: 1px solid $lightgray;
+      text-align: center;
+      text-decoration: none;
+      background-color: $white;
+      color: $red;
+      &:hover, &:active {
+        z-index: 2;
+        background-color: darken($white,2);
+        color: $blue;
+        outline-color: $gray;
+      }
+    }
+  }
+}
+

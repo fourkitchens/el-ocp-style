@@ -67,12 +67,19 @@ main {
       top: auto;
     }
   }
+  
+  // Page intro
+  
+  .page-intro {
+    clear: both;
+  }
 }
 
 // The node content elements
 
 .node-content {
   @include clearfix;
+  clear: both;
 
   // Primary content
   

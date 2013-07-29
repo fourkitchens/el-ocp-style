@@ -58,8 +58,16 @@
 }
 
 .container {
+  *zoom: 1;
   padding: 12px;
   background-color: #f3f3f3;
+}
+.container:before, .container:after {
+  display: table;
+  content: "";
+}
+.container:after {
+  clear: both;
 }
 .container .title {
   font-size: 18px;
@@ -69,6 +77,13 @@
   line-height: 24px;
   line-height: 2.4rem;
   color: #444444;
+}
+.container .title-large {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  padding: 12px 0;
 }
 .container .body {
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
@@ -758,6 +773,40 @@ hr {
   border-top: 1px solid #c6123f;
 }
 
+form {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #444444;
+}
+
+input[type="text"],
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-top-color: #bbbbbb;
+  margin-bottom: 6px;
+  padding: 6px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+}
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: #c6123f;
+}
+
 table {
   margin-bottom: 2.4rem;
   font-family: Georgia, serif;
@@ -1007,9 +1056,13 @@ main {
     top: auto;
   }
 }
+.node-top .page-intro {
+  clear: both;
+}
 
 .node-content {
   *zoom: 1;
+  clear: both;
 }
 .node-content:before, .node-content:after {
   display: table;
@@ -1656,10 +1709,18 @@ footer {
 }
 
 .node-top {
+  *zoom: 1;
   border-bottom: 2px dotted #c6123f;
   margin-bottom: 24px;
   padding-bottom: 24px;
   padding-top: 24px;
+}
+.node-top:before, .node-top:after {
+  display: table;
+  content: "";
+}
+.node-top:after {
+  clear: both;
 }
 .node-top .breadcrumb {
   display: none;
@@ -1713,6 +1774,28 @@ footer {
     margin-right: 2.5%;
     width: 72px;
   }
+}
+
+.page-intro {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+}
+.page-intro p {
+  margin: 24px 0 0;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  max-width: 30em;
+  color: #444444;
+}
+.page-intro a .icon {
+  color: inherit;
 }
 
 .grade .node-top {
@@ -2912,6 +2995,55 @@ footer {
   .fader .prev .icon, .fader .next .icon {
     margin-top: -.25em;
   }
+}
+
+.tile-grid {
+  *zoom: 1;
+  margin-bottom: 24px;
+  width: 100%;
+}
+.tile-grid:before, .tile-grid:after {
+  display: table;
+  content: "";
+}
+.tile-grid:after {
+  clear: both;
+}
+.tile-grid > div {
+  float: left;
+  margin: 0;
+}
+.tile-grid .tile-grade {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 48px;
+  line-height: 4.8rem;
+  font-weight: 400;
+}
+.tile-grid .tile-grade small {
+  display: block;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+.tile-grid .tile-grade a {
+  display: block;
+  padding: 12px 24px;
+  position: relative;
+  z-index: 1;
+  outline: 1px solid #eaeaea;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #c6123f;
+}
+.tile-grid .tile-grade a:hover, .tile-grid .tile-grade a:active {
+  z-index: 2;
+  background-color: #fafafa;
+  color: #006595;
+  outline-color: #bbbbbb;
 }
 
 body.common .content {

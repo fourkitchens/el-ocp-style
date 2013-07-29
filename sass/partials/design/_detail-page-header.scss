@@ -5,6 +5,7 @@
 // The node top container
 
 .node-top {
+  @include clearfix;
   border-bottom: $borderwidth $borderstyle $bordercolor;
   margin-bottom: $space;
   padding-bottom: $space;
@@ -54,7 +55,7 @@
   .thumbnail {
     display: none;
   }
-  
+    
   @include breakpoint($main) {
     .page-title {
       @include font-size(48);
@@ -72,6 +73,24 @@
       margin-right: gutter-span();
       width: $space-triple;
     }
+  }
+}
+
+// Page intro
+
+.page-intro {
+  @include grid-span(12,1);
+  font-family: $headline-text;
+  font-weight: $body-font-weight;
+  p {
+    margin: $space 0 0;
+    @include font-size(24);
+    @include line-height(28);
+    max-width: 30em;
+    color: $darkgray;
+  }
+  a .icon {
+    color: inherit;
   }
 }
 
