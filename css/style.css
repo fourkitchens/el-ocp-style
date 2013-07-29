@@ -1914,6 +1914,9 @@ footer {
   padding: 12px;
   background-color: #f3f3f3;
 }
+.search .search-input form {
+  margin-bottom: 0;
+}
 .search .search-input label {
   display: block;
   margin-bottom: 6px;
@@ -1991,9 +1994,15 @@ footer {
   line-height: 3rem;
   color: #222222;
 }
-.search .search-report .share, .search .search-report .reset {
-  float: left;
-  width: 50%;
+.search .search-report .count .results-link {
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+  text-decoration: none;
+}
+.search .search-report .actions {
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -2001,16 +2010,29 @@ footer {
   line-height: 30px;
   line-height: 3rem;
 }
-.search .search-report .share a, .search .search-report .reset a {
+.search .search-report .actions a {
   text-decoration: none;
 }
-.search .search-report .share .icon, .search .search-report .reset .icon {
+.search .search-report .actions .icon {
   font-size: 1.25em;
 }
-.search .search-report .reset {
-  text-align: right;
+.search .search-report .actions .jump {
+  float: left;
+  margin-right: .5em;
+}
+.search .search-report .actions .share {
+  float: right;
+  margin-left: .5em;
+}
+.search .search-report .active-facets {
+  float: left;
+  width: 100%;
 }
 @media (min-width: 37.5em) {
+  .search .search-report {
+    padding-bottom: 0;
+    padding-top: 12px;
+  }
   .search .search-report .count {
     width: 23.125%;
     float: left;
@@ -2018,19 +2040,29 @@ footer {
     margin-left: 0%;
     clear: none;
   }
-  .search .search-report .share {
+  .search .search-report .active-facets {
     width: 48.75%;
     float: left;
     margin-right: -100%;
     margin-left: 25.625%;
     clear: none;
+    margin-top: 0;
   }
-  .search .search-report .reset {
+  .search .search-report .actions {
     width: 23.125%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
+    text-align: right;
+  }
+  .search .search-report .actions .share {
+    float: none;
+    display: inline-block;
+    margin: 0;
+  }
+  .search .search-report .actions .jump {
+    display: none;
   }
 }
 
@@ -2054,6 +2086,10 @@ footer {
     float: right;
     clear: none;
   }
+  .search-results .result:nth-child(1), .search-results .result:nth-child(2) {
+    border-top-width: 0;
+    padding-top: 6px;
+  }
 }
 @media (min-width: 61.25em) {
   .search-results .result:nth-child(even) {
@@ -2070,6 +2106,10 @@ footer {
   }
   .search-results .result:nth-child(3n) {
     margin-right: 0;
+  }
+  .search-results .result:nth-child(3) {
+    border-top-width: 0;
+    padding-top: 6px;
   }
 }
 
@@ -2216,13 +2256,14 @@ footer {
 }
 
 .active-facets {
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 .active-facets .facet {
   display: inline-block;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  margin-bottom: .2em;
+  margin-bottom: .5em;
   margin-right: .2em;
   padding: 0 .375em 0 .25em;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
