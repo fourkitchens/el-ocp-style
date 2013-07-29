@@ -1,3 +1,36 @@
 //
 // Forms
 //
+
+form {
+  margin-bottom: $space;
+}
+
+// Labels
+
+label {
+  display: block;
+  margin-bottom: $space-quarter;
+  @include font-size(20);
+  font-family: $headline-text;
+  font-weight: $headline-font-weight;
+  @include line-height(24);
+  color: $darkgray;
+}
+
+// Text and search input
+
+input[type="text"],
+input[type="search"] {
+  @include box-sizing(border-box);
+  border: 1px solid $lightgray;
+  border-top-color: $gray;
+  margin-bottom: $space-quarter;
+  padding: $space-quarter;
+  width: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  &:focus {
+    border-color: $red;
+  }
+}

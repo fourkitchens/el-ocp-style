@@ -80,6 +80,7 @@
 // Containers
 //
 .container {
+  @include clearfix;
   padding: $space-half;
   background-color: $verylightgray;
   .title {
@@ -88,6 +89,11 @@
     font-weight: $headline-font-weight;
     @include line-height(24);
     color: $darkgray;
+  }
+  .title-large {
+    @include font-size(24);
+    @include line-height(28);
+    padding: $space-half 0;
   }
   .body {
     font-family: $headline-text;
