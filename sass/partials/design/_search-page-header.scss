@@ -31,6 +31,10 @@
     padding: $space-half;
     background-color: $verylightgray;
     
+    form {
+      margin-bottom: 0;
+    }
+    
     label {
       display: block;
       margin-bottom: $space-quarter;
@@ -104,37 +108,67 @@
       @include font-size(24);
       @include line-height(30);
       color: $headlinecolor;
+      
+      // The jump to results link
+      .results-link {
+        font-weight: $body-font-weight;
+        @include font-size(18);
+        @include line-height(20);
+        text-decoration: none;
+      }
     }
     
-    .share, .reset {
-      float: left;
-      width: 50%;
+    .actions {
       font-family: $headline-text;
       font-weight: $body-font-weight;
       @include font-size(20);
       @include line-height(30);
       
-      a { text-decoration: none; }
-      
+      a {
+        text-decoration: none;
+      }
       .icon {
         font-size: 1.25em;
       }
+      
+      .jump {
+        float: left;
+        margin-right: .5em;
+      }
+      .share {
+        float: right;
+        margin-left: .5em;
+      }
     }
-    
-    .reset {
-      text-align: right;
+      
+    .active-facets {
+      float: left;
+      width: 100%;
     }
 
     @include breakpoint($main) {
+    
+      padding-bottom: 0;
+      padding-top: $space-half;
       
       .count {
         @include grid-span(3,1);
       }
-      .share {
+      .active-facets {
         @include grid-span(6,4);
+        margin-top: 0;
       }
-      .reset {
+      .actions {
         @include grid-span(3,10);
+        text-align: right;
+        .share {
+          float: none;
+          display: inline-block;
+          margin: 0;
+        }
+        .jump {
+          display: none;
+        }
       }
     }
   }

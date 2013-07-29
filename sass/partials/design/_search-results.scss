@@ -13,10 +13,19 @@
       float: left;
       width: column-span(4.5,1,9);
       clear: both;
+      
+      // Last in rows
       &:nth-child(even) {
         float: right;
         clear: none;
       }
+
+      // Remove top-border and top-padding on first row items
+      &:nth-child(1), &:nth-child(2) {
+        border-top-width: 0;
+        padding-top: $space-quarter;
+      }
+
     }    
   }
 
@@ -43,6 +52,13 @@
       &:nth-child(3n) {
         margin-right: 0;
       }
+      
+      // Remove top-border and top-padding on third item in first row
+      &:nth-child(3) {
+        border-top-width: 0;
+        padding-top: $space-quarter;
+      }
+      
     }    
   }
   
