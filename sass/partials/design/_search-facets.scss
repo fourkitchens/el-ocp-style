@@ -141,13 +141,14 @@
 // The currently active facets
 
 .active-facets {
+  margin-top: $space-half;
   margin-bottom: $space-half;
 
   .facet {
     display: inline-block;
     border-radius: 5px;
     border: 1px solid $verylightgray;
-    margin-bottom: .2em;
+    margin-bottom: .5em;
     margin-right: .2em;
     padding: 0 .375em 0 .25em;
     font-family: $headline-text;
