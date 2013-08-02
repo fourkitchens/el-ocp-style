@@ -42,8 +42,48 @@ footer {
       }
     }
     
-    @include breakpoint($arrow) {
-      padding-top: $space;
-      padding-bottom: $space;
+  // The license
+  
+  .license {
+    padding-top: $space;
+    font-family: $headline-text;
+    font-weight: $body-font-weight;
+    @include font-size(18);
+    @include line-height(20);
+    color: $verylightred;
+    text-align: left;
+    
+    p {
+      margin: 0;
     }
+    
+    a {
+      text-decoration: underline;
+      color: $verylightred;
+      &:hover {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+    
+  @include breakpoint($arrow) {
+    padding-top: $space;
+    padding-bottom: $space;
+  }
+    
+  @include breakpoint($homepage-md) {
+    .license {
+      text-align: center;
+      max-width: column-span(10,1);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include breakpoint($homepage-lg) {
+    .license {
+      max-width: column-span(8,1);
+    }
+  }
 }

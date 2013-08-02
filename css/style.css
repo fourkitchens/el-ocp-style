@@ -1580,10 +1580,45 @@ footer {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.site-footer .license {
+  padding-top: 24px;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #e2889f;
+  text-align: left;
+}
+.site-footer .license p {
+  margin: 0;
+}
+.site-footer .license a {
+  text-decoration: underline;
+  color: #e2889f;
+}
+.site-footer .license a:hover {
+  text-decoration: none;
+  color: white;
+}
 @media (min-width: 37.5em) {
   .site-footer {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+}
+@media (min-width: 47.5em) {
+  .site-footer .license {
+    text-align: center;
+    max-width: 82.91667%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 61.25em) {
+  .site-footer .license {
+    max-width: 65.83333%;
   }
 }
 
