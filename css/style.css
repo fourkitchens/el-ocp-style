@@ -2935,7 +2935,166 @@ footer {
   }
 }
 
+.features-and-benefits {
+  *zoom: 1;
+  padding: 36px 0 48px;
+}
+.features-and-benefits:before, .features-and-benefits:after {
+  display: table;
+  content: "";
+}
+.features-and-benefits:after {
+  clear: both;
+}
+.features-and-benefits h2 {
+  margin: 0 0 24px 0;
+  padding: 0;
+  text-align: center;
+}
+.features-and-benefits .feature-list {
+  *zoom: 1;
+  margin: 0 0 24px;
+  padding: 0;
+}
+.features-and-benefits .feature-list:before, .features-and-benefits .feature-list:after {
+  display: table;
+  content: "";
+}
+.features-and-benefits .feature-list:after {
+  clear: both;
+}
+.features-and-benefits .feature-list > li {
+  list-style-type: none;
+}
+.features-and-benefits .feature {
+  border-top: 2px dotted #bbbbbb;
+  margin: 0;
+  padding: 12px 0 24px;
+}
+.features-and-benefits .feature h3 {
+  margin: 0 0 12px 0;
+}
+.features-and-benefits .feature h5 {
+  margin: 12px 0 0 0;
+}
+.features-and-benefits .feature p {
+  margin: 0;
+}
+.features-and-benefits .feature p + p {
+  margin-top: 12px;
+}
+.features-and-benefits .feature img {
+  display: block;
+  margin-bottom: 12px;
+}
+.features-and-benefits .next-step {
+  text-align: center;
+}
+.features-and-benefits .next-step .button, .features-and-benefits .next-step .node-ocp-assessment .download_all, .node-ocp-assessment .features-and-benefits .next-step .download_all {
+  margin-bottom: 12px;
+}
+.features-and-benefits .action-link {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #006595;
+  text-decoration: none;
+}
+.features-and-benefits .action-link .icon {
+  -webkit-font-smoothing: antialiased;
+}
+.features-and-benefits .action-link:hover {
+  color: #004262;
+}
+
+@media (min-width: 37.5em) {
+  #differences .feature {
+    width: 48.75%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 2.5%;
+  }
+  #differences .feature:nth-child(even) {
+    width: 48.75%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 61.25em) {
+  #differences .feature {
+    width: 23.125%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 2.5%;
+  }
+  #differences .feature:nth-child(even) {
+    width: 23.125%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 2.5%;
+  }
+  #differences .feature:nth-child(4n) {
+    width: 23.125%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5em) {
+  #how .feature {
+    width: 100%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+  #how .img {
+    width: 48.75%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 2.5%;
+  }
+  #how .body {
+    width: 48.75%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 61.25em) {
+  #how .feature {
+    width: 31.66667%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 2.5%;
+  }
+  #how .feature:nth-child(3) {
+    width: 31.66667%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+  #how .img {
+    float: none;
+    width: 100%;
+  }
+  #how .body {
+    float: none;
+    width: 100%;
+  }
+}
+
 .in-action {
+  display: none;
   padding: 24px 0 36px;
   background-color: white;
 }
