@@ -1,0 +1,26 @@
+//
+// Feedback widget styles
+//
+
+.feedback {
+  margin-top: $space;
+  padding: $space-half;
+  border: 1px solid $gray;
+  font-family: $headline-text;
+  
+  .title {
+    margin: 0;
+    font-family: $headline-text;
+    @include font-size(18);
+    @include line-height(24);
+    color: $headlinecolor;
+  }
+  
+  p {
+    margin: 0 0 $space-half;
+    padding: 0;
+    @include font-size(18);
+    @include line-height(24);    
+  }
+  
+}

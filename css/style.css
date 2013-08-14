@@ -3122,6 +3122,30 @@ footer {
   outline-color: #bbbbbb;
 }
 
+.feedback {
+  margin-top: 24px;
+  padding: 12px;
+  border: 1px solid #bbbbbb;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+}
+.feedback .title {
+  margin: 0;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #222222;
+}
+.feedback p {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
 body.common .content {
   max-width: 39em;
   margin: 0 auto;
