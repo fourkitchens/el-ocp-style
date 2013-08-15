@@ -92,6 +92,8 @@
 
 // Features and benefits
 
+// Base styles
+
 .features-and-benefits {
 
   @include clearfix;
@@ -220,43 +222,6 @@
     }
   }  
 }  
-
-
-// In action section
-
-.in-action {
-  display: none;
-  
-  padding: $space 0 $space-and-half;
-  background-color: $white;
-  
-  h2 {
-    margin: 0 0 $space-half;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .video-wrapper {
-    position: relative; // Establish positioning context
-    width: 100%; // Make sure it's full width
-    padding-bottom: 56.25%; // Maintain a 16:9 aspect ratio for the container, and therefore the absolutely positioned iframe
-  }
-  
-  iframe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  @include breakpoint($homepage-md) {
-    padding-top: $space-and-half;
-    padding-bottom: $space-double;
-  }  
-  
-}
-
 
 // Testimonials
 

@@ -3110,35 +3110,6 @@ footer {
   }
 }
 
-.in-action {
-  display: none;
-  padding: 24px 0 36px;
-  background-color: white;
-}
-.in-action h2 {
-  margin: 0 0 12px;
-  padding: 0;
-  text-align: center;
-}
-.in-action .video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-.in-action iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-@media (min-width: 47.5em) {
-  .in-action {
-    padding-top: 36px;
-    padding-bottom: 48px;
-  }
-}
-
 .testimonials {
   background-color: #bbbbbb;
 }
