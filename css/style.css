@@ -1929,6 +1929,23 @@ footer {
   border-bottom: 2px dotted #c6123f;
 }
 
+.component-copyright {
+  border: 1px dotted #c6123f;
+  margin-bottom: 0;
+  padding: 12px;
+  background-color: #fef3f5;
+}
+.component-copyright p {
+  margin: 0;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #c6123f;
+}
+
 .search .node-top {
   border: none;
   margin-bottom: 24px;
