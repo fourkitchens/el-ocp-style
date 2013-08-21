@@ -109,6 +109,7 @@
 .component-copyright {
   border: 1px dotted $red;
   margin-bottom: 0;
+  margin-top: $space-double;
   padding: $space-half;
   background-color: lighten($red,55);
   p {
