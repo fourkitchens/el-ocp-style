@@ -11,6 +11,7 @@
 .promos {
   padding: 0;
   background-color: $brick;
+  //display: none;
   
   .promo {
 
@@ -89,39 +90,138 @@
 
 }
 
-// In action section
+// Features and benefits
 
-.in-action {
-  padding: $space 0 $space-and-half;
-  background-color: $white;
+// Base styles
+
+.features-and-benefits {
+
+  @include clearfix;
+  padding: $space-and-half 0 $space-double;
   
   h2 {
-    margin: 0 0 $space-half;
+    margin: 0 0 $space 0;
     padding: 0;
     text-align: center;
   }
   
-  .video-wrapper {
-    position: relative; // Establish positioning context
-    width: 100%; // Make sure it's full width
-    padding-bottom: 56.25%; // Maintain a 16:9 aspect ratio for the container, and therefore the absolutely positioned iframe
+  .feature-list {
+    @include clearfix;
+    margin: 0 0 $space;
+    padding: 0;
+    > li {
+      list-style-type: none;
+    }
+  }
+
+  .feature {
+    border-top: 2px dotted $gray;
+    margin: 0;
+    padding: $space-half 0 $space;
+
+    h3 {
+      margin: 0 0 $space-half 0;
+    }
+    h5 {
+      margin: $space-half 0 0 0;
+    }
+    p {
+      margin: 0;
+    }
+    p+p {
+      margin-top: $space-half;
+    }
+    
+    img {
+      display: block;
+      margin-bottom: $space-half;
+    }
   }
   
-  iframe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  @include breakpoint($homepage-md) {
-    padding-top: $space-and-half;
-    padding-bottom: $space-double;
+  .next-step {
+    text-align: center;
+    
+    .button {
+      margin-bottom: $space-half;
+    }
   }  
-  
+
+  .action-link {
+    font-family: $headline-text;
+    @include font-size(20);
+    font-weight: $body-font-weight;
+    @include line-height(24);
+    color: $blue;
+    text-decoration: none;
+    .icon {
+      -webkit-font-smoothing: antialiased;
+    }
+    &:hover {
+      color: $linkcolorhover;
+    }
+  }
+
 }
 
+// The differences feature list
+
+#differences {
+  // At non-mobile widths show 2-up
+  @include breakpoint($homepage) {
+    .feature {
+      @include float-span(6);
+      &:nth-child(even) {
+        @include float-span(6,'last');
+      }
+    }
+  }
+  // At widescreen widths whow 4-up  
+  @include breakpoint($homepage-lg) {
+    .feature {
+      @include float-span(3);
+      &:nth-child(even) {
+        @include float-span(3);
+      }
+      &:nth-child(4n) {
+        @include float-span(3,'last');
+      }
+    }
+  }  
+}
+
+// The how it works feature list
+
+#how {
+  // At non-mobile widths show the images and body side-by-side
+  @include breakpoint($homepage) {
+    .feature {
+      @include float-span(12);
+    }
+    .img {
+      @include float-span(6);
+    }
+    .body {
+      @include float-span(6,'last');
+    }
+  }
+  // At widescreen widths whow 3-up  
+  @include breakpoint($homepage-lg) {
+    .feature {
+      @include float-span(4);
+    }
+    .feature:nth-child(3) {
+      @include float-span(4,'last');
+    }
+    .img {
+      float: none;
+      width: 100%;
+    }
+    .body {
+      float: none;
+      width: 100%;
+    }
+  }  
+}  
 
 // Testimonials
 

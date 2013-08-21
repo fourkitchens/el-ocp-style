@@ -103,3 +103,20 @@
     border-bottom: $borderwidth $borderstyle $bordercolor;
   }
 }
+
+// Copyright components use special type treatment
+
+.component-copyright {
+  border: 1px dotted $red;
+  margin-bottom: 0;
+  padding: $space-half;
+  background-color: lighten($red,55);
+  p {
+    margin: 0;
+    font-family: $headline-text;
+    @include font-size(16);
+    font-weight: $body-font-weight;
+    @include line-height(20);
+    color: $red;
+  }
+}
