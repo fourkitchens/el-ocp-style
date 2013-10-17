@@ -43,6 +43,15 @@
 .button.button-subtle:visited, .node-ocp-assessment .button-subtle.download_all:visited, .button.button-subtle:hover, .node-ocp-assessment .button-subtle.download_all:hover, .button.button-subtle:active, .node-ocp-assessment .button-subtle.download_all:active {
   background-color: #222222;
 }
+.button.button-brick, .node-ocp-assessment .button-brick.download_all {
+  border: 2px solid #d44d6f;
+  background-color: #772432;
+  color: #e2889f;
+}
+.button.button-brick:hover, .node-ocp-assessment .button-brick.download_all:hover, .button.button-brick:active, .node-ocp-assessment .button-brick.download_all:active {
+  background-color: #c6123f;
+  color: white;
+}
 .button.button-small, .node-ocp-assessment .button-small.download_all {
   font-size: 16px;
   font-size: 1.6rem;
@@ -2880,9 +2889,24 @@ footer {
   padding-bottom: 0;
 }
 
+.grades {
+  background-color: #eaeaea;
+  padding-bottom: 24px;
+  text-align: center;
+}
+.grades h3 {
+  color: #444444;
+}
+.grades .tile-grid > div {
+  float: none;
+  display: inline-block;
+  margin-right: -4px;
+}
+
 .promos {
   padding: 0;
   background-color: #772432;
+  border-bottom: 2px dotted #b2364b;
 }
 .promos .promo {
   border-top: 2px dotted #b2364b;
@@ -3219,6 +3243,31 @@ footer {
   .fader .prev .icon, .fader .next .icon {
     margin-top: -.25em;
   }
+}
+
+.home .feedback {
+  background-color: #772432;
+  border: none;
+  border-bottom: 2px dotted #b2364b;
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+}
+.home .feedback .title {
+  color: white;
+  display: inline-block;
+}
+.home .feedback p {
+  /*margin: 0 0 $space-half;
+  padding: 0;
+  @include font-size(18);
+  @include line-height(24);*/
+  color: white;
+  display: inline-block;
+}
+.home .feedback .title, .home .feedback p {
+  display: inline-block;
+  margin: 0 .25em;
 }
 
 .tile-grid {

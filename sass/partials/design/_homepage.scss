@@ -6,12 +6,32 @@
   padding-bottom: 0; // Zero out standard padding on main so bottom stripe can sit flush against site footer
 }
 
+// Grades
+
+.grades {
+  background-color: $lightgray;
+  padding-bottom: $space;
+  text-align: center;
+  
+  h3 {
+    color: $darkgray;
+  }
+  
+  .tile-grid {
+    > div {
+      float: none; // Get rid of the float that applied by default to divs in a .tile-grid
+      display: inline-block; // Display them inline-block so they will center
+      margin-right: -4px; // Remove the gap between inline-block elements
+    }
+  }
+  
+}
 // Promos
 
 .promos {
   padding: 0;
   background-color: $brick;
-  //display: none;
+  border-bottom: $borderwidth $borderstyle lighten($brick,15);
   
   .promo {
 
@@ -327,6 +347,45 @@
         margin-top: -.25em;
       }
     }
+  }
+  
+}
+
+// Feedback
+
+.home .feedback {
+  background-color: $brick;
+  border: none;
+  border-bottom: $borderwidth $borderstyle lighten($brick,15);
+  margin: 0;
+  padding: $space;
+  text-align: center;
+  //margin-top: $space;
+  //padding: $space-half;
+  // border: 1px solid $gray;
+  // font-family: $headline-text;
+  
+  .title {
+    //margin: 0;
+    //font-family: $headline-text;
+    //@include font-size(18);
+    //@include line-height(24);
+    // color: $headlinecolor;
+    color: $white;
+    display: inline-block;
+  }
+  
+  p {
+    /*margin: 0 0 $space-half;
+    padding: 0;
+    @include font-size(18);
+    @include line-height(24);*/
+    color: $white;
+    display: inline-block;   
+  }
+  .title, p {
+    display: inline-block;
+    margin: 0 .25em;
   }
   
 }

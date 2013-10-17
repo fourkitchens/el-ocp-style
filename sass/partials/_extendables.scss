@@ -59,6 +59,16 @@
     }
   }
   
+  &.button-brick {
+    border: 2px solid $lightred;//lighten($brick, 15);
+    background-color: $brick;
+    color: $verylightred;
+    &:hover, &:active {
+      background-color: $red;
+      color: $white;
+    }
+  }
+  
   // Sized buttons
   
   &.button-small {
