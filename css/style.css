@@ -2891,19 +2891,27 @@ footer {
 
 .grades {
   background-color: #eaeaea;
-  padding-bottom: 24px;
+  padding: 24px 0 36px;
   text-align: center;
 }
 .grades h3 {
   color: #444444;
+  margin-top: 0;
+}
+.grades .tile-grid {
+  margin-bottom: 0;
 }
 .grades .tile-grid > div {
   float: none;
   display: inline-block;
   margin-right: -4px;
 }
+.grades .tile-grid .tile-grade a {
+  outline-color: #dddddd;
+}
 
 .promos {
+  display: none;
   padding: 0;
   background-color: #772432;
   border-bottom: 2px dotted #b2364b;
@@ -3253,21 +3261,24 @@ footer {
   padding: 24px;
   text-align: center;
 }
-.home .feedback .title {
+.home .feedback .title, .home .feedback p {
   color: white;
-  display: inline-block;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+.home .feedback .title {
+  -webkit-font-smoothing: antialiased;
 }
 .home .feedback p {
-  /*margin: 0 0 $space-half;
-  padding: 0;
-  @include font-size(18);
-  @include line-height(24);*/
-  color: white;
-  display: inline-block;
+  margin-bottom: 24px;
 }
-.home .feedback .title, .home .feedback p {
-  display: inline-block;
-  margin: 0 .25em;
+@media (min-width: 61.25em) {
+  .home .feedback .title, .home .feedback p {
+    display: inline-block;
+    margin: 0 .5em 0 0;
+  }
 }
 
 .tile-grid {
@@ -3310,12 +3321,12 @@ footer {
   text-align: center;
   text-decoration: none;
   background-color: white;
-  color: #c6123f;
+  color: #006595;
 }
 .tile-grid .tile-grade a:hover, .tile-grid .tile-grade a:active {
   z-index: 2;
   background-color: #fafafa;
-  color: #006595;
+  color: #c6123f;
   outline-color: #bbbbbb;
 }
 

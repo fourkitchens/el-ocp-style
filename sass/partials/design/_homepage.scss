@@ -10,18 +10,23 @@
 
 .grades {
   background-color: $lightgray;
-  padding-bottom: $space;
+  padding: $space 0 $space-and-half;
   text-align: center;
   
   h3 {
     color: $darkgray;
+    margin-top: 0;
   }
   
   .tile-grid {
+    margin-bottom: 0;
     > div {
       float: none; // Get rid of the float that applied by default to divs in a .tile-grid
       display: inline-block; // Display them inline-block so they will center
       margin-right: -4px; // Remove the gap between inline-block elements
+    }
+    .tile-grade a {
+      outline-color: darken($lightgray,5);
     }
   }
   
@@ -29,6 +34,7 @@
 // Promos
 
 .promos {
+  display: none;
   padding: 0;
   background-color: $brick;
   border-bottom: $borderwidth $borderstyle lighten($brick,15);
@@ -360,32 +366,24 @@
   margin: 0;
   padding: $space;
   text-align: center;
-  //margin-top: $space;
-  //padding: $space-half;
-  // border: 1px solid $gray;
-  // font-family: $headline-text;
-  
-  .title {
-    //margin: 0;
-    //font-family: $headline-text;
-    //@include font-size(18);
-    //@include line-height(24);
-    // color: $headlinecolor;
-    color: $white;
-    display: inline-block;
-  }
-  
-  p {
-    /*margin: 0 0 $space-half;
-    padding: 0;
-    @include font-size(18);
-    @include line-height(24);*/
-    color: $white;
-    display: inline-block;   
-  }
+
   .title, p {
-    display: inline-block;
-    margin: 0 .25em;
+    color: $white;
+    @include font-size(24);
+    @include line-height(28);
+  }
+  .title {
+    -webkit-font-smoothing: antialiased;
+  }
+  p {
+    margin-bottom: $space;
   }
   
+  @include breakpoint($homepage-lg) {
+    .title, p {
+      display: inline-block;
+      margin: 0 .5em 0 0;
+    }
+  }
+    
 }
