@@ -59,9 +59,9 @@
     }
   }
   
-  &.button-brick {
+  &.button-outline {
     border: 2px solid $lightred;//lighten($brick, 15);
-    background-color: $brick;
+    background-color: transparent;
     color: $verylightred;
     &:hover, &:active {
       background-color: $red;
@@ -69,7 +69,23 @@
     }
   }
   
+  &.button-outline-dark {
+    border: 2px solid $brick;//lighten($brick, 15);
+    background-color: transparent;
+    color: $brick;
+    &:hover, &:active {
+      background-color: $lightred;
+      border-color: $white;
+      color: $white;
+    }
+  }
+  
   // Sized buttons
+
+  &.button-tiny {
+    @include font-size(18);
+    padding: .125em .3755em .15em;
+  }
   
   &.button-small {
     @include font-size(16);

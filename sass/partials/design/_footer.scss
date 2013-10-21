@@ -21,11 +21,8 @@ footer {
   
   a {
     color: $white;
-    text-decoration: underline;
-    &:hover {
-        text-decoration: none;
-    }
   }
+  
   .arrow {
     height: 1.375rem;
     width: 1.375rem;
@@ -41,6 +38,37 @@ footer {
       size: contain;
       }
     }
+
+  // Feedback
+  
+  .footer-feedback {
+    border-bottom: $borderwidth $borderstyle lighten($brick,15);
+    padding: 0 0 $space;
+    text-align: center;
+    margin-bottom: $space-half;
+    
+    h3 {
+      margin: 0;
+    }
+  
+    p {
+      margin: 0 0 $space-half;
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+      @include font-size(24);
+      @include line-height(28);
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    @include breakpoint($homepage-lg) {
+      p {
+        display: inline-block;
+        margin: 0 .5em 0 0;
+      }
+    }
+      
+  }
     
   // The license
   
@@ -70,6 +98,9 @@ footer {
   @include breakpoint($arrow) {
     padding-top: $space;
     padding-bottom: $space;
+    .footer-feedback {
+      margin-bottom: $space;
+    }
   }
     
   @include breakpoint($homepage-md) {

@@ -139,6 +139,7 @@
     background-color: transparent;
     @include font-size(24);
     @include line-height(28);
+    float: right;
     > li {
       display: inline-block;
     }
@@ -155,6 +156,17 @@
     a {
       padding: 0 .5rem;
     }
+  }
+}
+
+// Feedback button
+
+#nav-feedback {
+  display: none;
+  @include breakpoint($main-nav-sm) {
+    display: block;
+    float: right;
+    margin-left: $space-half;
   }
 }
 
