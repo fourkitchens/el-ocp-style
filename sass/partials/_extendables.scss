@@ -60,9 +60,9 @@
   }
   
   &.button-outline {
-    border: 2px solid $lightred;//lighten($brick, 15);
+    border: 2px solid $verylightred;
     background-color: transparent;
-    color: $verylightred;
+    color: lighten($verylightred,15);
     &:hover, &:active {
       background-color: $red;
       color: $white;
@@ -70,7 +70,7 @@
   }
   
   &.button-outline-dark {
-    border: 2px solid $brick;//lighten($brick, 15);
+    border: 2px solid $brick;
     background-color: transparent;
     color: $brick;
     &:hover, &:active {

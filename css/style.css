@@ -44,9 +44,9 @@
   background-color: #222222;
 }
 .button.button-outline, .node-ocp-assessment .button-outline.download_all {
-  border: 2px solid #d44d6f;
+  border: 2px solid #e2889f;
   background-color: transparent;
-  color: #e2889f;
+  color: #f1c6d1;
 }
 .button.button-outline:hover, .node-ocp-assessment .button-outline.download_all:hover, .button.button-outline:active, .node-ocp-assessment .button-outline.download_all:active {
   background-color: #c6123f;
