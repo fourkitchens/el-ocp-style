@@ -2897,11 +2897,40 @@ footer {
 .texts .isbn {
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
 }
-.texts .isbn:before {
-  content: 'ISBN: ';
-}
 .texts .lexile {
   text-align: right;
+}
+
+.texts .notes {
+  margin-top: 12px;
+}
+.texts .notes.is-collapsed {
+  max-height: 0;
+  overflow: hidden;
+}
+.texts .notes.is-expanded {
+  max-height: none;
+  margin-bottom: 12px;
+}
+.texts .notes-toggle {
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  line-height: 20px;
+  line-height: 2rem;
+}
+.texts .notes-toggle .show {
+  display: block;
+}
+.texts .notes-toggle .hide {
+  display: none;
+}
+.texts .notes-toggle.active .show {
+  display: none;
+}
+.texts .notes-toggle.active .hide {
+  display: block;
 }
 
 .breadcrumb {
