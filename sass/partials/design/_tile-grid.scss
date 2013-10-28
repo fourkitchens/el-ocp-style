@@ -36,11 +36,11 @@
       text-align: center;
       text-decoration: none;
       background-color: $white;
-      color: $red;
+      color: $blue;
       &:hover, &:active {
         z-index: 2;
         background-color: darken($white,2);
-        color: $blue;
+        color: $red;
         outline-color: $gray;
       }
     }

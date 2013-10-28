@@ -43,6 +43,30 @@
 .button.button-subtle:visited, .node-ocp-assessment .button-subtle.download_all:visited, .button.button-subtle:hover, .node-ocp-assessment .button-subtle.download_all:hover, .button.button-subtle:active, .node-ocp-assessment .button-subtle.download_all:active {
   background-color: #222222;
 }
+.button.button-outline, .node-ocp-assessment .button-outline.download_all {
+  border: 2px solid #e2889f;
+  background-color: transparent;
+  color: #f1c6d1;
+}
+.button.button-outline:hover, .node-ocp-assessment .button-outline.download_all:hover, .button.button-outline:active, .node-ocp-assessment .button-outline.download_all:active {
+  background-color: #c6123f;
+  color: white;
+}
+.button.button-outline-dark, .node-ocp-assessment .button-outline-dark.download_all {
+  border: 2px solid #772432;
+  background-color: transparent;
+  color: #772432;
+}
+.button.button-outline-dark:hover, .node-ocp-assessment .button-outline-dark.download_all:hover, .button.button-outline-dark:active, .node-ocp-assessment .button-outline-dark.download_all:active {
+  background-color: #d44d6f;
+  border-color: white;
+  color: white;
+}
+.button.button-tiny, .node-ocp-assessment .button-tiny.download_all {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: .125em .3755em .15em;
+}
 .button.button-small, .node-ocp-assessment .button-small.download_all {
   font-size: 16px;
   font-size: 1.6rem;
@@ -1340,6 +1364,7 @@ main {
     font-size: 2.4rem;
     line-height: 28px;
     line-height: 2.8rem;
+    float: right;
   }
   .main-nav > li {
     display: inline-block;
@@ -1358,6 +1383,17 @@ main {
   }
   .main-nav a {
     padding: 0 .5rem;
+  }
+}
+
+#nav-feedback {
+  display: none;
+}
+@media (min-width: 37.5em) {
+  #nav-feedback {
+    display: block;
+    float: right;
+    margin-left: 12px;
   }
 }
 
@@ -1562,10 +1598,6 @@ footer {
 }
 .site-footer a {
   color: white;
-  text-decoration: underline;
-}
-.site-footer a:hover {
-  text-decoration: none;
 }
 .site-footer .arrow {
   height: 1.375rem;
@@ -1579,6 +1611,32 @@ footer {
   background-position: right 50%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.site-footer .footer-feedback {
+  border-bottom: 2px dotted #b2364b;
+  padding: 0 0 24px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.site-footer .footer-feedback h3 {
+  margin: 0;
+}
+.site-footer .footer-feedback p {
+  margin: 0 0 12px;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 61.25em) {
+  .site-footer .footer-feedback p {
+    display: inline-block;
+    margin: 0 .5em 0 0;
+  }
 }
 .site-footer .license {
   padding-top: 24px;
@@ -1606,6 +1664,9 @@ footer {
   .site-footer {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+  .site-footer .footer-feedback {
+    margin-bottom: 24px;
   }
 }
 @media (min-width: 47.5em) {
@@ -2880,77 +2941,25 @@ footer {
   padding-bottom: 0;
 }
 
-.promos {
-  padding: 0;
-  background-color: #772432;
+.grades {
+  background-color: #eaeaea;
+  padding: 24px 0 36px;
+  text-align: center;
 }
-.promos .promo {
-  border-top: 2px dotted #b2364b;
-  padding-bottom: 36px;
-  padding-top: 24px;
+.grades h3 {
+  color: #444444;
+  margin-top: 0;
 }
-.promos .promo:first-child {
-  border-top-width: 0;
+.grades .tile-grid {
+  margin-bottom: 0;
 }
-.promos .promo .title {
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 28px;
-  line-height: 2.8rem;
-  margin-bottom: 12px;
-  color: white;
-  -webkit-font-smoothing: antialiased;
+.grades .tile-grid > div {
+  float: none;
+  display: inline-block;
+  margin-right: -4px;
 }
-.promos .promo .title a {
-  color: white;
-  text-decoration: none;
-}
-.promos .promo .title a:hover {
-  color: #e2889f;
-  text-decoration: underline;
-}
-.promos .promo .body {
-  margin-bottom: 12px;
-  color: white;
-}
-.promos .promo .body p {
-  margin: 0;
-}
-.promos .promo .action {
-  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
-  font-size: 20px;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 24px;
-  line-height: 2.4rem;
-  color: #e2889f;
-}
-.promos .promo .action a {
-  color: #e2889f;
-  text-decoration: none;
-}
-.promos .promo .action a:hover {
-  color: white;
-}
-.promos .promo .action .icon {
-  -webkit-font-smoothing: antialiased;
-}
-@media (min-width: 47.5em) {
-  .promos .promo {
-    border-top-width: 0;
-    float: left;
-    width: 30%;
-  }
-  .promos .promo:nth-child(even) {
-    width: 34%;
-    margin: 0 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-left: 2px dotted #b2364b;
-    border-right: 2px dotted #b2364b;
-  }
+.grades .tile-grid .tile-grade a {
+  outline-color: #dddddd;
 }
 
 .features-and-benefits {
@@ -3261,12 +3270,12 @@ footer {
   text-align: center;
   text-decoration: none;
   background-color: white;
-  color: #c6123f;
+  color: #006595;
 }
 .tile-grid .tile-grade a:hover, .tile-grid .tile-grade a:active {
   z-index: 2;
   background-color: #fafafa;
-  color: #006595;
+  color: #c6123f;
   outline-color: #bbbbbb;
 }
 
