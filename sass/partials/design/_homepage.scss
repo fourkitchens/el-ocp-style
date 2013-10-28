@@ -6,88 +6,30 @@
   padding-bottom: 0; // Zero out standard padding on main so bottom stripe can sit flush against site footer
 }
 
-// Promos
+// Grades
 
-.promos {
-  padding: 0;
-  background-color: $brick;
-  //display: none;
+.grades {
+  background-color: $lightgray;
+  padding: $space 0 $space-and-half;
+  text-align: center;
   
-  .promo {
-
-    border-top: $borderwidth $borderstyle lighten($brick,15);    
-    padding-bottom: $space-and-half;
-    padding-top: $space;    
-    &:first-child {
-      border-top-width: 0;
-    }
-    
-    .title {
-      font-family: $headline-text;
-      @include font-size(24);
-      font-weight: $headline-font-weight;
-      @include line-height(28);
-      margin-bottom: $space-half;
-      color: $white;
-      -webkit-font-smoothing: antialiased;
-      
-      a {
-        color: $white;
-        text-decoration: none;
-        &:hover {
-          color: $verylightred;
-          text-decoration: underline;
-        }
-      }
-    }
-    
-    .body {
-      margin-bottom: $space-half;
-      color: $white;
-      p { margin: 0; }
-    }
-    
-    .action {
-      font-family: $headline-text;
-      @include font-size(20);
-      font-weight: $body-font-weight;
-      @include line-height(24);
-      color: $verylightred;
-      a {
-        color: $verylightred;
-        text-decoration: none;
-        &:hover {
-          color: $white;
-        }
-      }
-      .icon {
-        -webkit-font-smoothing: antialiased;
-      }
-    }
-    
-  } // End promo
-  
-  @include breakpoint($homepage-md) {
-
-    .promo {
-      border-top-width: 0;
-      float: left;
-      width: 30%;
-    }
-    
-    // Apply margin, padding and borders to the 2nd promo only
-    
-    .promo:nth-child(even) {
-      width: 34%;
-      margin: 0 2%;
-      padding-left: 2%;
-      padding-right: 2%;
-      border-left: 2px dotted lighten($brick,15);
-      border-right: 2px dotted lighten($brick,15);
-    }
-
+  h3 {
+    color: $darkgray;
+    margin-top: 0;
   }
-
+  
+  .tile-grid {
+    margin-bottom: 0;
+    > div {
+      float: none; // Get rid of the float that applied by default to divs in a .tile-grid
+      display: inline-block; // Display them inline-block so they will center
+      margin-right: -4px; // Remove the gap between inline-block elements
+    }
+    .tile-grade a {
+      outline-color: darken($lightgray,5);
+    }
+  }
+  
 }
 
 // Features and benefits
