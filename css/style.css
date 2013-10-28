@@ -124,14 +124,14 @@
 }
 @media (min-width: 37.5em) {
   .container .body {
-    width: 64.95726%;
+    width: 65.51724%;
     float: left;
     margin-right: -100%;
     margin-left: 0%;
     clear: none;
   }
   .container .action {
-    width: 29.91453%;
+    width: 31.03448%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -1852,6 +1852,10 @@ footer {
 .title-wrapper .thumbnail {
   display: none;
 }
+.title-wrapper h2 {
+  margin: 0;
+  padding: 0;
+}
 @media (min-width: 37.5em) {
   .title-wrapper .page-title {
     font-size: 48px;
@@ -2540,7 +2544,7 @@ footer {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0%;
+  margin-right: 0;
   position: relative;
   border-top: 2px dotted #c6123f;
   margin: 0;
@@ -2561,20 +2565,20 @@ footer {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0%;
+  margin-right: 0;
 }
 .curriculum-list .item-action {
   padding: 0 0 30px 0;
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0%;
+  margin-right: 0;
 }
 .curriculum-list .item-children {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0%;
+  margin-right: 0;
   max-height: 0;
   overflow-y: hidden;
 }
@@ -2696,111 +2700,111 @@ footer {
     width: 100%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-module > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   .curriculum-list .item-module > .item-content .thumb {
     width: 38.19095%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-module > .item-content .body {
     width: 58.79397%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-module > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-unit > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   .curriculum-list .item-unit > .item-content .thumb {
     width: 17.58794%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-unit > .item-content .body {
     width: 79.39698%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-unit > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-task > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   .curriculum-list .item-task > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-lesson > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   .curriculum-list .item-lesson > .item-content .thumb {
     width: 17.58794%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-lesson > .item-content .body {
     width: 79.39698%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-lesson > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .curriculum-list .item-assessment > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   .curriculum-list .item-assessment > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
 }
 @media (min-width: 47.5em) {
@@ -3042,14 +3046,14 @@ footer {
     width: 48.75%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(even) {
     width: 48.75%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
 }
 @media (min-width: 61.25em) {
@@ -3057,21 +3061,21 @@ footer {
     width: 23.125%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(even) {
     width: 23.125%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(4n) {
     width: 23.125%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
 }
 
@@ -3080,20 +3084,20 @@ footer {
     width: 100%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   #how .img {
     width: 48.75%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   #how .body {
     width: 48.75%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
 }
 @media (min-width: 61.25em) {
@@ -3101,14 +3105,14 @@ footer {
     width: 31.66667%;
     clear: right;
     float: left;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: 2.5%;
   }
   #how .feature:nth-child(3) {
     width: 31.66667%;
     clear: right;
     float: right;
-    margin-right: 0%;
+    margin-right: 0;
   }
   #how .img {
     float: none;
@@ -3325,14 +3329,14 @@ body.common .content {
   width: 6.04167%;
   clear: right;
   float: left;
-  margin-left: 0%;
+  margin-left: 0;
   margin-right: 2.5%;
 }
 .grid-docs .last {
   width: 6.04167%;
   clear: right;
   float: right;
-  margin-right: 0%;
+  margin-right: 0;
 }
 @media (min-width: 37.5em) {
   .grid-docs .primary {

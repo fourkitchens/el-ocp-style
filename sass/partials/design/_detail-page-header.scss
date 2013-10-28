@@ -55,6 +55,11 @@
   .thumbnail {
     display: none;
   }
+  
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
     
   @include breakpoint($main) {
     .page-title {
