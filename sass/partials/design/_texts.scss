@@ -9,11 +9,53 @@
     }
     .isbn {
         font-family: $headline-text;
-        &:before {
-            content: 'ISBN: ';
-        }
     }
     .lexile {
         text-align: right;
     }
+    
+    // Notes
+    
+    
 }
+
+// Toggling text notes
+
+.texts {
+
+    
+    // The  notes container
+    
+    .notes {
+        margin-top: $space-half;
+    }
+    .notes.is-collapsed {
+        //display: none;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .notes.is-expanded {
+        max-height: none;
+        margin-bottom: $space-half;
+    }
+
+    // The toggle link base styles
+    
+    .notes-toggle {
+        display: block;
+        @include font-size(18);
+        font-family: $headline-text;
+        @include line-height(20);
+    }
+    
+    // States of the notes-toggle link
+    .notes-toggle {
+        .show { display: block; }
+        .hide { display: none; }
+    }
+    .notes-toggle.active {
+        .show { display: none; }
+        .hide { display: block; }
+    }
+  
+} // End toggle notes styles
