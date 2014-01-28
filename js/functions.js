@@ -57,6 +57,23 @@ $(document).ready(function (){
         // Suppress normal behavior for the toggle link
         return false;
     });
+
+/* =======================================================
+    Toggle text notes
+   ======================================================= */
+
+       
+    $noteslink = $('.texts .notes-toggle');
+    
+    $noteslink.click(function() {
+        $(this).toggleClass('active');
+        
+        // Switch between the is-expanded and is-collapsed class
+        $(this).siblings('.notes').toggleClass('is-expanded is-collapsed');
+        
+        // Suppress normal behavior for the toggle link
+        return false;
+    });
     
 /* =======================================================
     Testimonial fader on homepage
