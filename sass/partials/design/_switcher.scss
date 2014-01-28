@@ -1,0 +1,82 @@
+//
+// Switcher
+//
+
+.switcher {
+
+  @include clearfix;
+
+  // Containers
+
+  > div {
+    // any styles for containers go here
+  }
+
+  // States
+
+  .is-hidden {
+  
+    display: none !important;
+    visibility: hidden !important;
+    
+  }
+  
+  // Navigation
+  
+  .switcher-nav {
+  
+    margin: 0 auto $space-half;
+    padding: 0;
+    display: inline-block;
+    
+    li {
+      @include clearfix;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 2px solid $gray;
+      @include font-size(20);
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+      text-align: center;
+      float: left;
+      
+      &:first-child {
+        @include border-left-radius(5px);
+      }
+      
+      &:last-child {
+        @include border-right-radius(5px);
+      }
+      
+      &.is-active {
+        background-color: $white;
+      }
+      
+      &:not(:first-child) {
+        border-left-width: 0;
+      }
+    }
+    
+    a {
+      display: block;
+      padding: $space-quarter $space-half;
+      background-color: transparent;
+      color: $blue;
+      
+      &:hover {
+        color: $red;
+      }
+      
+      &.is-active {
+        text-decoration: none;
+        color: $darkgray;
+      }
+      
+      @include breakpoint($homepage) {
+        padding: $space-quarter $space;
+      }
+    }
+  }
+
+}

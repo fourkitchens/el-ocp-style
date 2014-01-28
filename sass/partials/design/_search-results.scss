@@ -87,6 +87,7 @@
     font-weight: $headline-font-weight;
     @include line-height(24);
     
+    /*
     a {
       color: $headlinecolor;
       text-decoration: none;
@@ -95,6 +96,7 @@
         text-decoration: underline;
       }
     }
+    */
   }
   
   // The actions
