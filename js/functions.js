@@ -83,6 +83,39 @@ $(document).ready(function (){
       slideDur: 5000,
       fadeDur: 500
     });
+
+/* =======================================================
+    Switcher
+   ======================================================= */
+
+   $('.switcher-nav a').click(function(){
+     
+     var $this = $(this);
+     var $container = $(this).attr('href');
+               
+     // Remove active class from active
+     
+     $this.parents('.switcher-nav').find('.is-active').removeClass('is-active');
+     
+     // Turn this one and it's child link active
+     
+     $this.addClass('is-active').parent('li').addClass('is-active');
+     
+     // Hide all containers
+     
+     $this.parents('.switcher').find('> div').addClass('is-hidden');
+     
+     // Show the intended target container
+     
+     $($container).removeClass('is-hidden');
+     
+     // Suppress normal behavior
+     
+     return false;
+
+   });
+
+
     
 });
 

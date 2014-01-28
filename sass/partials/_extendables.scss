@@ -109,6 +109,14 @@
   @include clearfix;
   padding: $space-half;
   background-color: $verylightgray;
+  
+  /*
+  + .container {
+    margin-top: $space;
+  }
+  */
+  margin-bottom: $space;
+  
   .title {
     @include font-size(18);
     font-family: $headline-text;
@@ -148,7 +156,7 @@
 .container-group {
   @include clearfix;
   .container {
-    margin-bottom: $space-quarter;
+    margin-bottom: $space-quarter;    
   }
   @include breakpoint($main) {
     .container {
