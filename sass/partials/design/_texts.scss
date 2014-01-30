@@ -14,9 +14,19 @@
         text-align: right;
     }
     
-    // Notes
+    // Define the width of the "Cover" column at wider-than-mobile breakpoints to keep it from getting too large
     
+    @include breakpoint($table) {
+      [data-title='Cover'] {
+        width: 80px;
+      }
+    }
     
+    @include breakpoint($table-md) {
+      [data-title='Cover'] {
+        width: 120px;
+      }
+    }    
 }
 
 // Toggling text notes
