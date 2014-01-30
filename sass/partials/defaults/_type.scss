@@ -61,6 +61,16 @@ h6 {
   color: $black;
 }
 
+// descriptors inside main headings
+
+h1, h2, h3 {
+  small {
+    display: block;
+    font-weight: 400;
+    color: $bodycolor;
+  }
+}
+
 p, ul, dl, ol { 
   font-size: $base-font-size;
   line-height: $base-line-height;
