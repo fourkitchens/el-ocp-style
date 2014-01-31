@@ -81,6 +81,14 @@
   width: 100%;
 }
 
+.button-group .button, .button-group .node-ocp-assessment .download_all, .node-ocp-assessment .button-group .download_all {
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.button-group .button:last-child, .button-group .node-ocp-assessment .download_all:last-child, .node-ocp-assessment .button-group .download_all:last-child {
+  margin-right: 0;
+}
+
 .container {
   *zoom: 1;
   padding: 12px;
@@ -3428,6 +3436,7 @@ footer {
   padding: 6px 12px;
   background-color: transparent;
   color: #006595;
+  text-decoration: none;
 }
 .switcher .switcher-nav a:hover {
   color: #c6123f;

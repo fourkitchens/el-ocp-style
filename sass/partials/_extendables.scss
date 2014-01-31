@@ -103,6 +103,19 @@
 }
 
 //
+// Button group
+//
+
+.button-group {
+  .button {
+    margin-right: $space-quarter;
+    margin-bottom: $space-quarter;
+    &:last-child {
+      margin-right: 0;
+    } 
+  }
+}
+//
 // Containers
 //
 .container {
