@@ -63,6 +63,7 @@
       padding: $space-quarter $space-half;
       background-color: transparent;
       color: $blue;
+      text-decoration: none;
       
       &:hover {
         color: $red;
@@ -74,7 +75,7 @@
       }
       
       @include breakpoint($homepage) {
-        padding: $space-quarter $space;
+        padding: $space-quarter ($space-half + $space-quarter);
       }
     }
   }
