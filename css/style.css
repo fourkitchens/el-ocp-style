@@ -3008,6 +3008,79 @@ footer {
   padding-bottom: 0;
 }
 
+.promos {
+  padding: 0;
+  background-color: #772432;
+}
+.promos .promo {
+  border-top: 2px dotted #b2364b;
+  padding-bottom: 36px;
+  padding-top: 24px;
+}
+.promos .promo:first-child {
+  border-top-width: 0;
+}
+.promos .promo .title {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 2.8rem;
+  margin-bottom: 12px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+.promos .promo .title a {
+  color: white;
+  text-decoration: none;
+}
+.promos .promo .title a:hover {
+  color: #e2889f;
+  text-decoration: underline;
+}
+.promos .promo .body {
+  margin-bottom: 12px;
+  color: white;
+}
+.promos .promo .body p {
+  margin: 0;
+}
+.promos .promo .action {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #e2889f;
+}
+.promos .promo .action a {
+  color: #e2889f;
+  text-decoration: none;
+}
+.promos .promo .action a:hover {
+  color: white;
+}
+.promos .promo .action .icon {
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 47.5em) {
+  .promos .promo {
+    border-top-width: 0;
+    float: left;
+    width: 30%;
+  }
+  .promos .promo:nth-child(even) {
+    width: 34%;
+    margin: 0 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 2px dotted #b2364b;
+    border-right: 2px dotted #b2364b;
+  }
+}
+
 .grades {
   background-color: #eaeaea;
   padding: 24px 0 36px;
@@ -3447,7 +3520,7 @@ footer {
 }
 @media (min-width: 37.5em) {
   .switcher .switcher-nav a {
-    padding: 6px 24px;
+    padding: 6px 18px;
   }
 }
 
