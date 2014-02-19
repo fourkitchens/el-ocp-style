@@ -71,6 +71,15 @@ h1, h2, h3 {
   }
 }
 
+// Eyebrows inside main headings
+
+h1, h2, h3 {
+  .eyebrow {
+    display: block;
+    font-weight: $body-font-weight;
+  }
+}
+
 p, ul, dl, ol { 
   font-size: $base-font-size;
   line-height: $base-line-height;

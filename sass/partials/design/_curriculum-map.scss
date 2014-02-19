@@ -1,0 +1,51 @@
+//
+// Curriculum Map
+//
+
+.map-grid {
+
+  // Base styles
+  
+  @include clearfix;
+
+  > div {
+    border-top: $borderwidth $borderstyle $bordercolor;
+    padding: $space-half 0 $space;
+    
+    > h3 {
+      margin: 0 0 $space-half;
+    }
+    
+    > ul {
+      margin: 0;
+    }
+  }
+  
+
+  @include breakpoint($main $main-lg) {
+    
+    // 2-up grid
+    
+    > div {
+      @include float-span(6,1);
+    }
+    
+    > div:nth-child(even) {
+      margin-right: 0;
+    }
+    
+  }
+
+  @include breakpoint($main-lg) {
+  
+    // 4-up grid
+        
+    > div {
+      @include float-span(3,1);
+    }
+    
+    > div:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
