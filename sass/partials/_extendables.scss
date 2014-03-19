@@ -15,30 +15,30 @@
   color: $white;
   border: none;
   border-bottom: 2px solid darken($blue,8);
-  
+
   // Transitions
-  
+
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
-  
+
   // The visited state
-  
+
   &:visited {
     color: $white;
   }
 
   // The hover state
-  
+
   &:hover, &:active {
     background-color: darken($blue,8);
     color: $white;
   }
-  
+
   // Button Variations
-  
+
   &.button-disabled {
     border-bottom-color: $gray;
     background-color: $lightgray;
@@ -58,7 +58,7 @@
       background-color: $black;
     }
   }
-  
+
   &.button-outline {
     border: 2px solid $verylightred;
     background-color: transparent;
@@ -68,7 +68,7 @@
       color: $white;
     }
   }
-  
+
   &.button-outline-dark {
     border: 2px solid $brick;
     background-color: transparent;
@@ -79,24 +79,24 @@
       color: $white;
     }
   }
-  
+
   // Sized buttons
 
   &.button-tiny {
     @include font-size(18);
     padding: .125em .3755em .15em;
   }
-  
+
   &.button-small {
     @include font-size(16);
     padding: .25em .625em .3em;
   }
-  
+
   &.button-large {
     @include font-size(24);
     padding: .6em 1em .625em;
   }
-  
+
   &.button-full {
     width: 100%;
   }
@@ -112,7 +112,7 @@
     margin-bottom: $space-quarter;
     &:last-child {
       margin-right: 0;
-    } 
+    }
   }
 }
 //
@@ -122,14 +122,14 @@
   @include clearfix;
   padding: $space-half;
   background-color: $verylightgray;
-  
+
   /*
   + .container {
     margin-top: $space;
   }
   */
   margin-bottom: $space;
-  
+
   .title {
     @include font-size(18);
     font-family: $headline-text;
@@ -161,15 +161,15 @@
       @include grid-span(2,5,6,.25);
       padding: $space-quarter 0;
       text-align: right;
-      
+
     }
-  }    
+  }
 }
 
 .container-group {
   @include clearfix;
   .container {
-    margin-bottom: $space-quarter;    
+    margin-bottom: $space-quarter;
   }
   @include breakpoint($main) {
     .container {
@@ -177,7 +177,26 @@
       width: column-span(6,1);
       &:nth-child(even) {
         float: right;
-      } 
+      }
     }
-  }  
+  }
+}
+
+//
+// Action link
+//
+
+.action-link {
+  font-family: $headline-text;
+  @include font-size(20);
+  font-weight: $body-font-weight;
+  @include line-height(24);
+  color: $blue;
+  text-decoration: none;
+  .icon {
+    -webkit-font-smoothing: antialiased;
+  }
+  &:hover {
+    color: $linkcolorhover;
+  }
 }
