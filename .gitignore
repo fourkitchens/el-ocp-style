@@ -13,3 +13,7 @@ _site
 # Bundler stuff
 .bundle
 vendor
+
+# Sublime stuff
+*.sublime-project
+*.sublime-workspace
