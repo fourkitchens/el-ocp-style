@@ -2936,6 +2936,11 @@ footer {
   }
 }
 
+.text-downloads {
+  clear: both;
+  padding-top: 24px;
+}
+
 .texts .title {
   font-weight: 700;
   color: #222222;
