@@ -13,16 +13,16 @@
   padding: 0;
   background-color: $brick;
   // border-bottom: $borderwidth $borderstyle lighten($brick,15);
-  
+
   .promo {
 
-    border-top: $borderwidth $borderstyle lighten($brick,15);    
+    border-top: $borderwidth $borderstyle lighten($brick,15);
     padding-bottom: $space-and-half;
-    padding-top: $space;    
+    padding-top: $space;
     &:first-child {
       border-top-width: 0;
     }
-    
+
     .title {
       font-family: $headline-text;
       @include font-size(24);
@@ -31,7 +31,7 @@
       margin-bottom: $space-half;
       color: $white;
       -webkit-font-smoothing: antialiased;
-      
+
       a {
         color: $white;
         text-decoration: none;
@@ -41,13 +41,13 @@
         }
       }
     }
-    
+
     .body {
       margin-bottom: $space-half;
       color: $white;
       p { margin: 0; }
     }
-    
+
     .action {
       font-family: $headline-text;
       @include font-size(20);
@@ -65,9 +65,9 @@
         -webkit-font-smoothing: antialiased;
       }
     }
-    
+
   } // End promo
-  
+
   @include breakpoint($homepage-md) {
 
     .promo {
@@ -75,9 +75,9 @@
       float: left;
       width: 30%;
     }
-    
+
     // Apply margin, padding and borders to the 2nd promo only
-    
+
     .promo:nth-child(even) {
       width: 34%;
       margin: 0 2%;
@@ -91,18 +91,28 @@
 
 }
 
+// Switcher + nav
+
+.home {
+  .switcher {
+    background-color: $lightgray;
+    padding-top: $space;
+    text-align: center;
+  }
+}
+
 // Grades
 
 .grades {
   background-color: $lightgray;
-  padding: $space 0 $space-and-half;
+  padding: 0 0 $space-and-half;
   text-align: center;
-  
+
   h3 {
     color: $darkgray;
     margin-top: 0;
   }
-  
+
   .tile-grid {
     margin-bottom: 0;
     > div {
@@ -114,7 +124,7 @@
       outline-color: darken($lightgray,5);
     }
   }
-  
+
 }
 
 // Features and benefits
@@ -125,13 +135,15 @@
 
   @include clearfix;
   padding: $space-and-half 0 $space-double;
-  
+  background-color: $white;
+  text-align: left;
+
   h2 {
     margin: 0 0 $space 0;
     padding: 0;
     text-align: center;
   }
-  
+
   .feature-list {
     @include clearfix;
     margin: 0 0 $space;
@@ -158,20 +170,20 @@
     p+p {
       margin-top: $space-half;
     }
-    
+
     img {
       display: block;
       margin-bottom: $space-half;
     }
   }
-  
+
   .next-step {
     text-align: center;
-    
+
     .button {
       margin-bottom: $space-half;
     }
-  }  
+  }
 
   .action-link {
     font-family: $headline-text;
@@ -202,7 +214,7 @@
       }
     }
   }
-  // At widescreen widths whow 4-up  
+  // At widescreen widths whow 4-up
   @include breakpoint($homepage-lg) {
     .feature {
       @include float-span(3);
@@ -213,7 +225,7 @@
         @include float-span(3,'last');
       }
     }
-  }  
+  }
 }
 
 // The how it works feature list
@@ -231,7 +243,7 @@
       @include float-span(6,'last');
     }
   }
-  // At widescreen widths whow 3-up  
+  // At widescreen widths whow 3-up
   @include breakpoint($homepage-lg) {
     .feature {
       @include float-span(4);
@@ -247,8 +259,8 @@
       float: none;
       width: 100%;
     }
-  }  
-}  
+  }
+}
 
 // Testimonials
 
@@ -256,7 +268,7 @@
 
 .testimonials {
   background-color: $gray;
-  
+
   .quote {
     padding: $space 0;
     @include grid-span(10,2);
@@ -264,7 +276,7 @@
     font-weight: $body-font-weight;
     background-color: $gray;
     color: $darkgray;
-    
+
     .body {
       @include font-size(24);
       @include line-height(28);
@@ -280,13 +292,13 @@
       color: $verylightgray;
     }
   }
-  
+
   @include breakpoint($homepage-md) {
     .quote {
       @include grid-span(8,3);
     }
   }
-    
+
 }
 
 // Fader styles
@@ -295,12 +307,12 @@
 
   @include clearfix;
   position: relative;
-  
+
   .slide {
     z-index: 1;
     opacity: 0; // Init values for these hide all slides. They are revealed by the script
   }
-  
+
   .prev, .next {
     position: absolute;
     top: 0;
@@ -310,16 +322,16 @@
     &:hover {
       color: $white;
     }
-    
+
     .icon {
       position: absolute;
       top: 50%;
       margin-top: -.375em;
       -webkit-font-smoothing: antialiased;
     }
-    
+
   }
-  
+
   .prev {
     text-align: left;
     left: 0;
@@ -328,7 +340,7 @@
       left: 0;
     }
   }
-  
+
   .next {
     text-align: right;
     right: 0;
@@ -346,7 +358,7 @@
       }
     }
   }
-  
+
   @include breakpoint($homepage-md) {
     .prev,.next {
       @include font-size(60);
@@ -355,5 +367,5 @@
       }
     }
   }
-  
+
 }

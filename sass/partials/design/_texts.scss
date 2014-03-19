@@ -2,6 +2,13 @@
 // Texts
 //
 
+// Text downloads
+
+.text-downloads {
+  clear: both;
+  padding-top: $space;
+}
+
 .texts {
     .title {
         font-weight: $headline-font-weight;
@@ -13,29 +20,29 @@
     .lexile {
         text-align: right;
     }
-    
+
     // Define the width of the "Cover" column at wider-than-mobile breakpoints to keep it from getting too large
-    
+
     @include breakpoint($table) {
       [data-title='Cover'] {
         width: 80px;
       }
     }
-    
+
     @include breakpoint($table-md) {
       [data-title='Cover'] {
         width: 120px;
       }
-    }    
+    }
 }
 
 // Toggling text notes
 
 .texts {
 
-    
+
     // The  notes container
-    
+
     .notes {
         margin-top: $space-half;
     }
@@ -50,14 +57,14 @@
     }
 
     // The toggle link base styles
-    
+
     .notes-toggle {
         display: block;
         @include font-size(18);
         font-family: $headline-text;
         @include line-height(20);
     }
-    
+
     // States of the notes-toggle link
     .notes-toggle {
         .show { display: block; }
@@ -67,5 +74,5 @@
         .show { display: none; }
         .hide { display: block; }
     }
-  
+
 } // End toggle notes styles

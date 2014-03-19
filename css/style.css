@@ -138,14 +138,14 @@
 }
 @media (min-width: 37.5em) {
   .container .body {
-    width: 65.51724%;
+    width: 64.95726%;
     float: left;
     margin-right: -100%;
     margin-left: 0%;
     clear: none;
   }
   .container .action {
-    width: 31.03448%;
+    width: 29.91453%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -176,6 +176,23 @@
   .container-group .container:nth-child(even) {
     float: right;
   }
+}
+
+.action-link {
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #006595;
+  text-decoration: none;
+}
+.action-link .icon {
+  -webkit-font-smoothing: antialiased;
+}
+.action-link:hover {
+  color: #004262;
 }
 
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
@@ -2571,7 +2588,7 @@ footer {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0;
+  margin-right: 0%;
   position: relative;
   border-top: 2px dotted #c6123f;
   margin: 0;
@@ -2592,20 +2609,20 @@ footer {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0;
+  margin-right: 0%;
 }
 .curriculum-list .item-action {
   padding: 0 0 30px 0;
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0;
+  margin-right: 0%;
 }
 .curriculum-list .item-children {
   width: 100%;
   clear: right;
   float: right;
-  margin-right: 0;
+  margin-right: 0%;
   max-height: 0;
   overflow-y: hidden;
 }
@@ -2729,111 +2746,111 @@ footer {
     width: 100%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-module > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .curriculum-list .item-module > .item-content .thumb {
     width: 38.19095%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-module > .item-content .body {
     width: 58.79397%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-module > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-unit > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .curriculum-list .item-unit > .item-content .thumb {
     width: 17.58794%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-unit > .item-content .body {
     width: 79.39698%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-unit > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-task > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .curriculum-list .item-task > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-lesson > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .curriculum-list .item-lesson > .item-content .thumb {
     width: 17.58794%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 3.01508%;
   }
   .curriculum-list .item-lesson > .item-content .body {
     width: 79.39698%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-lesson > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   .curriculum-list .item-assessment > .item-content {
     width: 82.91667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .curriculum-list .item-assessment > .item-action {
     width: 14.58333%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
 }
 @media (min-width: 47.5em) {
@@ -2917,6 +2934,11 @@ footer {
     line-height: 100%;
     margin-bottom: -15px;
   }
+}
+
+.text-downloads {
+  clear: both;
+  padding-top: 24px;
 }
 
 .texts .title {
@@ -3086,9 +3108,15 @@ footer {
   }
 }
 
+.home .switcher {
+  background-color: #eaeaea;
+  padding-top: 24px;
+  text-align: center;
+}
+
 .grades {
   background-color: #eaeaea;
-  padding: 24px 0 36px;
+  padding: 0 0 36px;
   text-align: center;
 }
 .grades h3 {
@@ -3110,6 +3138,8 @@ footer {
 .features-and-benefits {
   *zoom: 1;
   padding: 36px 0 48px;
+  background-color: white;
+  text-align: left;
 }
 .features-and-benefits:before, .features-and-benefits:after {
   display: table;
@@ -3187,14 +3217,14 @@ footer {
     width: 48.75%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(even) {
     width: 48.75%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
 }
 @media (min-width: 61.25em) {
@@ -3202,21 +3232,21 @@ footer {
     width: 23.125%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(even) {
     width: 23.125%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   #differences .feature:nth-child(4n) {
     width: 23.125%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
 }
 
@@ -3225,20 +3255,20 @@ footer {
     width: 100%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   #how .img {
     width: 48.75%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   #how .body {
     width: 48.75%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
 }
 @media (min-width: 61.25em) {
@@ -3246,14 +3276,14 @@ footer {
     width: 31.66667%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   #how .feature:nth-child(3) {
     width: 31.66667%;
     clear: right;
     float: right;
-    margin-right: 0;
+    margin-right: 0%;
   }
   #how .img {
     float: none;
@@ -3555,7 +3585,7 @@ footer {
     width: 48.75%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .map-grid > div:nth-child(even) {
@@ -3567,7 +3597,7 @@ footer {
     width: 23.125%;
     clear: right;
     float: left;
-    margin-left: 0;
+    margin-left: 0%;
     margin-right: 2.5%;
   }
   .map-grid > div:nth-child(4n) {
@@ -3597,14 +3627,14 @@ body.common .content {
   width: 6.04167%;
   clear: right;
   float: left;
-  margin-left: 0;
+  margin-left: 0%;
   margin-right: 2.5%;
 }
 .grid-docs .last {
   width: 6.04167%;
   clear: right;
   float: right;
-  margin-right: 0;
+  margin-right: 0%;
 }
 @media (min-width: 37.5em) {
   .grid-docs .primary {
