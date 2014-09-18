@@ -125,6 +125,20 @@
     }
   }
 
+  .update-explanation {
+    margin: $space-and-half 0 (-1 * $space-half);
+    padding: 0;
+    text-align: center;
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: $headline-text;
+      font-weight: $body-font-weight;
+      @include font-size(18);
+      @include line-height(20);
+    }
+  }
+
 }
 
 // Features and benefits

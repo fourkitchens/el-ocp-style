@@ -7,26 +7,27 @@
   margin-bottom: $space;
   width: 100%;
   //outline: 1px solid red;
-  
+
   > div {
     float: left;
     margin: 0;
   }
-  
+
   // Grades
-  
+
   .tile-grade {
+    position: relative;
     font-family: $headline-text;
     @include font-size(48);
     @include line-height(48);
     font-weight: $body-font-weight;
-    
+
     small {
       display: block;
       @include font-size(20);
       @include line-height(24);
     }
-  
+
     a {
       display: block;
       padding: $space-half $space;
@@ -43,6 +44,14 @@
         color: $red;
         outline-color: $gray;
       }
+    }
+
+    .updated {
+      position: absolute;
+      top: em(2,32);
+      right: em(6,32);
+      @include font-size(32);
+      @include line-height(32);
     }
   }
 }

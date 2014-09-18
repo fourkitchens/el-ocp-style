@@ -3134,6 +3134,21 @@ footer {
 .grades .tile-grid .tile-grade a {
   outline-color: #dddddd;
 }
+.grades .update-explanation {
+  margin: 36px 0 -12px;
+  padding: 0;
+  text-align: center;
+}
+.grades .update-explanation p {
+  margin: 0;
+  padding: 0;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
 
 .features-and-benefits {
   *zoom: 1;
@@ -3422,6 +3437,7 @@ footer {
   margin: 0;
 }
 .tile-grid .tile-grade {
+  position: relative;
   font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
   font-size: 48px;
   font-size: 4.8rem;
@@ -3452,6 +3468,15 @@ footer {
   background-color: #fafafa;
   color: #c6123f;
   outline-color: #bbbbbb;
+}
+.tile-grid .tile-grade .updated {
+  position: absolute;
+  top: 0.0625em;
+  right: 0.1875em;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 32px;
+  line-height: 3.2rem;
 }
 
 .feedback {
@@ -3603,6 +3628,13 @@ footer {
   .map-grid > div:nth-child(4n) {
     margin-right: 0;
   }
+}
+
+.updated {
+  display: inline-block;
+  font-family: "DINWebCondensed", "Arial Narrow", "Lucida Grande", Arial, sans-serif;
+  font-weight: 400;
+  color: #c6123f;
 }
 
 body.common .content {
